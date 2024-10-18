@@ -1,0 +1,42 @@
+<html>
+<!-- //Page d'entrée de l'application -->
+<head>
+<title>Demande de Login-Password</title>
+<script language="JavaScript" src="time.js"></script>
+<script>window.name="fenetre1";</script>
+<script language="VBScript" src="fonction1.vbs"></script>
+</head>
+<body bgcolor="#ffffff" onLoad="display_time_in_status_line()">
+<center><APPLET code=clock.class height=70 id=clock_Dispatch1 width=250 VIEWASTEXT>
+	<PARAM NAME="fonte" VALUE="images\clockfont1.gif">
+	<PARAM NAME="showdate" VALUE="">
+	<PARAM NAME="datepos" VALUE="15;50">
+	<PARAM NAME="clockpos" VALUE="29;5">
+	<PARAM NAME="fond" VALUE="images\panel.gif">
+	</APPLET>
+&nbsp;
+</center>
+
+<center><IMG height=212 src="images\sample.jpg" style="HEIGHT: 107px; WIDTH: 176px" width=283>
+
+<form method="post" action="default.asp">
+<p>SERVER&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<select name="serv" style="HEIGHT: 22px; WIDTH: 92px">
+<option selected>O816ACH</option>
+<option>O4CWQA3</option>
+<option>ACH</option></select></p>
+<p>TYPE DE SERVEUR&nbsp;<select name="servtyp">
+<option selected>Serveur Oracle</option>
+<option>Serveur Microsoft</option></select></p>
+<p>USER&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&nbsp;&nbsp;<input name="usid" style="HEIGHT: 22px; WIDTH: 98px"></p>
+<p>PASSWORD&nbsp;&nbsp;&nbsp;<input type="password" name="pwd" style="HEIGHT: 22px; WIDTH: 98px"></p>
+<input type="submit" value="Enter"></form>&nbsp;
+<A href="eANALYZER.doc">eANALYZER.doc</A>&nbsp; 
+<p></p>
+<p><a href="test_liens_c_s/index.html">Liens </a>vers la page d'entrée pour tester tous les liens Client/serveurs</p>
+<p></p>
+<p><a href="liens_c_s_quoted/index.html">Liens </a>vers la page d'entrée pour tester tous les liens Client/serveurs avec base_quoted</p>
+</center>
+</body>
+</html>

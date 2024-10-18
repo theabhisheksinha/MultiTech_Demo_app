@@ -1,0 +1,254 @@
+/******************************************************************************/
+/*** ----------------------------------------------------------------------- **/
+/*** CAST Release Builder R2.1                            (generated script) **/
+/*** ----------------------------------------------------------------------- **/
+/******************************************************************************/
+/* Server name    : OSPORTES                           */
+/* Oracle version : 8.1.5.0.0                          */
+/* Schema         : SCOTT                              */
+/* Date & Time    : January 07, 2000 at 04:34 PM       */
+/*******************************************************/
+
+
+
+/******************************************************************************/
+/** Generated Script (CREATE): Synonyms                                      **/
+/** ------------------------------------------------------------------------ **/
+/******************************************************************************/
+
+CREATE SYNONYM I3_SYN_FCT2 FOR I3_CALLFCT2
+/
+
+CREATE SYNONYM I3_SYN_TAB1 FOR I3_TABLE1
+/
+
+
+/******************************************************************************/
+/** Generated Script (CREATE): Tables                                        **/
+/** ------------------------------------------------------------------------ **/
+/******************************************************************************/
+
+CREATE TABLE I3_TABLE1 (
+  T1_COL1                                       NUMBER(10,0)        NOT NULL  ,
+  T1_COL2                                       VARCHAR2(255)       NOT NULL  ,
+  T1_COL3                                       DATE                NOT NULL  ,
+  T1_COL4                                       NUMBER              NULL      
+)
+
+/
+
+CREATE TABLE I3_TABLE2 (
+  T2_COL1                                       NUMBER(10,0)        NOT NULL  ,
+  T2_COL2                                       VARCHAR2(255)       NOT NULL  
+)
+
+/
+
+
+/******************************************************************************/
+/** Generated Script (CREATE): Check constraints                             **/
+/** ------------------------------------------------------------------------ **/
+/******************************************************************************/
+
+ALTER TABLE I3_TABLE1
+ADD CHECK( "T1_COL1" IS NOT NULL )
+/
+
+ALTER TABLE I3_TABLE1
+ADD CHECK( "T1_COL2" IS NOT NULL )
+/
+
+ALTER TABLE I3_TABLE1
+ADD CHECK( "T1_COL3" IS NOT NULL )
+/
+
+ALTER TABLE I3_TABLE2
+ADD CHECK( "T2_COL1" IS NOT NULL )
+/
+
+ALTER TABLE I3_TABLE2
+ADD CHECK( "T2_COL2" IS NOT NULL )
+/
+
+
+/******************************************************************************/
+/** Generated Script (CREATE): Primary/Unique Key constraints                **/
+/** ------------------------------------------------------------------------ **/
+/******************************************************************************/
+
+ALTER TABLE I3_TABLE2
+ADD CONSTRAINT PK_I3_TABLE2 PRIMARY KEY(T2_COL1)
+USING INDEX
+
+/
+
+ALTER TABLE I3_TABLE1
+ADD CONSTRAINT PK_I3_TABLE1 PRIMARY KEY(T1_COL1)
+USING INDEX
+
+/
+
+
+/******************************************************************************/
+/** Generated Script (CREATE): Views                                         **/
+/** ------------------------------------------------------------------------ **/
+/******************************************************************************/
+
+CREATE OR REPLACE FORCE VIEW I3_VIEWONTAB1
+(T1_COL1,T1_COL2,T1_COL3,T1_COL4)
+AS
+select "T1_COL1","T1_COL2","T1_COL3","T1_COL4" from I3_TABLE1
+/
+
+
+/******************************************************************************/
+/** Generated Script (CREATE): Functions                                     **/
+/** ------------------------------------------------------------------------ **/
+/******************************************************************************/
+
+CREATE OR REPLACE FUNCTION I3_CALLFCT1 (
+	PARAM1 OUT NUMBER
+)
+Return NUMBER
+Is
+	VAR1 NUMBER;
+	VAR2 NUMBER;
+Begin
+	VAR1:=1;
+	return I3_IMP_FONCTION(VAR1,VAR2);
+End;
+/
+
+CREATE OR REPLACE FUNCTION I3_CALLFCT2 
+Return NUMBER
+Is
+	VAR1 NUMBER;
+Begin
+	return I3_CALLFCT1(VAR1);
+End;
+/
+
+CREATE OR REPLACE FUNCTION I3_FCALLPACK 
+Return NUMBER
+Is
+Begin
+	return I3_PACKAGE1.F1;
+End;
+/
+
+CREATE OR REPLACE FUNCTION I3_IMP_FONCTION (
+	PARAM1 IN NUMBER,
+	PARAM2 OUT NUMBER
+)
+Return NUMBER
+Is
+	TITI NUMBER;
+Begin
+	TITI:=1;
+	return TITI;
+End;
+/
+
+
+/******************************************************************************/
+/** Generated Script (CREATE): Procedures                                    **/
+/** ------------------------------------------------------------------------ **/
+/******************************************************************************/
+
+CREATE OR REPLACE PROCEDURE I3_P_CALLFCT (
+	PARAM1 OUT NUMBER
+)
+Is
+	VAR1 number;
+	VAR2 number;
+	VAR3 number;
+Begin
+	VAR3:=I3_IMP_FONCTION(VAR1,VAR2);
+	PARAM1:=I3_IMP_FONCTION(VAR1,VAR2);
+End;
+/
+
+CREATE OR REPLACE PROCEDURE I3_P_CALLFCT2 
+Is
+	VAR1 number;
+Begin
+	I3_P_CALLFCT(VAR1);
+End;
+/
+
+CREATE OR REPLACE PROCEDURE I3_P_CALLFCT3 
+Is
+	VAR1 number;
+Begin
+	VAR1:=I3_CALLFCT2;
+End;
+/
+
+CREATE OR REPLACE PROCEDURE I3_P_CALLFCT4 
+Is
+	VAR1 number;
+	VAR2 number;
+	VAR3 number;
+Begin
+	VAR3:=I3_IMP_FONCTION(VAR1,VAR2);
+	VAR1:=I3_CALLFCT2;
+End;
+/
+
+CREATE OR REPLACE PROCEDURE I3_P_CALLFCT5 
+Is
+	VAR1 number;
+	VAR2 number;
+	VAR3 number;
+Begin
+	VAR1:=I3_SYN_FCT2;
+End;
+/
+
+CREATE OR REPLACE PROCEDURE I3_P_CALLPACK 
+Is
+	toto number;
+Begin
+	I3_PACKAGE1.P1;
+	toto:=I3_PACKAGE1.F1;
+	toto:=I3_PACKAGE1.MAIN;
+End;
+/
+
+
+/******************************************************************************/
+/** Generated Script (CREATE): Packages                                      **/
+/** ------------------------------------------------------------------------ **/
+/******************************************************************************/
+
+CREATE OR REPLACE PACKAGE I3_PACKAGE1 
+Is
+	MAIN number;
+	Procedure P1;
+	Function F1 return NUMBER;
+End;
+/
+
+
+/******************************************************************************/
+/** Generated Script (CREATE): Package bodies                                **/
+/** ------------------------------------------------------------------------ **/
+/******************************************************************************/
+
+CREATE OR REPLACE PACKAGE BODY I3_PACKAGE1 
+Is
+	Procedure P1 is
+		VAR2 NUMBER;
+		VAR3 NUMBER;
+	begin
+		MAIN:=I3_IMP_FONCTION(VAR2,VAR3);
+	end;
+	Function F1 return NUMBER is
+		VAR2 NUMBER;
+		VAR3 NUMBER;
+	begin
+		return I3_IMP_FONCTION(VAR2,VAR3);
+	end;
+End;
+/
+

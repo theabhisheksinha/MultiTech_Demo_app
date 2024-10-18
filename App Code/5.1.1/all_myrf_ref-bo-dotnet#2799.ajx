@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<jobDescription xmlns="http://www.castsoftware.com">
+<anaJob name="JOB_FORMS" type="708" version="511" cookie="0"></anaJob>
+<anaSel><anaSelEntry refCookie="0" cookie="2" type="6" prop="1" ordNum="0" objType="0"><![CDATA[L:\casta\rsc\clia\O920\Forms_Oracle3\9i\*.fmb;*.mmb;*.olb;*.pld;*.rex]]></anaSelEntry>
+</anaSel>
+<anaInf><anaInfEntry refCookie="0" infType="1" infSubType="2" blockNo="0">2</anaInfEntry>
+<anaInfEntry refCookie="0" infType="1" infSubType="3" blockNo="0">2</anaInfEntry>
+<anaInfEntry refCookie="0" infType="1" infSubType="26" blockNo="0">1</anaInfEntry>
+<anaInfEntry refCookie="0" infType="1" infSubType="17" blockNo="0">-1</anaInfEntry>
+<anaInfEntry refCookie="0" infType="1" infSubType="20" blockNo="0">2</anaInfEntry>
+<anaInfEntry refCookie="0" infType="1" infSubType="21" blockNo="0">2</anaInfEntry>
+<anaInfEntry refCookie="0" infType="1" infSubType="22" blockNo="0">2</anaInfEntry>
+<anaInfEntry refCookie="0" infType="26000" infSubType="1" blockNo="0">5</anaInfEntry>
+<anaInfEntry refCookie="0" infType="26000" infSubType="2" blockNo="0">5</anaInfEntry>
+<anaInfEntry refCookie="0" infType="26000" infSubType="3" blockNo="0">1</anaInfEntry>
+<anaInfEntry refCookie="0" infType="26000" infSubType="24" blockNo="0">0</anaInfEntry>
+<anaInfEntry refCookie="0" infType="26000" infSubType="8" blockNo="0">1</anaInfEntry>
+<anaInfEntry refCookie="0" infType="26000" infSubType="9" blockNo="0">1</anaInfEntry>
+<anaInfEntry refCookie="0" infType="26000" infSubType="10" blockNo="0">0</anaInfEntry>
+<anaInfEntry refCookie="0" infType="26000" infSubType="11" blockNo="0">1</anaInfEntry>
+<anaInfEntry refCookie="0" infType="26000" infSubType="12" blockNo="0">0</anaInfEntry>
+<anaInfEntry refCookie="0" infType="26000" infSubType="21" blockNo="0">0</anaInfEntry>
+<anaInfEntry refCookie="0" infType="26000" infSubType="22" blockNo="0">0</anaInfEntry>
+<anaInfEntry refCookie="0" infType="26000" infSubType="23" blockNo="0">0</anaInfEntry>
+<anaInfEntry refCookie="0" infType="1" infSubType="7" blockNo="0">0</anaInfEntry>
+<anaInfEntry refCookie="0" infType="26000" infSubType="20" blockNo="0">0</anaInfEntry>
+</anaInf>
+<anaDesc><anaDescEntry refCookie="0" infType="1" infSubType="1" blockNo="0"><![CDATA[]]></anaDescEntry>
+<anaDescEntry refCookie="0" infType="1" infSubType="18" blockNo="0"><![CDATA[]]></anaDescEntry>
+<anaDescEntry refCookie="0" infType="1" infSubType="19" blockNo="0"><![CDATA[]]></anaDescEntry>
+<anaDescEntry refCookie="0" infType="26000" infSubType="4" blockNo="0"><![CDATA[L:\casta\rsc\clia\O920\Forms_Oracle3\9i]]></anaDescEntry>
+<anaDescEntry refCookie="0" infType="26000" infSubType="5" blockNo="0"><![CDATA[O92CASTA.US.ORACLE.COM]]></anaDescEntry>
+<anaDescEntry refCookie="0" infType="26000" infSubType="6" blockNo="0"><![CDATA[system]]></anaDescEntry>
+<anaDescEntry refCookie="0" infType="26000" infSubType="7" blockNo="0"><![CDATA[5A51585E4841]]></anaDescEntry>
+<anaDescEntry refCookie="0" infType="26000" infSubType="13" blockNo="0"><![CDATA[L:\casta\rsc\clia\O920\Forms_Oracle3\CodeViewer]]></anaDescEntry>
+<anaDescEntry refCookie="0" infType="1" infSubType="5" blockNo="0"><![CDATA[*.fmb;*.mmb;*.olb;*.pld;*.rex]]></anaDescEntry>
+<anaDescEntry refCookie="0" infType="1" infSubType="6" blockNo="0"><![CDATA[]]></anaDescEntry>
+<anaDescEntry refCookie="2" infType="16010" infSubType="0" blockNo="0"><![CDATA[CASTPUBS]]></anaDescEntry>
+<anaDescEntry refCookie="0" infType="26000" infSubType="18" blockNo="0"><![CDATA[*.fmb]]></anaDescEntry>
+<anaDescEntry refCookie="0" infType="26000" infSubType="19" blockNo="0"><![CDATA[]]></anaDescEntry>
+</anaDesc>
+<anaCnx><anaCnxEntry refCookie="2" connectionName="O92CASTA"></anaCnxEntry>
+</anaCnx>
+
+</jobDescription>

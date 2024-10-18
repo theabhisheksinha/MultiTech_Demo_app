@@ -1,0 +1,13 @@
+[Settings]
+script=D:\www\cgi-shell\fonctionne\oraperl\createsale.pl
+args=
+pathinfo=
+exec_dir=
+itype=0
+[Wizard]
+form=
+errout=
+dout=
+rout=
+parse=0
+out=0

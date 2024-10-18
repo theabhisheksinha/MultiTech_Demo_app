@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<jobDescription xmlns="http://www.castsoftware.com">
+<anaJob name="job_WS" type="838" version="513" cookie="0"></anaJob>
+<anaSel><anaSelEntry refCookie="0" cookie="2" type="8195" prop="15" ordNum="0" objType="0"><![CDATA[Visual Basic]]></anaSelEntry>
+<anaSelEntry refCookie="0" cookie="3" type="6" prop="1" ordNum="0" objType="0"><![CDATA[L:\casta\rsc\clia\O920\WS_VB\*.wsdl]]></anaSelEntry>
+</anaSel>
+<anaInf><anaInfEntry refCookie="0" infType="1" infSubType="2" blockNo="0">-1</anaInfEntry>
+<anaInfEntry refCookie="0" infType="1" infSubType="3" blockNo="0">2</anaInfEntry>
+<anaInfEntry refCookie="0" infType="1" infSubType="26" blockNo="0">1</anaInfEntry>
+<anaInfEntry refCookie="0" infType="1" infSubType="17" blockNo="0">-1</anaInfEntry>
+<anaInfEntry refCookie="0" infType="1" infSubType="20" blockNo="0">2</anaInfEntry>
+<anaInfEntry refCookie="0" infType="1" infSubType="21" blockNo="0">2</anaInfEntry>
+<anaInfEntry refCookie="0" infType="1" infSubType="22" blockNo="0">2</anaInfEntry>
+<anaInfEntry refCookie="0" infType="1" infSubType="12" blockNo="0">7</anaInfEntry>
+<anaInfEntry refCookie="0" infType="1" infSubType="12" blockNo="1">1</anaInfEntry>
+<anaInfEntry refCookie="0" infType="1" infSubType="12" blockNo="2">26</anaInfEntry>
+<anaInfEntry refCookie="0" infType="1" infSubType="12" blockNo="3">55</anaInfEntry>
+<anaInfEntry refCookie="0" infType="1" infSubType="12" blockNo="4">13</anaInfEntry>
+<anaInfEntry refCookie="0" infType="1" infSubType="12" blockNo="5">9</anaInfEntry>
+<anaInfEntry refCookie="0" infType="1" infSubType="12" blockNo="6">10</anaInfEntry>
+<anaInfEntry refCookie="0" infType="1" infSubType="12" blockNo="7">0</anaInfEntry>
+<anaInfEntry refCookie="2" infType="1" infSubType="13" blockNo="0">0</anaInfEntry>
+<anaInfEntry refCookie="2" infType="1" infSubType="15" blockNo="0">1</anaInfEntry>
+<anaInfEntry refCookie="2" infType="1" infSubType="23" blockNo="0">0</anaInfEntry>
+<anaInfEntry refCookie="0" infType="1" infSubType="8" blockNo="0">1</anaInfEntry>
+<anaInfEntry refCookie="0" infType="1" infSubType="9" blockNo="0">1</anaInfEntry>
+<anaInfEntry refCookie="0" infType="1" infSubType="10" blockNo="0">0</anaInfEntry>
+<anaInfEntry refCookie="0" infType="1" infSubType="16" blockNo="0">1</anaInfEntry>
+<anaInfEntry refCookie="0" infType="1" infSubType="25" blockNo="0">0</anaInfEntry>
+<anaInfEntry refCookie="0" infType="36000" infSubType="1" blockNo="0">10</anaInfEntry>
+<anaInfEntry refCookie="0" infType="1" infSubType="7" blockNo="0">0</anaInfEntry>
+</anaInf>
+<anaDesc><anaDescEntry refCookie="0" infType="1" infSubType="1" blockNo="0"><![CDATA[]]></anaDescEntry>
+<anaDescEntry refCookie="0" infType="1" infSubType="18" blockNo="0"><![CDATA[]]></anaDescEntry>
+<anaDescEntry refCookie="0" infType="1" infSubType="19" blockNo="0"><![CDATA[]]></anaDescEntry>
+<anaDescEntry refCookie="0" infType="1" infSubType="5" blockNo="0"><![CDATA[*.wsdl]]></anaDescEntry>
+<anaDescEntry refCookie="0" infType="1" infSubType="6" blockNo="0"><![CDATA[]]></anaDescEntry>
+</anaDesc>
+<anaCnx></anaCnx>
+
+</jobDescription>

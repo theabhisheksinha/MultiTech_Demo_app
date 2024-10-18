@@ -1,0 +1,2 @@
+il faut mettre *.unv dans le répertoire "\Business Objects\BusinessObjects 5.0\Universe"
+et le *.rep dans le répertoire "D:\Program Files\Business Objects\BusinessObjects 5.0\UserDocs"

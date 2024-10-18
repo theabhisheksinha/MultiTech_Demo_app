@@ -1,0 +1,21 @@
+<HTML>
+<HEAD>
+<STYLE>
+#flier { 
+    behavior: url( composant.htc );
+    text-align: center;
+}
+</STYLE>
+</HEAD>
+<BODY>
+<H1 ID=flier>Flying titles!</H1>
+<P><BUTTON onclick=document.getElementsByTagname("H1")[0].stop();>Stop</BUTTON></P>
+
+<SCRIPT>
+var flyingElem = document.getElementsByTagname( "H1" )[0];
+flyingElem.onFlyFinished = "alert('finished flying!');"
+flyingElem.direction = "left";
+flyingElem.start();
+</SCRIPT>
+</BODY>
+</HTML>

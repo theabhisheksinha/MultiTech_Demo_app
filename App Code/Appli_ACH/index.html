@@ -1,0 +1,30 @@
+<html>
+
+<head>
+<title>Menu Principal</title>
+<script language="JavaScript" src="time.js">
+</script>
+</head>
+<body bgcolor="#ffffff" onLoad="display_time_in_status_line();">
+<!-- #include file="affiche.htm"-->
+<p>Choisissez une ville :</p>
+<!-- la suite est uniquement faite pour créer une récupération de variable avec Request.querystring -->
+<p><a href="index.asp?ville=Marseille">Marseille</a> <a href="index.asp?ville=Lyon">Lyon</a> <a href="index.asp?ville=Paris">Paris</a></p>
+
+<!-- La suite de l'application se trouve ici -->
+<p>Suite de l'interrogation de la base</p>
+<p></p>
+<a href="enregistre_employee.htm">Enregistrer un nouvel employé</a>
+<p></p>
+<a href="affiche.htm">Affiche la liste des employés triée par employee_id</a>
+<p></p>
+<a href="efface.htm">Efface un employé</a>
+<p></p>
+<a href="pageclass.html">Lien avec une page contenant un class VBSCRIPT</a>
+<p></p>
+<a href="pageactiveX.asp">Lien avec une page contenant un activeX non utlisé par autre chose (pas ADODB)</a>
+<p></p>
+<a href="pagec-s.asp">Lien avec une page contenant des liens C/s dynamique</a>
+<p></p>
+<a href="erreur_8742.asp">Lien avec une page pour le support de l'instruction "<%@enablesessionstate=false%>"</a>
+</body></html>

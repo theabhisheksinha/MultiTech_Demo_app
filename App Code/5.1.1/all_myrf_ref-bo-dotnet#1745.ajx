@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<jobDescription xmlns="http://www.castsoftware.com">
+<anaJob name="job_PB8" type="712" version="511" cookie="0"></anaJob>
+<anaSel><anaSelEntry refCookie="0" cookie="2" type="8195" prop="15" ordNum="0" objType="0"><![CDATA[ABD_TEST]]></anaSelEntry>
+<anaSelEntry refCookie="2" cookie="3" type="8195" prop="15" ordNum="1" objType="0"><![CDATA[CASTPUBS]]></anaSelEntry>
+<anaSelEntry refCookie="0" cookie="4" type="8195" prop="15" ordNum="2" objType="0"><![CDATA[ABDXP\MS2K_CASTA]]></anaSelEntry>
+<anaSelEntry refCookie="4" cookie="5" type="8195" prop="15" ordNum="3" objType="0"><![CDATA[CASTpubs]]></anaSelEntry>
+<anaSelEntry refCookie="0" cookie="6" type="8195" prop="15" ordNum="4" objType="0"><![CDATA[SYBCASTA]]></anaSelEntry>
+<anaSelEntry refCookie="6" cookie="7" type="8195" prop="15" ordNum="5" objType="0"><![CDATA[CASTpubs]]></anaSelEntry>
+<anaSelEntry refCookie="0" cookie="8" type="8195" prop="15" ordNum="6" objType="0"><![CDATA[O92CASTA.US.ORACLE.COM]]></anaSelEntry>
+<anaSelEntry refCookie="8" cookie="9" type="8195" prop="15" ordNum="7" objType="0"><![CDATA[CASTPUBS]]></anaSelEntry>
+<anaSelEntry refCookie="0" cookie="10" type="1" prop="1" ordNum="0" objType="0"><![CDATA[L:\casta\rsc\clia\O920\Pb8_CASTpubs\pb8_castpubs.pbw]]></anaSelEntry>
+<anaSelEntry refCookie="0" cookie="11" type="1" prop="1" ordNum="0" objType="0"><![CDATA[L:\casta\rsc\clia\O920\Pb8_CASTpubs\pb8_castpubs.pbw]]></anaSelEntry>
+<anaSelEntry refCookie="11" cookie="12" type="1" prop="1" ordNum="1" objType="0"><![CDATA[L:\casta\rsc\clia\O920\Pb8_CASTpubs\castpubs2.pbt]]></anaSelEntry>
+<anaSelEntry refCookie="11" cookie="13" type="1" prop="1" ordNum="2" objType="0"><![CDATA[L:\casta\rsc\clia\O920\Pb8_CASTpubs\genapp.pbt]]></anaSelEntry>
+<anaSelEntry refCookie="0" cookie="14" type="8195" prop="27" ordNum="0" objType="0"><![CDATA[PB Job]]></anaSelEntry>
+<anaSelEntry refCookie="0" cookie="15" type="8195" prop="27" ordNum="1" objType="0"><![CDATA[PB Job]]></anaSelEntry>
+<anaSelEntry refCookie="15" cookie="16" type="8195" prop="27" ordNum="2" objType="0"><![CDATA[castpubs2]]></anaSelEntry>
+<anaSelEntry refCookie="0" cookie="17" type="8195" prop="27" ordNum="3" objType="0"><![CDATA[PB Job]]></anaSelEntry>
+<anaSelEntry refCookie="17" cookie="18" type="8195" prop="27" ordNum="4" objType="0"><![CDATA[castpubs2]]></anaSelEntry>
+<anaSelEntry refCookie="18" cookie="19" type="8195" prop="27" ordNum="5" objType="0"><![CDATA[castpubs2.pbl]]></anaSelEntry>
+<anaSelEntry refCookie="0" cookie="20" type="8195" prop="27" ordNum="6" objType="0"><![CDATA[PB Job]]></anaSelEntry>
+<anaSelEntry refCookie="20" cookie="21" type="8195" prop="27" ordNum="7" objType="0"><![CDATA[castpubs2]]></anaSelEntry>
+<anaSelEntry refCookie="21" cookie="22" type="8195" prop="27" ordNum="8" objType="0"><![CDATA[cast2_datawindows.pbl]]></anaSelEntry>
+<anaSelEntry refCookie="0" cookie="23" type="8195" prop="27" ordNum="9" objType="0"><![CDATA[PB Job]]></anaSelEntry>
+<anaSelEntry refCookie="23" cookie="24" type="8195" prop="27" ordNum="10" objType="0"><![CDATA[castpubs2]]></anaSelEntry>
+<anaSelEntry refCookie="24" cookie="25" type="8195" prop="27" ordNum="11" objType="0"><![CDATA[cast2_fnc.pbl]]></anaSelEntry>
+<anaSelEntry refCookie="0" cookie="26" type="8195" prop="27" ordNum="12" objType="0"><![CDATA[PB Job]]></anaSelEntry>
+<anaSelEntry refCookie="26" cookie="27" type="8195" prop="27" ordNum="13" objType="0"><![CDATA[castpubs2]]></anaSelEntry>
+<anaSelEntry refCookie="27" cookie="28" type="8195" prop="27" ordNum="14" objType="0"><![CDATA[cast2_menus.pbl]]></anaSelEntry>
+<anaSelEntry refCookie="0" cookie="29" type="8195" prop="27" ordNum="15" objType="0"><![CDATA[PB Job]]></anaSelEntry>
+<anaSelEntry refCookie="29" cookie="30" type="8195" prop="27" ordNum="16" objType="0"><![CDATA[castpubs2]]></anaSelEntry>
+<anaSelEntry refCookie="30" cookie="31" type="8195" prop="27" ordNum="17" objType="0"><![CDATA[cast2_query.pbl]]></anaSelEntry>
+<anaSelEntry refCookie="0" cookie="32" type="8195" prop="27" ordNum="18" objType="0"><![CDATA[PB Job]]></anaSelEntry>
+<anaSelEntry refCookie="32" cookie="33" type="8195" prop="27" ordNum="19" objType="0"><![CDATA[castpubs2]]></anaSelEntry>
+<anaSelEntry refCookie="33" cookie="34" type="8195" prop="27" ordNum="20" objType="0"><![CDATA[cast2_str.pbl]]></anaSelEntry>
+<anaSelEntry refCookie="0" cookie="35" type="8195" prop="27" ordNum="21" objType="0"><![CDATA[PB Job]]></anaSelEntry>
+<anaSelEntry refCookie="35" cookie="36" type="8195" prop="27" ordNum="22" objType="0"><![CDATA[castpubs2]]></anaSelEntry>
+<anaSelEntry refCookie="36" cookie="37" type="8195" prop="27" ordNum="23" objType="0"><![CDATA[cast2_uo.pbl]]></anaSelEntry>
+<anaSelEntry refCookie="0" cookie="38" type="8195" prop="27" ordNum="24" objType="0"><![CDATA[PB Job]]></anaSelEntry>
+<anaSelEntry refCookie="38" cookie="39" type="8195" prop="27" ordNum="25" objType="0"><![CDATA[castpubs2]]></anaSelEntry>
+<anaSelEntry refCookie="39" cookie="40" type="8195" prop="27" ordNum="26" objType="0"><![CDATA[cast2_windows.pbl]]></anaSelEntry>
+<anaSelEntry refCookie="0" cookie="41" type="8195" prop="27" ordNum="27" objType="0"><![CDATA[PB Job]]></anaSelEntry>
+<anaSelEntry refCookie="41" cookie="42" type="8195" prop="27" ordNum="28" objType="0"><![CDATA[castpubs2]]></anaSelEntry>
+<anaSelEntry refCookie="42" cookie="43" type="8195" prop="27" ordNum="29" objType="0"><![CDATA[library2.pbl]]></anaSelEntry>
+<anaSelEntry refCookie="0" cookie="44" type="8195" prop="27" ordNum="30" objType="0"><![CDATA[PB Job]]></anaSelEntry>
+<anaSelEntry refCookie="44" cookie="45" type="8195" prop="27" ordNum="31" objType="0"><![CDATA[genapp]]></anaSelEntry>
+<anaSelEntry refCookie="0" cookie="46" type="8195" prop="27" ordNum="32" objType="0"><![CDATA[PB Job]]></anaSelEntry>
+<anaSelEntry refCookie="46" cookie="47" type="8195" prop="27" ordNum="33" objType="0"><![CDATA[genapp]]></anaSelEntry>
+<anaSelEntry refCookie="47" cookie="48" type="8195" prop="27" ordNum="34" objType="0"><![CDATA[genapp.pbl]]></anaSelEntry>
+</anaSel>
+<anaInf><anaInfEntry refCookie="0" infType="1" infSubType="2" blockNo="0">2</anaInfEntry>
+<anaInfEntry refCookie="0" infType="1" infSubType="3" blockNo="0">2</anaInfEntry>
+<anaInfEntry refCookie="0" infType="1" infSubType="26" blockNo="0">1</anaInfEntry>
+<anaInfEntry refCookie="0" infType="1" infSubType="17" blockNo="0">-1</anaInfEntry>
+<anaInfEntry refCookie="0" infType="1" infSubType="20" blockNo="0">2</anaInfEntry>
+<anaInfEntry refCookie="0" infType="1" infSubType="21" blockNo="0">2</anaInfEntry>
+<anaInfEntry refCookie="0" infType="1" infSubType="22" blockNo="0">2</anaInfEntry>
+<anaInfEntry refCookie="0" infType="1" infSubType="12" blockNo="0">5</anaInfEntry>
+<anaInfEntry refCookie="0" infType="1" infSubType="12" blockNo="1">9</anaInfEntry>
+<anaInfEntry refCookie="0" infType="1" infSubType="12" blockNo="2">10</anaInfEntry>
+<anaInfEntry refCookie="0" infType="1" infSubType="12" blockNo="3">13</anaInfEntry>
+<anaInfEntry refCookie="2" infType="1" infSubType="13" blockNo="0">1570</anaInfEntry>
+<anaInfEntry refCookie="2" infType="1" infSubType="15" blockNo="0">313</anaInfEntry>
+<anaInfEntry refCookie="2" infType="1" infSubType="23" blockNo="0">1</anaInfEntry>
+<anaInfEntry refCookie="3" infType="1" infSubType="13" blockNo="0">15254</anaInfEntry>
+<anaInfEntry refCookie="3" infType="1" infSubType="15" blockNo="0">301</anaInfEntry>
+<anaInfEntry refCookie="3" infType="1" infSubType="23" blockNo="0">0</anaInfEntry>
+<anaInfEntry refCookie="4" infType="1" infSubType="13" blockNo="0">-5000</anaInfEntry>
+<anaInfEntry refCookie="4" infType="1" infSubType="15" blockNo="0">127</anaInfEntry>
+<anaInfEntry refCookie="4" infType="1" infSubType="23" blockNo="0">1</anaInfEntry>
+<anaInfEntry refCookie="5" infType="1" infSubType="13" blockNo="0">-5000</anaInfEntry>
+<anaInfEntry refCookie="5" infType="1" infSubType="15" blockNo="0">278</anaInfEntry>
+<anaInfEntry refCookie="5" infType="1" infSubType="23" blockNo="0">0</anaInfEntry>
+<anaInfEntry refCookie="6" infType="1" infSubType="13" blockNo="0">-5000</anaInfEntry>
+<anaInfEntry refCookie="6" infType="1" infSubType="15" blockNo="0">127</anaInfEntry>
+<anaInfEntry refCookie="6" infType="1" infSubType="23" blockNo="0">1</anaInfEntry>
+<anaInfEntry refCookie="7" infType="1" infSubType="13" blockNo="0">-5000</anaInfEntry>
+<anaInfEntry refCookie="7" infType="1" infSubType="15" blockNo="0">278</anaInfEntry>
+<anaInfEntry refCookie="7" infType="1" infSubType="23" blockNo="0">0</anaInfEntry>
+<anaInfEntry refCookie="8" infType="1" infSubType="13" blockNo="0">-5000</anaInfEntry>
+<anaInfEntry refCookie="8" infType="1" infSubType="15" blockNo="0">218</anaInfEntry>
+<anaInfEntry refCookie="8" infType="1" infSubType="23" blockNo="0">1</anaInfEntry>
+<anaInfEntry refCookie="9" infType="1" infSubType="13" blockNo="0">-5000</anaInfEntry>
+<anaInfEntry refCookie="9" infType="1" infSubType="15" blockNo="0">17</anaInfEntry>
+<anaInfEntry refCookie="9" infType="1" infSubType="23" blockNo="0">0</anaInfEntry>
+<anaInfEntry refCookie="0" infType="1" infSubType="8" blockNo="0">1</anaInfEntry>
+<anaInfEntry refCookie="0" infType="1" infSubType="9" blockNo="0">1</anaInfEntry>
+<anaInfEntry refCookie="0" infType="1" infSubType="10" blockNo="0">0</anaInfEntry>
+<anaInfEntry refCookie="0" infType="1" infSubType="16" blockNo="0">1</anaInfEntry>
+<anaInfEntry refCookie="0" infType="1" infSubType="25" blockNo="0">0</anaInfEntry>
+<anaInfEntry refCookie="0" infType="3000" infSubType="1" blockNo="0">49</anaInfEntry>
+<anaInfEntry refCookie="0" infType="3000" infSubType="7" blockNo="0">1</anaInfEntry>
+<anaInfEntry refCookie="0" infType="3000" infSubType="2" blockNo="0">1</anaInfEntry>
+<anaInfEntry refCookie="14" infType="1" infSubType="13" blockNo="0">-1</anaInfEntry>
+<anaInfEntry refCookie="14" infType="1" infSubType="15" blockNo="0">1</anaInfEntry>
+<anaInfEntry refCookie="14" infType="1" infSubType="23" blockNo="0">0</anaInfEntry>
+<anaInfEntry refCookie="15" infType="1" infSubType="13" blockNo="0">-1</anaInfEntry>
+<anaInfEntry refCookie="15" infType="1" infSubType="15" blockNo="0">1</anaInfEntry>
+<anaInfEntry refCookie="15" infType="1" infSubType="23" blockNo="0">0</anaInfEntry>
+<anaInfEntry refCookie="16" infType="1" infSubType="13" blockNo="0">0</anaInfEntry>
+<anaInfEntry refCookie="16" infType="1" infSubType="15" blockNo="0">3070</anaInfEntry>
+<anaInfEntry refCookie="16" infType="1" infSubType="23" blockNo="0">0</anaInfEntry>
+<anaInfEntry refCookie="17" infType="1" infSubType="13" blockNo="0">-1</anaInfEntry>
+<anaInfEntry refCookie="17" infType="1" infSubType="15" blockNo="0">1</anaInfEntry>
+<anaInfEntry refCookie="17" infType="1" infSubType="23" blockNo="0">0</anaInfEntry>
+<anaInfEntry refCookie="18" infType="1" infSubType="13" blockNo="0">0</anaInfEntry>
+<anaInfEntry refCookie="18" infType="1" infSubType="15" blockNo="0">3070</anaInfEntry>
+<anaInfEntry refCookie="18" infType="1" infSubType="23" blockNo="0">0</anaInfEntry>
+<anaInfEntry refCookie="19" infType="1" infSubType="13" blockNo="0">0</anaInfEntry>
+<anaInfEntry refCookie="19" infType="1" infSubType="15" blockNo="0">3080</anaInfEntry>
+<anaInfEntry refCookie="19" infType="1" infSubType="23" blockNo="0">0</anaInfEntry>
+<anaInfEntry refCookie="20" infType="1" infSubType="13" blockNo="0">-1</anaInfEntry>
+<anaInfEntry refCookie="20" infType="1" infSubType="15" blockNo="0">1</anaInfEntry>
+<anaInfEntry refCookie="20" infType="1" infSubType="23" blockNo="0">0</anaInfEntry>
+<anaInfEntry refCookie="21" infType="1" infSubType="13" blockNo="0">0</anaInfEntry>
+<anaInfEntry refCookie="21" infType="1" infSubType="15" blockNo="0">3070</anaInfEntry>
+<anaInfEntry refCookie="21" infType="1" infSubType="23" blockNo="0">0</anaInfEntry>
+<anaInfEntry refCookie="22" infType="1" infSubType="13" blockNo="0">0</anaInfEntry>
+<anaInfEntry refCookie="22" infType="1" infSubType="15" blockNo="0">3080</anaInfEntry>
+<anaInfEntry refCookie="22" infType="1" infSubType="23" blockNo="0">0</anaInfEntry>
+<anaInfEntry refCookie="23" infType="1" infSubType="13" blockNo="0">-1</anaInfEntry>
+<anaInfEntry refCookie="23" infType="1" infSubType="15" blockNo="0">1</anaInfEntry>
+<anaInfEntry refCookie="23" infType="1" infSubType="23" blockNo="0">0</anaInfEntry>
+<anaInfEntry refCookie="24" infType="1" infSubType="13" blockNo="0">0</anaInfEntry>
+<anaInfEntry refCookie="24" infType="1" infSubType="15" blockNo="0">3070</anaInfEntry>
+<anaInfEntry refCookie="24" infType="1" infSubType="23" blockNo="0">0</anaInfEntry>
+<anaInfEntry refCookie="25" infType="1" infSubType="13" blockNo="0">0</anaInfEntry>
+<anaInfEntry refCookie="25" infType="1" infSubType="15" blockNo="0">3080</anaInfEntry>
+<anaInfEntry refCookie="25" infType="1" infSubType="23" blockNo="0">0</anaInfEntry>
+<anaInfEntry refCookie="26" infType="1" infSubType="13" blockNo="0">-1</anaInfEntry>
+<anaInfEntry refCookie="26" infType="1" infSubType="15" blockNo="0">1</anaInfEntry>
+<anaInfEntry refCookie="26" infType="1" infSubType="23" blockNo="0">0</anaInfEntry>
+<anaInfEntry refCookie="27" infType="1" infSubType="13" blockNo="0">0</anaInfEntry>
+<anaInfEntry refCookie="27" infType="1" infSubType="15" blockNo="0">3070</anaInfEntry>
+<anaInfEntry refCookie="27" infType="1" infSubType="23" blockNo="0">0</anaInfEntry>
+<anaInfEntry refCookie="28" infType="1" infSubType="13" blockNo="0">0</anaInfEntry>
+<anaInfEntry refCookie="28" infType="1" infSubType="15" blockNo="0">3080</anaInfEntry>
+<anaInfEntry refCookie="28" infType="1" infSubType="23" blockNo="0">0</anaInfEntry>
+<anaInfEntry refCookie="29" infType="1" infSubType="13" blockNo="0">-1</anaInfEntry>
+<anaInfEntry refCookie="29" infType="1" infSubType="15" blockNo="0">1</anaInfEntry>
+<anaInfEntry refCookie="29" infType="1" infSubType="23" blockNo="0">0</anaInfEntry>
+<anaInfEntry refCookie="30" infType="1" infSubType="13" blockNo="0">0</anaInfEntry>
+<anaInfEntry refCookie="30" infType="1" infSubType="15" blockNo="0">3070</anaInfEntry>
+<anaInfEntry refCookie="30" infType="1" infSubType="23" blockNo="0">0</anaInfEntry>
+<anaInfEntry refCookie="31" infType="1" infSubType="13" blockNo="0">0</anaInfEntry>
+<anaInfEntry refCookie="31" infType="1" infSubType="15" blockNo="0">3080</anaInfEntry>
+<anaInfEntry refCookie="31" infType="1" infSubType="23" blockNo="0">0</anaInfEntry>
+<anaInfEntry refCookie="32" infType="1" infSubType="13" blockNo="0">-1</anaInfEntry>
+<anaInfEntry refCookie="32" infType="1" infSubType="15" blockNo="0">1</anaInfEntry>
+<anaInfEntry refCookie="32" infType="1" infSubType="23" blockNo="0">0</anaInfEntry>
+<anaInfEntry refCookie="33" infType="1" infSubType="13" blockNo="0">0</anaInfEntry>
+<anaInfEntry refCookie="33" infType="1" infSubType="15" blockNo="0">3070</anaInfEntry>
+<anaInfEntry refCookie="33" infType="1" infSubType="23" blockNo="0">0</anaInfEntry>
+<anaInfEntry refCookie="34" infType="1" infSubType="13" blockNo="0">0</anaInfEntry>
+<anaInfEntry refCookie="34" infType="1" infSubType="15" blockNo="0">3080</anaInfEntry>
+<anaInfEntry refCookie="34" infType="1" infSubType="23" blockNo="0">0</anaInfEntry>
+<anaInfEntry refCookie="35" infType="1" infSubType="13" blockNo="0">-1</anaInfEntry>
+<anaInfEntry refCookie="35" infType="1" infSubType="15" blockNo="0">1</anaInfEntry>
+<anaInfEntry refCookie="35" infType="1" infSubType="23" blockNo="0">0</anaInfEntry>
+<anaInfEntry refCookie="36" infType="1" infSubType="13" blockNo="0">0</anaInfEntry>
+<anaInfEntry refCookie="36" infType="1" infSubType="15" blockNo="0">3070</anaInfEntry>
+<anaInfEntry refCookie="36" infType="1" infSubType="23" blockNo="0">0</anaInfEntry>
+<anaInfEntry refCookie="37" infType="1" infSubType="13" blockNo="0">0</anaInfEntry>
+<anaInfEntry refCookie="37" infType="1" infSubType="15" blockNo="0">3080</anaInfEntry>
+<anaInfEntry refCookie="37" infType="1" infSubType="23" blockNo="0">0</anaInfEntry>
+<anaInfEntry refCookie="38" infType="1" infSubType="13" blockNo="0">-1</anaInfEntry>
+<anaInfEntry refCookie="38" infType="1" infSubType="15" blockNo="0">1</anaInfEntry>
+<anaInfEntry refCookie="38" infType="1" infSubType="23" blockNo="0">0</anaInfEntry>
+<anaInfEntry refCookie="39" infType="1" infSubType="13" blockNo="0">0</anaInfEntry>
+<anaInfEntry refCookie="39" infType="1" infSubType="15" blockNo="0">3070</anaInfEntry>
+<anaInfEntry refCookie="39" infType="1" infSubType="23" blockNo="0">0</anaInfEntry>
+<anaInfEntry refCookie="40" infType="1" infSubType="13" blockNo="0">0</anaInfEntry>
+<anaInfEntry refCookie="40" infType="1" infSubType="15" blockNo="0">3080</anaInfEntry>
+<anaInfEntry refCookie="40" infType="1" infSubType="23" blockNo="0">0</anaInfEntry>
+<anaInfEntry refCookie="41" infType="1" infSubType="13" blockNo="0">-1</anaInfEntry>
+<anaInfEntry refCookie="41" infType="1" infSubType="15" blockNo="0">1</anaInfEntry>
+<anaInfEntry refCookie="41" infType="1" infSubType="23" blockNo="0">0</anaInfEntry>
+<anaInfEntry refCookie="42" infType="1" infSubType="13" blockNo="0">0</anaInfEntry>
+<anaInfEntry refCookie="42" infType="1" infSubType="15" blockNo="0">3070</anaInfEntry>
+<anaInfEntry refCookie="42" infType="1" infSubType="23" blockNo="0">0</anaInfEntry>
+<anaInfEntry refCookie="43" infType="1" infSubType="13" blockNo="0">0</anaInfEntry>
+<anaInfEntry refCookie="43" infType="1" infSubType="15" blockNo="0">3080</anaInfEntry>
+<anaInfEntry refCookie="43" infType="1" infSubType="23" blockNo="0">0</anaInfEntry>
+<anaInfEntry refCookie="44" infType="1" infSubType="13" blockNo="0">-1</anaInfEntry>
+<anaInfEntry refCookie="44" infType="1" infSubType="15" blockNo="0">1</anaInfEntry>
+<anaInfEntry refCookie="44" infType="1" infSubType="23" blockNo="0">0</anaInfEntry>
+<anaInfEntry refCookie="45" infType="1" infSubType="13" blockNo="0">0</anaInfEntry>
+<anaInfEntry refCookie="45" infType="1" infSubType="15" blockNo="0">3070</anaInfEntry>
+<anaInfEntry refCookie="45" infType="1" infSubType="23" blockNo="0">0</anaInfEntry>
+<anaInfEntry refCookie="46" infType="1" infSubType="13" blockNo="0">-1</anaInfEntry>
+<anaInfEntry refCookie="46" infType="1" infSubType="15" blockNo="0">1</anaInfEntry>
+<anaInfEntry refCookie="46" infType="1" infSubType="23" blockNo="0">0</anaInfEntry>
+<anaInfEntry refCookie="47" infType="1" infSubType="13" blockNo="0">0</anaInfEntry>
+<anaInfEntry refCookie="47" infType="1" infSubType="15" blockNo="0">3070</anaInfEntry>
+<anaInfEntry refCookie="47" infType="1" infSubType="23" blockNo="0">0</anaInfEntry>
+<anaInfEntry refCookie="48" infType="1" infSubType="13" blockNo="0">0</anaInfEntry>
+<anaInfEntry refCookie="48" infType="1" infSubType="15" blockNo="0">3080</anaInfEntry>
+<anaInfEntry refCookie="48" infType="1" infSubType="23" blockNo="0">0</anaInfEntry>
+</anaInf>
+<anaDesc><anaDescEntry refCookie="0" infType="1" infSubType="1" blockNo="0"><![CDATA[]]></anaDescEntry>
+<anaDescEntry refCookie="0" infType="1" infSubType="18" blockNo="0"><![CDATA[]]></anaDescEntry>
+<anaDescEntry refCookie="0" infType="1" infSubType="19" blockNo="0"><![CDATA[]]></anaDescEntry>
+<anaDescEntry refCookie="0" infType="3000" infSubType="8" blockNo="0"><![CDATA[L:\casta\rsc\pb\Parsing\Shared_PB8\pborc80.dll]]></anaDescEntry>
+<anaDescEntry refCookie="0" infType="3000" infSubType="4" blockNo="0"><![CDATA[]]></anaDescEntry>
+</anaDesc>
+<anaCnx><anaCnxEntry refCookie="2" connectionName="ABD_TEST"></anaCnxEntry>
+<anaCnxEntry refCookie="3" connectionName="ABD_TEST"></anaCnxEntry>
+<anaCnxEntry refCookie="4" connectionName="MS2K_CASTA"></anaCnxEntry>
+<anaCnxEntry refCookie="5" connectionName="MS2K_CASTA"></anaCnxEntry>
+<anaCnxEntry refCookie="6" connectionName="SYBCASTA"></anaCnxEntry>
+<anaCnxEntry refCookie="7" connectionName="SYBCASTA"></anaCnxEntry>
+<anaCnxEntry refCookie="8" connectionName="O92CASTA"></anaCnxEntry>
+<anaCnxEntry refCookie="9" connectionName="O92CASTA"></anaCnxEntry>
+</anaCnx>
+
+</jobDescription>

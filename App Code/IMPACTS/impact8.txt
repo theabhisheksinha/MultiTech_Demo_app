@@ -1,0 +1,174 @@
+/******************************************************************************/
+/*** ----------------------------------------------------------------------- **/
+/*** CAST Release Builder R2.1                            (generated script) **/
+/*** ----------------------------------------------------------------------- **/
+/******************************************************************************/
+/* Server name    : OSPORTES                           */
+/* Oracle version : 8.1.5.0.0                          */
+/* Schema         : SCOTT                              */
+/* Date & Time    : January 14, 2000 at 11:55 AM       */
+/*******************************************************/
+
+
+
+/******************************************************************************/
+/** Generated Script (CREATE): Tables                                        **/
+/** ------------------------------------------------------------------------ **/
+/******************************************************************************/
+
+CREATE TABLE I8_TABLE1 (
+  T1_COL1                                       NUMBER(10,0)        NOT NULL  ,
+  T1_COL2                                       VARCHAR2(255)       NOT NULL  ,
+  T1_COL3                                       DATE                NOT NULL  ,
+  T1_COL4                                       NUMBER              NULL      
+)
+/
+
+
+/******************************************************************************/
+/** Generated Script (CREATE): Check constraints                             **/
+/** ------------------------------------------------------------------------ **/
+/******************************************************************************/
+
+ALTER TABLE I8_TABLE1
+ADD CHECK( "T1_COL1" IS NOT NULL )
+/
+
+ALTER TABLE I8_TABLE1
+ADD CHECK( "T1_COL2" IS NOT NULL )
+/
+
+ALTER TABLE I8_TABLE1
+ADD CHECK( "T1_COL3" IS NOT NULL )
+/
+
+
+/******************************************************************************/
+/** Generated Script (CREATE): Primary/Unique Key constraints                **/
+/** ------------------------------------------------------------------------ **/
+/******************************************************************************/
+
+ALTER TABLE I8_TABLE1
+ADD CONSTRAINT PK_I8_TABLE1 PRIMARY KEY(T1_COL1)
+USING INDEX
+/
+
+
+/******************************************************************************/
+/** Generated Script (CREATE): Functions                                     **/
+/** ------------------------------------------------------------------------ **/
+/******************************************************************************/
+
+/******************************************************************************/
+/** FUNCTION I8_USEPCKDEF                         * Object from Data Dictionary  */
+/******************************************************************************/
+
+CREATE OR REPLACE FUNCTION I8_USEPCKDEF 
+Return number
+Is
+Begin
+	I8_IMP_PACKAGE_OBJ.IMP_PROC(1);
+	return I8_IMP_PACKAGE_OBJ.IMP_FNC(1);
+End;
+/
+
+
+/******************************************************************************/
+/** Generated Script (CREATE): Procedures                                    **/
+/** ------------------------------------------------------------------------ **/
+/******************************************************************************/
+
+/******************************************************************************/
+/** PROCEDURE I8_PROCUSETYP1                       * Object from Data Dictionary */
+/******************************************************************************/
+
+CREATE OR REPLACE PROCEDURE I8_PROCUSETYP1 
+Is
+	VAR number;
+Begin
+	VAR:=I8_IMP_PACKAGE_OBJ.IMP_FNC(1);				
+	I8_IMP_PACKAGE_OBJ.IMP_PROC(1);
+End;
+/
+
+
+/******************************************************************************/
+/** Generated Script (CREATE): Packages                                      **/
+/** ------------------------------------------------------------------------ **/
+/******************************************************************************/
+
+/******************************************************************************/
+/** PACKAGE I8_IMP_PACKAGE_OBJ                     * Object from Data Dictionary */
+/******************************************************************************/
+
+CREATE OR REPLACE PACKAGE I8_IMP_PACKAGE_OBJ 
+Is
+	procedure IMP_PROC (PARAM1 in NUMBER);
+	function IMP_FNC (PARAM1 in NUMBER) return NUMBER;
+End;
+/
+
+/******************************************************************************/
+/** PACKAGE PCKUSE1                             * Object from Data Dictionary */
+/******************************************************************************/
+
+CREATE OR REPLACE PACKAGE I8_PCKUSE1 
+Is
+	function FCT1 return NUMBER;
+	procedure PS1;
+End;
+/
+
+
+/******************************************************************************/
+/** Generated Script (CREATE): Package bodies                                **/
+/** ------------------------------------------------------------------------ **/
+/******************************************************************************/
+
+/******************************************************************************/
+/** PACKAGE BODY I8_IMP_PACKAGE_OBJ                * Object from Data Dictionary */
+/******************************************************************************/
+
+CREATE OR REPLACE PACKAGE BODY I8_IMP_PACKAGE_OBJ 
+Is
+	procedure IMP_LOCALE (PARAM1 in NUMBER) 
+	is
+	begin 
+		NULL;
+	end;
+	procedure IMP_PROC (PARAM1 in NUMBER)
+	is 
+	begin
+		IMP_LOCALE(1);
+	end;
+	function IMP_FNC (PARAM1 in NUMBER) return NUMBER
+	is 
+	begin
+		IMP_LOCALE(1);
+	end ;
+End;
+/
+
+/******************************************************************************/
+/** PACKAGE BODY I8_PCKUSE1                        * Object from Data Dictionary */
+/******************************************************************************/
+
+CREATE OR REPLACE PACKAGE BODY I8_PCKUSE1 
+Is
+	function FCT1 return NUMBER 
+	is
+	begin
+		I8_IMP_PACKAGE_OBJ.IMP_PROC(1);
+		return I8_IMP_PACKAGE_OBJ.IMP_FNC(1);
+	end;
+	
+	procedure PS1 
+	is
+		VAR number;
+	begin
+		VAR:=I8_IMP_PACKAGE_OBJ.IMP_FNC(1);				
+		I8_IMP_PACKAGE_OBJ.IMP_PROC(1);
+	end;
+End;
+/
+

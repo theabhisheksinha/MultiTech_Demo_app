@@ -1,0 +1,14 @@
+create procedure author_proc (@author varchar(30), @nombre int output)
+	as
+		begin
+			select @author = lower(@author) + '%'
+
+			select au_lname, au_fname
+			from authors
+			where lower(au_lname) like @author
+
+			select @nombre = @@rowcount
+
+			return @@error
+
+		end

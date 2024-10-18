@@ -1,0 +1,25 @@
+Description du profile MyProfile.pfl :
+
+[profile info] 
+description : Profile servant à l'analyze des fichiers *.mpf
+language character : [a-zA-Z0-9]
+
+[extension]
+save type : MySaveType
+
+[Comment]
+monoline :	*	N/A	N/A
+multiline :	**	!	N/A
+
+[String]
+STRING		ENDSTRING	<%
+
+[Embedded SQL]
+Language characters : [a-zA-Z0-9]
+Ignore Server COmments : Yes
+<%>		</>
+
+[Embedded Language]
+OBV		OBV_BEGIN	OBV_END
+
+

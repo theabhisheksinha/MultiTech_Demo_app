@@ -1,0 +1,42 @@
+<HTML XMLNS:TODAY>
+<HEAD>
+<PUBLIC:COMPONENT tagName="DAY">
+  <PROPERTY NAME="value"></PROPERTY>
+  <ATTACH EVENT="oncontentready" ONEVENT="fnInit()"></ATTACH>
+</PUBLIC:COMPONENT>
+
+<STYLE>
+  .clsDay { 
+    width:50;
+    height:50;
+    background-color: pink;
+    align:center;
+    text-align:right;
+  }
+</STYLE>
+
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+function fnInit()
+{
+  document.body.innerHTML = '<FONT COLOR="blue">' + element.value + '</FONT>';
+  document.body.className = "clsDay";
+  defaults.viewLink = document;
+  element.appointments = "";
+  element.date = element.value;
+}
+
+function fnShowAppts()
+{
+  newAppointments = prompt("Add your appointment:", element.appointments);
+  if (newAppointments != null) element.appointments = newAppointments;
+  document.body.innerHTML = '<FONT COLOR="blue">' + element.date + '</FONT>'  + "<BR>" + '<FONT SIZE="1">' + element.appointments + '</FONT>';
+}
+// -->
+</SCRIPT>
+</HEAD>
+
+<BODY onclick="fnShowAppts()">
+</BODY>
+</HTML>
+

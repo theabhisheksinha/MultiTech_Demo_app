@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<AnaMan>
+ <Version>500</Version>
+ <_x31_0>10</_x31_0>
+ <Config>
+  <LogConfig>
+   <UseLog>0</UseLog>
+   <RawTruncate>1</RawTruncate>
+   <RawImmediate>0</RawImmediate>
+   <RawSecure>0</RawSecure>
+   <RawFilePath></RawFilePath>
+   <StdTruncate>1</StdTruncate>
+   <StdImmediate>0</StdImmediate>
+   <StdSecure>0</StdSecure>
+   <StdFilePath>C:\DOCUME~1\TPO\LOCALS~1\Temp\CAST\5.1\AnaMan-Log.txt</StdFilePath>
+   <FieldTerminator>&#x9;</FieldTerminator>
+   <RowTerminator>&#xA;</RowTerminator>
+   <Threshold>4</Threshold>
+   <MaxLine>10000</MaxLine>
+   <ShowDate>0</ShowDate>
+   <IncludeDebug>0</IncludeDebug>
+  </LogConfig>
+  <ConnectionConfig>
+   <UserName>SYSTEM</UserName>
+   <UserPassword>CRYPTED:EAA7599F397B</UserPassword>
+   <ServerName>ORA92</ServerName>
+   <AppWName>CWMM_TPO_511</AppWName>
+   <ProfileName>ORA92_CWMM_TPO_511</ProfileName>
+   <HostName></HostName>
+   <LoginName>CASTCORP\TPO</LoginName>
+   <LoginPassword></LoginPassword>
+   <DatabaseType>Oracle</DatabaseType>
+  </ConnectionConfig>
+ </Config>
+ <Checktree>
+  <UserProject>
+   <Name>Tests</Name>
+   <Job>
+    <Name>dotnet</Name>
+    <Type>.NET Analyzer</Type>
+    <TypeKey>IL_LANGUAGE</TypeKey>
+    <JobItself>true</JobItself>
+   </Job>
+  </UserProject>
+ </Checktree>
+ <Expand>
+  <UserProject>
+   <Name>Tests</Name>
+  </UserProject>
+ </Expand>
+</AnaMan>

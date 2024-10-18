@@ -1,0 +1,4 @@
+CLRT=win	CLR=Lecture_table_titles	CLDT=Tab	CLD=TITLES	BF=Lit le contenu de la table titles	COM=developpé par GPE	ACT=select	PC=Utilisation d'une requête SQL pour lire la table titles	COD=select * from TITLES		
+CLRT=win	CLR=Execution de GetAuthors	CLDT=spr	CLD=GETAUTHORS	BF=exécution de la proc GetAuthors	COM=Developpé par ABD	FP=Lit la procédure GetAuthors	PC=Utilisation de la procedure GetAuthors	COD=exec GETAUTHORS	CLRBF=window permettant d'utiliser la procedure stockée GetAuthors	CLRCOM=Window developpée par ABD
+CLRT=win	CLR=Mise à jour de la vue titleview	CLDT=Vew	CLD=TITLEVIEW	ACT=u+s+i						
+CLRT=batch	CLR=Appel_lecture_titles	CLDT=win	CLD=Lecture_table_titles	BF=test lien tabular	COM=developpé par ABD					

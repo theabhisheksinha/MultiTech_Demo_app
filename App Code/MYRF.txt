@@ -1,0 +1,18 @@
+create procedure MYRF
+as
+begin
+	declare var1 number;
+	begin
+		select 1 into var1 from DUAL;
+	end;
+end;
+
+/
+create procedure MYRF2
+as
+begin
+	MYRF;
+end;
+
+/
+

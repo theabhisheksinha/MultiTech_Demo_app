@@ -1,0 +1,16 @@
+V:\STD\clia\O920\CASTPubs_VBNet\AppliPubs\obj\Debug\AppliPubs.exe
+V:\STD\clia\O920\CASTPubs_VBNet\AppliPubs\obj\Debug\AppliPubs.xml
+V:\STD\clia\O920\CASTPubs_VBNet\AppliPubs\obj\Debug\AppliPubs.pdb
+V:\STD\clia\O920\CASTPubs_VBNet\AppliPubs\bin\AppliPubs.exe
+V:\STD\clia\O920\CASTPubs_VBNet\AppliPubs\bin\AppliPubs.pdb
+V:\STD\clia\O920\CASTPubs_VBNet\AppliPubs\bin\AppliPubs.xml
+V:\STD\clia\O920\CASTPubs_VBNet\AppliPubs\bin\LibraryPubs.dll
+V:\STD\clia\O920\CASTPubs_VBNet\AppliPubs\bin\LibraryPubs.pdb
+V:\STD\clia\O920\CASTPubs_VBNet\AppliPubs\bin\LibraryPubs.xml
+V:\STD\clia\O920\CASTPubs_VBNet\AppliPubs\obj\Debug\ResolveAssemblyReference.cache
+V:\STD\clia\O920\CASTPubs_VBNet\AppliPubs\obj\Debug\AppliPubs.frmAuteur.resources
+V:\STD\clia\O920\CASTPubs_VBNet\AppliPubs\obj\Debug\AppliPubs.frmAuthors1.resources
+V:\STD\clia\O920\CASTPubs_VBNet\AppliPubs\obj\Debug\AppliPubs.frmMain.resources
+V:\STD\clia\O920\CASTPubs_VBNet\AppliPubs\obj\Debug\AppliPubs.frmTitles1.resources
+V:\STD\clia\O920\CASTPubs_VBNet\AppliPubs\obj\Debug\AppliPubs.frmTitleview1.resources
+V:\STD\clia\O920\CASTPubs_VBNet\AppliPubs\obj\Debug\AppliPubs.vbproj.GenerateResource.Cache

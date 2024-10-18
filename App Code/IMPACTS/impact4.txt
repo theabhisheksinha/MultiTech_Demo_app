@@ -1,0 +1,299 @@
+/******************************************************************************/
+/*** ----------------------------------------------------------------------- **/
+/*** CAST Release Builder R2.1                            (generated script) **/
+/*** ----------------------------------------------------------------------- **/
+/******************************************************************************/
+/* Server name    : OSPORTES                           */
+/* Oracle version : 8.1.5.0.0                          */
+/* Schema         : SCOTT                              */
+/* Date & Time    : January 07, 2000 at 04:45 PM       */
+/*******************************************************/
+
+
+
+/******************************************************************************/
+/** Generated Script (CREATE): Synonyms                                      **/
+/** ------------------------------------------------------------------------ **/
+/******************************************************************************/
+
+CREATE SYNONYM I4_SYN_FCT2 FOR I4_CALLFCT2
+/
+
+CREATE SYNONYM I4_SYN_TAB1 FOR I4_TABLE1
+/
+
+
+/******************************************************************************/
+/** Generated Script (CREATE): Tables                                        **/
+/** ------------------------------------------------------------------------ **/
+/******************************************************************************/
+
+CREATE TABLE I4_TABLE1 (
+  T1_COL1                                       NUMBER(10,0)        NOT NULL  ,
+  T1_COL2                                       VARCHAR2(255)       NOT NULL  ,
+  T1_COL3                                       DATE                NOT NULL  ,
+  T1_COL4                                       NUMBER              NULL      
+)
+
+/
+
+CREATE TABLE I4_TABLE2 (
+  T2_COL1                                       NUMBER(10,0)        NOT NULL  ,
+  T2_COL2                                       VARCHAR2(255)       NOT NULL  
+)
+
+/
+
+
+/******************************************************************************/
+/** Generated Script (CREATE): Check constraints                             **/
+/** ------------------------------------------------------------------------ **/
+/******************************************************************************/
+
+ALTER TABLE I4_TABLE1
+ADD CHECK( "T1_COL1" IS NOT NULL )
+/
+
+ALTER TABLE I4_TABLE1
+ADD CHECK( "T1_COL2" IS NOT NULL )
+/
+
+ALTER TABLE I4_TABLE1
+ADD CHECK( "T1_COL3" IS NOT NULL )
+/
+
+ALTER TABLE I4_TABLE2
+ADD CHECK( "T2_COL1" IS NOT NULL )
+/
+
+ALTER TABLE I4_TABLE2
+ADD CHECK( "T2_COL2" IS NOT NULL )
+/
+
+
+/******************************************************************************/
+/** Generated Script (CREATE): Primary/Unique Key constraints                **/
+/** ------------------------------------------------------------------------ **/
+/******************************************************************************/
+
+ALTER TABLE I4_TABLE2
+ADD CONSTRAINT PK_I4_TABLE2 PRIMARY KEY(T2_COL1)
+USING INDEX
+
+/
+
+ALTER TABLE I4_TABLE1
+ADD CONSTRAINT PK_I4_TABLE1 PRIMARY KEY(T1_COL1)
+USING INDEX
+
+/
+
+
+/******************************************************************************/
+/** Generated Script (CREATE): Views                                         **/
+/** ------------------------------------------------------------------------ **/
+/******************************************************************************/
+
+CREATE OR REPLACE FORCE VIEW I4_VIEWONTAB1
+(T1_COL1,T1_COL2,T1_COL3,T1_COL4)
+AS
+select "T1_COL1","T1_COL2","T1_COL3","T1_COL4" from I4_TABLE1
+/
+
+
+/******************************************************************************/
+/** Generated Script (CREATE): Functions                                     **/
+/** ------------------------------------------------------------------------ **/
+/******************************************************************************/
+
+/******************************************************************************/
+/** FUNCTION I4_CALLFCT2                          * Object from Data Dictionary  */
+/******************************************************************************/
+
+CREATE OR REPLACE FUNCTION I4_CALLFCT2 
+Return NUMBER
+Is
+	VAR1 NUMBER;
+Begin
+	return I4_FCALLPS1(VAR1);
+End;
+/
+
+/******************************************************************************/
+/** FUNCTION I4_FCALLPACK                         * Object from Data Dictionary  */
+/******************************************************************************/
+
+CREATE OR REPLACE FUNCTION I4_FCALLPACK 
+Return NUMBER
+Is
+Begin
+	return I4_PACKAGE1.F1;
+End;
+/
+
+/******************************************************************************/
+/** FUNCTION I4_FCALLPS1                          * Object from Data Dictionary  */
+/******************************************************************************/
+
+CREATE OR REPLACE FUNCTION I4_FCALLPS1 (
+	PARAM1 OUT NUMBER
+)
+Return NUMBER
+Is
+	VAR2 NUMBER;
+Begin
+	I4_IMP_PROCEDURE(PARAM1,VAR2);
+	return VAR2;
+End;
+/
+
+
+/******************************************************************************/
+/** Generated Script (CREATE): Procedures                                    **/
+/** ------------------------------------------------------------------------ **/
+/******************************************************************************/
+
+/******************************************************************************/
+/** PROCEDURE I4_IMP_PROCEDURE                     * Object from Data Dictionary */
+/******************************************************************************/
+
+CREATE OR REPLACE PROCEDURE I4_IMP_PROCEDURE (
+	PARAM1 IN NUMBER,
+	PARAM2 OUT NUMBER
+)
+Is
+Begin
+	PARAM2:=PARAM1;	
+End;
+/
+
+/******************************************************************************/
+/** PROCEDURE I4_P_CALLFCT2                        * Object from Data Dictionary */
+/******************************************************************************/
+
+CREATE OR REPLACE PROCEDURE I4_P_CALLFCT2 
+Is
+	VAR1 number;
+Begin
+	I4_P_CALLPS(VAR1);
+End;
+/
+
+/******************************************************************************/
+/** PROCEDURE I4_P_CALLFCT3                        * Object from Data Dictionary */
+/******************************************************************************/
+
+CREATE OR REPLACE PROCEDURE I4_P_CALLFCT3 
+Is
+	VAR1 number;
+Begin
+	VAR1:=I4_CALLFCT2;
+End;
+/
+
+/******************************************************************************/
+/** PROCEDURE I4_P_CALLPACK                        * Object from Data Dictionary */
+/******************************************************************************/
+
+CREATE OR REPLACE PROCEDURE I4_P_CALLPACK 
+Is
+	toto number;
+Begin
+	I4_PACKAGE1.P1;
+	toto:=I4_PACKAGE1.F1;
+	toto:=I4_PACKAGE1.MAIN;
+End;
+/
+
+/******************************************************************************/
+/** PROCEDURE I4_P_CALLPS                          * Object from Data Dictionary */
+/******************************************************************************/
+
+CREATE OR REPLACE PROCEDURE I4_P_CALLPS (
+	PARAM1 OUT NUMBER
+)
+Is
+	VAR1 number;
+	VAR2 number;
+	VAR3 number;
+Begin
+	I4_IMP_PROCEDURE(VAR1,VAR3);
+	I4_IMP_PROCEDURE(VAR1,PARAM1);
+End;
+/
+
+/******************************************************************************/
+/** PROCEDURE I4_P_CALLPS4                         * Object from Data Dictionary */
+/******************************************************************************/
+
+CREATE OR REPLACE PROCEDURE I4_P_CALLPS4 
+Is
+	VAR1 number;
+	VAR2 number;
+	VAR3 number;
+Begin
+	I4_IMP_PROCEDURE(VAR1,VAR2);
+	VAR3:=I4_CALLFCT2;
+End;
+/
+
+/******************************************************************************/
+/** PROCEDURE I4_P_CALLPS5                         * Object from Data Dictionary */
+/******************************************************************************/
+
+CREATE OR REPLACE PROCEDURE I4_P_CALLPS5 
+Is
+	VAR1 number;
+	VAR2 number;
+Begin
+	VAR1:=1;
+	I4_IMP_PROCEDURE(VAR1,VAR2);
+End;
+/
+
+
+/******************************************************************************/
+/** Generated Script (CREATE): Packages                                      **/
+/** ------------------------------------------------------------------------ **/
+/******************************************************************************/
+
+/******************************************************************************/
+/** PACKAGE I4_PACKAGE1                            * Object from Data Dictionary */
+/******************************************************************************/
+
+CREATE OR REPLACE PACKAGE I4_PACKAGE1 
+Is
+	MAIN number;
+	Procedure P1;
+	Function F1 return NUMBER;
+End;
+/
+
+
+/******************************************************************************/
+/** Generated Script (CREATE): Package bodies                                **/
+/** ------------------------------------------------------------------------ **/
+/******************************************************************************/
+
+/******************************************************************************/
+/** PACKAGE BODY I4_PACKAGE1                       * Object from Data Dictionary */
+/******************************************************************************/
+
+CREATE OR REPLACE PACKAGE BODY I4_PACKAGE1 
+Is
+	Procedure P1 is
+		VAR2 NUMBER;
+		VAR3 NUMBER;
+	begin
+		I4_IMP_PROCEDURE(VAR2,MAIN);
+	end;
+	Function F1 return NUMBER is
+		VAR2 NUMBER;
+		VAR3 NUMBER;
+	begin
+		I4_IMP_PROCEDURE(VAR2,VAR3);
+		return VAR3;
+	end;
+End;
+/
+

@@ -1,0 +1,58 @@
+object DataModule1: TDataModule1
+  OldCreateOrder = False
+  Left = 495
+  Top = 136
+  Height = 241
+  Width = 465
+  object MS2000FCH: TDatabase
+    AliasName = 'MS2000FCH'
+    Connected = True
+    DatabaseName = 'MS2000FCH'
+    Params.Strings = (
+      'USER NAME=fch')
+    SessionName = 'Default'
+    Left = 40
+    Top = 16
+  end
+  object Find_by_tokens: TQuery
+    DatabaseName = 'MS2000FCH'
+    Left = 114
+    Top = 16
+  end
+  object New_author: TQuery
+    DatabaseName = 'MS2000FCH'
+    Left = 189
+    Top = 16
+  end
+  object Delete_author: TStoredProc
+    DatabaseName = 'MS2000FCH'
+    StoredProcName = 'GetTitleAuthors'
+    ParamBindMode = pbByNumber
+    Left = 336
+    Top = 16
+  end
+  object Update_author: TQuery
+    DatabaseName = 'MS2000FCH'
+    Left = 264
+    Top = 16
+  end
+  object Table_authors: TTable
+    DatabaseName = 'MS2000FCH'
+    IndexName = 'auidind'
+    TableName = 'dbo.authors'
+    Left = 40
+    Top = 72
+  end
+  object Table_titleview: TTable
+    DatabaseName = 'MS2000FCH'
+    TableName = 'dbo.titleview'
+    Left = 112
+    Top = 72
+  end
+  object Session1: TSession
+    SessionName = 'Session1'
+    OnStartup = Session1Startup
+    Left = 192
+    Top = 72
+  end
+end

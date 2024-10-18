@@ -1,0 +1,45 @@
+Analysis
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	 Name        	: JvCastpubs
+	 Description 	: 
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Files
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	 "L:\_Qa_\GPE\ApplisJava\ApplisDeTest\Castpubs4Java440\Projects\Servlet1\src\com\castsoftware\test\servlet\Servlet1.java"
+	 "L:\_Qa_\GPE\ApplisJava\ApplisDeTest\Castpubs4Java440\Projects\AuthorBean\com\castsoftware\castpubs\AuthorBean.java"
+	 "L:\_Qa_\GPE\ApplisJava\ApplisDeTest\Castpubs4Java440\Projects\AuthorBean\com\castsoftware\castpubs\AuthorBeanEJB.java"
+	 "L:\_Qa_\GPE\ApplisJava\ApplisDeTest\Castpubs4Java440\Projects\AuthorBean\com\castsoftware\castpubs\AuthorBeanHome.java"
+	 "L:\_Qa_\GPE\ApplisJava\ApplisDeTest\Castpubs4Java440\Projects\AuthorBean\com\castsoftware\castpubs\AuthorBeanPK.java"
+	 "L:\_Qa_\GPE\ApplisJava\ApplisDeTest\Castpubs4Java440\Projects\AuthorSalesBean\com\castsoftware\castpubs\AuthorSalesBean.java"
+	 "L:\_Qa_\GPE\ApplisJava\ApplisDeTest\Castpubs4Java440\Projects\AuthorSalesBean\com\castsoftware\castpubs\AuthorSalesBeanEJB.java"
+	 "L:\_Qa_\GPE\ApplisJava\ApplisDeTest\Castpubs4Java440\Projects\AuthorSalesBean\com\castsoftware\castpubs\AuthorSalesBeanHome.java"
+	 "L:\_Qa_\GPE\ApplisJava\ApplisDeTest\Castpubs4Java440\Projects\ServletAuthor\com\castsoftware\castpubs\ServletAuthor.java"
+	 "L:\_Qa_\GPE\ApplisJava\ApplisDeTest\Castpubs4Java440\Projects\ServletAuthorMain\com\castsoftware\castpubs\ServletAuthorMain.java"
+	 "L:\_Qa_\GPE\ApplisJava\ApplisDeTest\Castpubs4Java440\Projects\ServletAuthorSales\com\castsoftware\castpubs\ServletAuthorSales.java"
+	 "L:\_Qa_\GPE\ApplisJava\ApplisDeTest\Castpubs4Java440\Projects\ServletTitlesFindId\com\castsoftware\castpubs\ServletTitlesFindId.java"
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Classpath
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	 "L:\_Qa_\GPE\ApplisJava\ApplisDeTest\Castpubs4Java440\Projects\Jar\servlet.jar"
+	 "L:\_Qa_\GPE\ApplisJava\ApplisDeTest\Castpubs4Java440\Projects\Jar\javax_ejb.zip"
+	 "L:\_Qa_\GPE\ApplisJava\ApplisDeTest\Castpubs4Java440\Projects\Classpath"
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Server objects
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	 SCHEMA 'CASTpubs'
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Options
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	 Only Modified Objects   	: off
+	 Warn About Shared Files 	: on
+	 Skip Confirmation       	: off
+	 Verify Location         	: off
+	 Stored comments         	: JavaDoc Traditional Monoline 
+	 Java Version            	: JDK 1.3
+	 Tab Length              	: 4
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<AnaMan>
+ <Version>500</Version>
+ <Config>
+  <LogConfig>
+   <UseLog>0</UseLog>
+   <RawTruncate>1</RawTruncate>
+   <RawImmediate>0</RawImmediate>
+   <RawSecure>0</RawSecure>
+   <RawFilePath></RawFilePath>
+   <StdTruncate>1</StdTruncate>
+   <StdImmediate>0</StdImmediate>
+   <StdSecure>0</StdSecure>
+   <StdFilePath>E:\temp\AnaMan-Log.txt</StdFilePath>
+   <FieldTerminator>&#x9;</FieldTerminator>
+   <RowTerminator>&#xA;</RowTerminator>
+   <Threshold>4</Threshold>
+   <MaxLine>10000</MaxLine>
+   <ShowDate>0</ShowDate>
+   <IncludeDebug>0</IncludeDebug>
+  </LogConfig>
+  <ConnectionConfig>
+   <UserName>system</UserName>
+   <UserPassword>CRYPTED:EAA7599F</UserPassword>
+   <ServerName>O92CESAR</ServerName>
+   <AppWName>CWMM503</AppWName>
+   <ProfileName>O92CESAR_CWMM503</ProfileName>
+   <HostName></HostName>
+   <LoginName>ABDXP</LoginName>
+   <LoginPassword></LoginPassword>
+   <DatabaseType>Oracle</DatabaseType>
+  </ConnectionConfig>
+ </Config>
+ <Checktree>
+  <UserProject>
+   <Name>up_multi</Name>
+  </UserProject>
+  <UserProject>
+   <Name>xxx_calculs</Name>
+  </UserProject>
+ </Checktree>
+ <Expand>
+  <UserProject>
+   <Name>up_multi</Name>
+   <Job>
+    <Name>job_PLSQL</Name>
+    <Type>PL/SQL Analyzer</Type>
+   </Job>
+   <Job>
+    <Name>job_PLSQL_script</Name>
+    <Type>PL/SQL script Analyzer</Type>
+   </Job>
+  </UserProject>
+  <UserProject>
+   <Name>xxx_calculs</Name>
+  </UserProject>
+ </Expand>
+</AnaMan>

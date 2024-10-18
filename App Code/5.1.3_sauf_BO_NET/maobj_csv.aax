@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<AnaMan>
+ <Version>500</Version>
+ <SubVersion>13</SubVersion>
+ <ListAnalysisProfile>
+  <AnalysisProfile>
+   <_x33_0>s</_x33_0>
+   <_x34_0>i1652</_x34_0>
+   <_x33_8>sCRYPTED:CD8F7ADF7D2A</_x33_8>
+   <_x34_1>i20</_x34_1>
+   <_x35_5>sOCI8:ABDO10G,(DESCRIPTION =    (ADDRESS_LIST =      (ADDRESS = (PROTOCOL = TCP)(HOST = abd2k4)(PORT = 1521))    )    (CONNECT_DATA =      (SERVER = DEDICATED)      (SERVICE_NAME = ABDO10G)    )  )</_x35_5>
+   <_x33_6>i0</_x33_6>
+   <_x31_>sABDO10G</_x31_>
+   <_x32_>sABDO10G</_x32_>
+   <_x33_>sDIP470</_x33_>
+   <_x32_7>sDIP470</_x32_7>
+   <_x38_>i108</_x38_>
+   <_x39_>i151</_x39_>
+   <_x31_0>b1</_x31_0>
+  </AnalysisProfile>
+  <AnalysisProfile>
+   <_x33_0>s</_x33_0>
+   <_x34_0>i1653</_x34_0>
+   <_x33_8>sCRYPTED:EAA7599F</_x33_8>
+   <_x34_8>i1</_x34_8>
+   <_x34_1>i16</_x34_1>
+   <_x33_9>b0</_x33_9>
+   <_x35_5>sOCI8:O92CESAR,(DESCRIPTION =    (ADDRESS_LIST =      (ADDRESS = (PROTOCOL = TCP)(HOST = CESAR)(PORT = 1521))    )    (CONNECT_DATA =      (SERVICE_NAME = GROUCHO)    )  )</_x35_5>
+   <_x33_6>i0</_x33_6>
+   <_x31_>sO92CESAR</_x31_>
+   <_x34_6>i1</_x34_6>
+   <_x32_>sO92CESAR</_x32_>
+   <_x33_>sSYSTEM</_x33_>
+   <_x32_7>sABD304</_x32_7>
+   <_x38_>i107</_x38_>
+   <_x39_>i150</_x39_>
+   <_x31_0>b1</_x31_0>
+  </AnalysisProfile>
+  <AnalysisProfile>
+   <_x33_0>s</_x33_0>
+   <_x34_0>i1654</_x34_0>
+   <_x33_8>s</_x33_8>
+   <_x35_4>i1</_x35_4>
+   <_x34_1>i0</_x34_1>
+   <_x33_9>b0</_x33_9>
+   <_x35_5>sODBC[SQL Server]:ABDXP\MS2K_CASTA</_x35_5>
+   <_x33_6>i0</_x33_6>
+   <_x31_>sMS2K_CASTA</_x31_>
+   <_x32_>sMS2K_CASTA</_x32_>
+   <_x33_>ssa</_x33_>
+   <_x38_>i10</_x38_>
+   <_x39_>i10</_x39_>
+   <_x31_0>b1</_x31_0>
+  </AnalysisProfile>
+  <AnalysisProfile>
+   <_x33_0>scesar.corp.castsoftware.com</_x33_0>
+   <_x34_0>i1655</_x34_0>
+   <_x33_8>sCRYPTED:EDA4188A2E77631F</_x33_8>
+   <_x35_4>i1</_x35_4>
+   <_x34_1>i24</_x34_1>
+   <_x33_9>b0</_x33_9>
+   <_x36_1>sTCP78EAB</_x36_1>
+   <_x35_5>s</_x35_5>
+   <_x33_6>i0</_x33_6>
+   <_x31_>sABD_TEST</_x31_>
+   <_x32_>sABD_TEST</_x32_>
+   <_x35_6>sDB2</_x35_6>
+   <_x33_>sdb2admin</_x33_>
+   <_x38_>i219</_x38_>
+   <_x39_>i289</_x39_>
+   <_x35_7>sABD_TEST</_x35_7>
+   <_x31_0>b1</_x31_0>
+  </AnalysisProfile>
+  <AnalysisProfile>
+   <_x33_0>s</_x33_0>
+   <_x34_0>i1656</_x34_0>
+   <_x33_8>s</_x33_8>
+   <_x35_4>i1</_x35_4>
+   <_x34_1>i0</_x34_1>
+   <_x33_9>b0</_x33_9>
+   <_x35_5>sCTLIB:SYBCASTA,TCP,CASTASRV, 12500</_x35_5>
+   <_x33_6>i0</_x33_6>
+   <_x31_>sSYBCASTA</_x31_>
+   <_x32_>sSYBCASTA</_x32_>
+   <_x33_>ssa</_x33_>
+   <_x38_>i12</_x38_>
+   <_x39_>i12</_x39_>
+   <_x31_0>b1</_x31_0>
+  </AnalysisProfile>
+  <AnalysisProfile>
+   <_x33_0>s</_x33_0>
+   <_x34_0>i1657</_x34_0>
+   <_x33_8>sCRYPTED:CA8779BF1A4F4822</_x33_8>
+   <_x34_4>s</_x34_4>
+   <_x35_4>i1</_x35_4>
+   <_x34_8>i1</_x34_8>
+   <_x34_1>i24</_x34_1>
+   <_x33_9>b0</_x33_9>
+   <_x35_5>sOCI8:O92CASTA,(DESCRIPTION =    (ADDRESS_LIST =      (ADDRESS = (PROTOCOL = TCP)(HOST = 192.168.17.27)(PORT = 1521))    )    (CONNECT_DATA =      (SERVICE_NAME = O92CASTA)    )  )</_x35_5>
+   <_x33_6>i0</_x33_6>
+   <_x31_>sO92CASTA</_x31_>
+   <_x34_6>i1</_x34_6>
+   <_x32_>sO92CASTA</_x32_>
+   <_x33_>sCASTPUBS</_x33_>
+   <_x32_7>sABD_O198</_x32_7>
+   <_x38_>i107</_x38_>
+   <_x39_>i150</_x39_>
+   <_x31_0>b1</_x31_0>
+  </AnalysisProfile>
+ </ListAnalysisProfile>
+ <AppWarehouse>
+  <UserProject>
+   <Id>27801</Id>
+   <Name>zzz_calculs</Name>
+   <Job>
+    <Id>27802</Id>
+    <Name>ma</Name>
+   </Job>
+   <Job>
+    <Id>28949</Id>
+    <Name>csv</Name>
+   </Job>
+  </UserProject>
+ </AppWarehouse>
+ <Attributes>
+  <UserProject>
+   <Name>up_clients</Name>
+   <Job>
+    <Name>job_ABAP</Name>
+    <Type>Abap Analyzer</Type>
+    <TypeKey>ABAP_LANGUAGE</TypeKey>
+    <Active>true</Active>
+    <BreakOnError>true</BreakOnError>
+   </Job>
+   <Job>
+    <Name>job_ASP</Name>
+    <Type>ASP Analyzer</Type>
+    <TypeKey>ASP_LANGUAGE</TypeKey>
+    <Active>true</Active>
+    <BreakOnError>true</BreakOnError>
+   </Job>
+   <Job>
+    <Name>job_JSP</Name>
+    <Type>J2EE Analyzer</Type>
+    <TypeKey>J2EE_LANGUAGE</TypeKey>
+    <Active>true</Active>
+    <BreakOnError>true</BreakOnError>
+   </Job>
+   <Job>
+    <Name>job_CPP</Name>
+    <Type>C++ Analyzer</Type>
+    <TypeKey>C_LANGUAGE</TypeKey>
+    <Active>true</Active>
+    <BreakOnError>true</BreakOnError>
+   </Job>
+   <Job>
+    <Name>job_Delphi</Name>
+    <Type>Delphi Analyzer</Type>
+    <TypeKey>DELPHI_LANGUAGE</TypeKey>
+    <Active>true</Active>
+    <BreakOnError>true</BreakOnError>
+   </Job>
+   <Job>
+    <Name>job_Mainframe</Name>
+    <Type>Mainframe Analyzers</Type>
+    <TypeKey>MAINFRAME_LANGUAGES</TypeKey>
+    <Active>true</Active>
+    <BreakOnError>true</BreakOnError>
+   </Job>
+   <Job>
+    <Name>job_eAv1</Name>
+    <Type>EAnalyzer</Type>
+    <TypeKey>EA_LANGUAGE</TypeKey>
+    <Active>true</Active>
+    <BreakOnError>true</BreakOnError>
+   </Job>
+   <Job>
+    <Name>job_GCS</Name>
+    <Type>Generic Code Scan</Type>
+    <TypeKey>GCS_LANGUAGE</TypeKey>
+    <Active>true</Active>
+    <BreakOnError>true</BreakOnError>
+    <SubJob>
+     <Name>job_tls</Name>
+     <Active>true</Active>
+     <BreakOnError>true</BreakOnError>
+    </SubJob>
+   </Job>
+   <Job>
+    <Name>job_PB7</Name>
+    <Type>PowerBuilder Analyzer</Type>
+    <TypeKey>PBLANGUAGE</TypeKey>
+    <Active>true</Active>
+    <BreakOnError>true</BreakOnError>
+   </Job>
+   <Job>
+    <Name>job_Java</Name>
+    <Type>Java Analyzer</Type>
+    <TypeKey>JAVA_LANGUAGE</TypeKey>
+    <Active>true</Active>
+    <BreakOnError>true</BreakOnError>
+   </Job>
+   <Job>
+    <Name>job_EJB</Name>
+    <Type>EJB Assistant</Type>
+    <TypeKey>EJB_ASSISTANT</TypeKey>
+    <Active>true</Active>
+    <BreakOnError>true</BreakOnError>
+   </Job>
+   <Job>
+    <Name>job_PB8</Name>
+    <Type>PowerBuilder Analyzer</Type>
+    <TypeKey>PBLANGUAGE</TypeKey>
+    <Active>true</Active>
+    <BreakOnError>true</BreakOnError>
+   </Job>
+   <Job>
+    <Name>job_Tibco</Name>
+    <Type>Tibco Analyzer</Type>
+    <TypeKey>EAI_TIB_LANGUAGE</TypeKey>
+    <Active>true</Active>
+    <BreakOnError>true</BreakOnError>
+   </Job>
+   <Job>
+    <Name>job_VB</Name>
+    <Type>Visual Basic Analyzer</Type>
+    <TypeKey>VB_LANGUAGE</TypeKey>
+    <Active>true</Active>
+    <BreakOnError>true</BreakOnError>
+   </Job>
+   <Job>
+    <Name>job_WS</Name>
+    <Type>Web Services Assistant</Type>
+    <TypeKey>WBS_ASSISTANT</TypeKey>
+    <Active>true</Active>
+    <BreakOnError>true</BreakOnError>
+   </Job>
+   <Job>
+    <Name>job_ua</Name>
+    <Type>Universal Analyzer</Type>
+    <TypeKey>UNIVERSAL_LANGUAGE</TypeKey>
+    <Active>true</Active>
+    <BreakOnError>true</BreakOnError>
+   </Job>
+   <Job>
+    <Name>job_iis</Name>
+    <Type>IIS Analyzer</Type>
+    <TypeKey>IIS_LANGUAGE</TypeKey>
+    <Active>true</Active>
+    <BreakOnError>true</BreakOnError>
+   </Job>
+  </UserProject>
+  <UserProject>
+   <Name>up_db2_sql</Name>
+   <Job>
+    <Name>job_DB2</Name>
+    <Type>DB2 Analyzer</Type>
+    <TypeKey>DB2_LANGUAGE</TypeKey>
+    <Active>true</Active>
+    <BreakOnError>true</BreakOnError>
+   </Job>
+  </UserProject>
+  <UserProject>
+   <Name>up_mssql</Name>
+   <Job>
+    <Name>job_TSQL</Name>
+    <Type>T-SQL Analyzer</Type>
+    <TypeKey>TSQL_SERVER</TypeKey>
+    <Active>true</Active>
+    <BreakOnError>true</BreakOnError>
+   </Job>
+  </UserProject>
+  <UserProject>
+   <Name>up_oracle</Name>
+   <Job>
+    <Name>job_PLSQL</Name>
+    <Type>PL/SQL Analyzer</Type>
+    <TypeKey>PLSQL_LANGUAGE</TypeKey>
+    <Active>true</Active>
+    <BreakOnError>true</BreakOnError>
+   </Job>
+   <Job>
+    <Name>job_PLSQL_script</Name>
+    <Type>PL/SQL script Analyzer</Type>
+    <TypeKey>PLSQLScript_LANGUAGE</TypeKey>
+    <Active>true</Active>
+    <BreakOnError>true</BreakOnError>
+   </Job>
+   <Job>
+    <Name>JOB_FORMS</Name>
+    <Type>Forms Analyzer</Type>
+    <TypeKey>FormsLANGUAGE</TypeKey>
+    <Active>true</Active>
+    <BreakOnError>true</BreakOnError>
+   </Job>
+  </UserProject>
+  <UserProject>
+   <Name>up_sybsql</Name>
+   <Job>
+    <Name>job_SYB</Name>
+    <Type>T-SQL Analyzer</Type>
+    <TypeKey>TSQL_SERVER</TypeKey>
+    <Active>true</Active>
+    <BreakOnError>true</BreakOnError>
+   </Job>
+  </UserProject>
+  <UserProject>
+   <Name>zzz_calculs</Name>
+   <Job>
+    <Name>ma</Name>
+    <Type>Metrics Assistant</Type>
+    <TypeKey>METRICS_ASSISTANT</TypeKey>
+    <Active>true</Active>
+    <BreakOnError>true</BreakOnError>
+   </Job>
+   <Job>
+    <Name>csv</Name>
+    <Type>Update CAST System Views</Type>
+    <TypeKey>CSV_TOOL</TypeKey>
+    <Active>true</Active>
+    <BreakOnError>true</BreakOnError>
+   </Job>
+  </UserProject>
+ </Attributes>
+</AnaMan>

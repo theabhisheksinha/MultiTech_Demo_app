@@ -1,0 +1,2 @@
+vbc : Command line error BC2001 : file 'Studio' could not be found
+vbc : Command line error BC2001 : file 'Projects\CASTPubs\LibraryPubs\bin\LibraryPubs.dll' could not be found

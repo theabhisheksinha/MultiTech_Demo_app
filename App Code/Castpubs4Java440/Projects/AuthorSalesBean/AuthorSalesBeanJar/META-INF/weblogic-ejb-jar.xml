@@ -1,0 +1,17 @@
+<!DOCTYPE weblogic-ejb-jar PUBLIC '-//BEA Systems, Inc.//DTD WebLogic 5.1.0 EJB//EN' 'http://www.bea.com/servers/wls510/dtd/weblogic-ejb-jar.dtd'>
+<weblogic-ejb-jar>
+   <weblogic-enterprise-bean>
+      <ejb-name>AuthorSalesBean</ejb-name>
+      <caching-descriptor>
+         <max-beans-in-cache>100</max-beans-in-cache>
+         <idle-timeout-seconds>600</idle-timeout-seconds>
+         <cache-strategy>Read-Write</cache-strategy>
+      </caching-descriptor>
+      <clustering-descriptor>
+         <home-is-clusterable>false</home-is-clusterable>
+         <home-load-algorithm>round-robin</home-load-algorithm>
+      </clustering-descriptor>
+      <enable-call-by-reference>false</enable-call-by-reference>
+      <jndi-name>AuthorSalesBean</jndi-name>
+   </weblogic-enterprise-bean>
+</weblogic-ejb-jar>

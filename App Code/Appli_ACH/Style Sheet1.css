@@ -1,0 +1,17 @@
+BODY
+{
+    BORDER-RIGHT: red double;
+    PAGE-BREAK-BEFORE: auto;
+    BORDER-TOP: red double;
+    FONT-WEIGHT: lighter;
+    FLOAT: left;
+    PAGE-BREAK-AFTER: auto;
+    TEXT-TRANSFORM: capitalize;
+    BORDER-LEFT: red double;
+    COLOR: black;
+    BORDER-BOTTOM: red double;
+    LIST-STYLE-TYPE: none;
+    POSITION: absolute;
+    BACKGROUND-COLOR: transparent;
+    FONT-VARIANT: small-caps
+}

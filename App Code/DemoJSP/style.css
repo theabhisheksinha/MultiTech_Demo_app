@@ -1,0 +1,20 @@
+BODY           {bgcolor:white; text:red; color:black; font-family:arial; font-size:10pt}
+A:link         {color:black}
+A:visited      {color:black}
+A:active       {color:black}	
+.sTitre1       {color:black; font:bold 20pt arial;align="center"}
+.sTitre2       {color:black; font:bold 12pt arial}
+.sTitre3       {color:black; font:bold 10pt arial}
+.sTitre4       {color:black; font:bold 10pt arial; text-decoration:underline; margin-top:5 margin-bottom:5}
+.sNormal       {color:black; font:bold 10pt arial}
+.sLibelle      {color:black; font:bold 8pt arial}
+.sTexte        {color:black; font:8pt arial}
+.sCombo        {color:black; font:8pt arial}
+.sTexteDisable {color:black; font:8pt arial}
+.sLibelleSuppr {color:black; font:bold 8pt arial; text-decoration:line-through}
+.sTexteSuppr   {color:black; font:8pt arial; text-decoration:line-through}
+.sDate         {color:black; font:bold 8pt arial;valign=bottom}
+.sOperation    {color:black; font:bold 8pt arial}
+.sBouton       {color:black; font:bold 8pt arial}
+.sAction       {color:black; font:bold 10pt arial}
+.sVersion      {color:black; font:bold 10pt arial}

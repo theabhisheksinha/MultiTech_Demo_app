@@ -1,0 +1,127 @@
+#include <stdio.h>
+#include <string.h>
+#include <oraca.h>
+#include <sqlca.h>
+#include <sqlcpr.h>
+                      
+/* Variables-hotes */
+
+EXEC SQL BEGIN DECLARE SECTION;
+  char *userid = "FCH/FCH";                  /* variable de connection */  
+                                             /* variables hôtes ...    */                   
+  int     id;                                /* id                     */
+  VARCHAR fname[20];                         /* fname                  */
+  VARCHAR lname[20];                         /* lname                  */ 
+  VARCHAR adress[40];                        /* adresse                 */
+  char    postalcode[10];                    /* code postal            */             
+  VARCHAR city[20];                          /* ville                  */
+  
+  short   ind_adress;                        /* indicatrice NULL       */  
+  
+  char query1[132];                          /* buffer de la SQL query */    
+  char query2[132];                          /* buffer de la SQL query */
+  
+  char *statement;                           /* ptr sur chaine d'une SQL query */
+  char *var_schema = "FCH.";
+  int  host_var; 
+  int  i;
+  	
+EXEC SQL END DECLARE SECTION;
+
+/* Prototype des fonctions */
+
+void sqlglm(char         *message_buffer,
+            unsigned int *buffer_size,
+            unsigned int *message_length);
+void sql_error();
+char *malloc();
+
+/* ------------------------------------------------------------------*/
+/* Construction d'une requete dynamique avec nombre de colonnes fixe */
+/* ------------------------------------------------------------------*/
+void main()
+{
+
+    EXEC SQL WHENEVER SQLERROR DO sql_error();
+    EXEC SQL CONNECT :userid; 
+
+	strcpy(query1,"SELECT au_id,au_fname,au_lname FROM");
+	strcat(query1," authors");
+	strcat(query1," WHERE postalcode >= :postalcode");
+	strcpy(query2,query1);
+
+	EXEC SQL PREPARE my_query FROM :query2;
+	EXEC SQL DECLARE my_cursor CURSOR FOR my_query;
+	
+	codpost = 91;
+	EXEC SQL OPEN my_cursor using postalcode;
+
+	EXEC SQL FETCH my_cursor INTO :id,:fname,:lname;
+	while(sqlca.sqlcode == 0 || sqlca.sqlcode != 1403)
+	{
+		printf("id = %d \n lname = %.*s \n fname = %.*s \n",
+		        id,lname.len,lname.arr,fname.len,fname.arr);
+		EXEC SQL FETCH my_cursor INTO :id,:fname,:lname;
+
+	}
+
+	EXEC SQL CLOSE my_cursor;
+
+	for (i = 0;i<133;i++)
+	{
+		query2[i] = ' ';
+		query1[i] = ' ';
+
+	}
+
+
+/*                                                                  */ 
+/* autre technique avec les pointeurs à la place du tableau de char */
+/*                                                                  */  	
+	statement = malloc(132);
+      sprintf(statement,"SELECT count(*) FROM %sdiscounts",var_schema); 
+
+	sprintf(statement,"SELECT count(*) FROM %sauthors",var_schema); 
+	
+	for (i = 0;*(statement + i) != '\0';i++)
+	{
+		query2[i] = *(statement + i);
+	}
+
+	EXEC SQL PREPARE my_query FROM :query2;
+	EXEC SQL DECLARE my_other_cursor CURSOR FOR my_query;
+	EXEC SQL OPEN my_other_cursor;
+
+	EXEC SQL FETCH my_other_cursor INTO :host_var;
+	while(sqlca.sqlcode == 0 || sqlca.sqlcode != 1403)
+	{
+		printf("count(*)= %d \n", host_var);
+		        
+		EXEC SQL FETCH my_other_cursor INTO :host_var;
+
+	}
+	EXEC SQL CLOSE my_other_cursor;
+
+	EXEC SQL COMMIT RELEASE;
+}
+
+/* --------------------------------------------------------------------- */
+/* Appel de la fonction Oracle qui retourne le message d'erreur integral */
+/* --------------------------------------------------------------------- */
+void sql_error()
+{
+	char         msg_buf[200];
+	unsigned int msg_buf_len,msg_actual_len;
+
+	msg_buf_len = sizeof (msg_buf);
+
+	sqlglm(msg_buf,&msg_buf_len,&msg_actual_len);                
+	
+	printf("sqlcode = %d \n",sqlca.sqlcode);
+	printf("%.*s \n",msg_buf_len,msg_buf);
+
+	EXEC SQL WHENEVER SQLERROR CONTINUE;
+	EXEC SQL CLOSE my_cursor;
+	EXEC SQL ROLLBACK RELEASE;
+
+}

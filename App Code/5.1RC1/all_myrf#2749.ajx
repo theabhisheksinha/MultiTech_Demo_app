@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<jobDescription xmlns="http://www.castsoftware.com">
+<anaJob name="job_DB2" type="787" version="510" cookie="0"></anaJob>
+<anaSel><anaSelEntry refCookie="0" cookie="2" type="256" prop="21" ordNum="0" objType="0"><![CDATA[CASTPUBS.*.*]]></anaSelEntry>
+</anaSel>
+<anaInf><anaInfEntry refCookie="0" infType="1" infSubType="2" blockNo="0">2</anaInfEntry>
+<anaInfEntry refCookie="0" infType="1" infSubType="3" blockNo="0">2</anaInfEntry>
+<anaInfEntry refCookie="0" infType="1" infSubType="26" blockNo="0">2</anaInfEntry>
+<anaInfEntry refCookie="0" infType="1" infSubType="17" blockNo="0">-1</anaInfEntry>
+<anaInfEntry refCookie="0" infType="1" infSubType="20" blockNo="0">2</anaInfEntry>
+<anaInfEntry refCookie="0" infType="1" infSubType="21" blockNo="0">2</anaInfEntry>
+<anaInfEntry refCookie="0" infType="1" infSubType="22" blockNo="0">2</anaInfEntry>
+<anaInfEntry refCookie="0" infType="38000" infSubType="6" blockNo="0">0</anaInfEntry>
+<anaInfEntry refCookie="0" infType="38000" infSubType="3" blockNo="0">1</anaInfEntry>
+<anaInfEntry refCookie="0" infType="38000" infSubType="4" blockNo="0">1</anaInfEntry>
+<anaInfEntry refCookie="0" infType="38000" infSubType="5" blockNo="0">1</anaInfEntry>
+<anaInfEntry refCookie="0" infType="38000" infSubType="2" blockNo="0">0</anaInfEntry>
+</anaInf>
+<anaDesc><anaDescEntry refCookie="0" infType="1" infSubType="1" blockNo="0"><![CDATA[]]></anaDescEntry>
+<anaDescEntry refCookie="0" infType="1" infSubType="18" blockNo="0"><![CDATA[]]></anaDescEntry>
+<anaDescEntry refCookie="0" infType="1" infSubType="19" blockNo="0"><![CDATA[]]></anaDescEntry>
+</anaDesc>
+<anaCnx><anaCnxEntry refCookie="0" connectionName="ABD_TEST"></anaCnxEntry>
+<anaCnxEntry refCookie="2" connectionName="ABD_TEST"></anaCnxEntry>
+</anaCnx>
+
+</jobDescription>

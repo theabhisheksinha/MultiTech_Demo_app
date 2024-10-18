@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<AnaMan>
+ <Version>500</Version>
+ <SubVersion>13</SubVersion>
+ <Config>
+  <LogConfig>
+   <UseLog>0</UseLog>
+   <RawTruncate>1</RawTruncate>
+   <RawImmediate>0</RawImmediate>
+   <RawSecure>0</RawSecure>
+   <RawFilePath></RawFilePath>
+   <StdTruncate>1</StdTruncate>
+   <StdImmediate>0</StdImmediate>
+   <StdSecure>0</StdSecure>
+   <StdFilePath>E:\temp\CAST\CAST\5.1\AnaMan-Log.txt</StdFilePath>
+   <FieldTerminator>&#x9;</FieldTerminator>
+   <RowTerminator>&#xA;</RowTerminator>
+   <Threshold>4</Threshold>
+   <MaxLine>10000</MaxLine>
+   <ShowDate>0</ShowDate>
+   <IncludeDebug>0</IncludeDebug>
+  </LogConfig>
+  <ConnectionConfig>
+   <UserName>DIP470</UserName>
+   <UserPassword>CRYPTED:CD8F7ADF7D2A</UserPassword>
+   <ServerName>ABDO10G</ServerName>
+   <AppWName>DIP470</AppWName>
+   <ProfileName>ABDO10G_DIP470</ProfileName>
+   <HostName></HostName>
+   <LoginName>ABDXP</LoginName>
+   <LoginPassword></LoginPassword>
+   <DatabaseType>Oracle</DatabaseType>
+  </ConnectionConfig>
+ </Config>
+ <Checktree>
+  <UserProject>
+   <Name>zzz_calculs</Name>
+  </UserProject>
+ </Checktree>
+ <Expand>
+  <UserProject>
+   <Name>up_clients</Name>
+   <Job>
+    <Name>job_ABAP</Name>
+    <Type>Abap Analyzer</Type>
+    <TypeKey>ABAP_LANGUAGE</TypeKey>
+   </Job>
+   <Job>
+    <Name>job_ASP</Name>
+    <Type>ASP Analyzer</Type>
+    <TypeKey>ASP_LANGUAGE</TypeKey>
+   </Job>
+   <Job>
+    <Name>job_JSP</Name>
+    <Type>J2EE Analyzer</Type>
+    <TypeKey>J2EE_LANGUAGE</TypeKey>
+   </Job>
+   <Job>
+    <Name>job_CPP</Name>
+    <Type>C++ Analyzer</Type>
+    <TypeKey>C_LANGUAGE</TypeKey>
+   </Job>
+   <Job>
+    <Name>job_Delphi</Name>
+    <Type>Delphi Analyzer</Type>
+    <TypeKey>DELPHI_LANGUAGE</TypeKey>
+   </Job>
+   <Job>
+    <Name>job_Mainframe</Name>
+    <Type>Mainframe Analyzers</Type>
+    <TypeKey>MAINFRAME_LANGUAGES</TypeKey>
+   </Job>
+   <Job>
+    <Name>job_eAv1</Name>
+    <Type>EAnalyzer</Type>
+    <TypeKey>EA_LANGUAGE</TypeKey>
+   </Job>
+   <Job>
+    <Name>job_GCS</Name>
+    <Type>Generic Code Scan</Type>
+    <TypeKey>GCS_LANGUAGE</TypeKey>
+   </Job>
+   <Job>
+    <Name>job_PB7</Name>
+    <Type>PowerBuilder Analyzer</Type>
+    <TypeKey>PBLANGUAGE</TypeKey>
+   </Job>
+   <Job>
+    <Name>job_Java</Name>
+    <Type>Java Analyzer</Type>
+    <TypeKey>JAVA_LANGUAGE</TypeKey>
+   </Job>
+   <Job>
+    <Name>job_PB8</Name>
+    <Type>PowerBuilder Analyzer</Type>
+    <TypeKey>PBLANGUAGE</TypeKey>
+   </Job>
+   <Job>
+    <Name>job_VB</Name>
+    <Type>Visual Basic Analyzer</Type>
+    <TypeKey>VB_LANGUAGE</TypeKey>
+   </Job>
+   <Job>
+    <Name>job_ua</Name>
+    <Type>Universal Analyzer</Type>
+    <TypeKey>UNIVERSAL_LANGUAGE</TypeKey>
+   </Job>
+   <Job>
+    <Name>job_iis</Name>
+    <Type>IIS Analyzer</Type>
+    <TypeKey>IIS_LANGUAGE</TypeKey>
+   </Job>
+  </UserProject>
+  <UserProject>
+   <Name>up_db2_sql</Name>
+   <Job>
+    <Name>job_DB2</Name>
+    <Type>DB2 Analyzer</Type>
+    <TypeKey>DB2_LANGUAGE</TypeKey>
+   </Job>
+  </UserProject>
+  <UserProject>
+   <Name>up_mssql</Name>
+   <Job>
+    <Name>job_TSQL</Name>
+    <Type>T-SQL Analyzer</Type>
+    <TypeKey>TSQL_SERVER</TypeKey>
+   </Job>
+  </UserProject>
+  <UserProject>
+   <Name>up_oracle</Name>
+   <Job>
+    <Name>job_PLSQL</Name>
+    <Type>PL/SQL Analyzer</Type>
+    <TypeKey>PLSQL_LANGUAGE</TypeKey>
+   </Job>
+   <Job>
+    <Name>job_PLSQL_script</Name>
+    <Type>PL/SQL script Analyzer</Type>
+    <TypeKey>PLSQLScript_LANGUAGE</TypeKey>
+   </Job>
+   <Job>
+    <Name>JOB_FORMS</Name>
+    <Type>Forms Analyzer</Type>
+    <TypeKey>FormsLANGUAGE</TypeKey>
+   </Job>
+  </UserProject>
+  <UserProject>
+   <Name>up_sybsql</Name>
+   <Job>
+    <Name>job_SYB</Name>
+    <Type>T-SQL Analyzer</Type>
+    <TypeKey>TSQL_SERVER</TypeKey>
+   </Job>
+  </UserProject>
+  <UserProject>
+   <Name>zzz_calculs</Name>
+  </UserProject>
+ </Expand>
+</AnaMan>

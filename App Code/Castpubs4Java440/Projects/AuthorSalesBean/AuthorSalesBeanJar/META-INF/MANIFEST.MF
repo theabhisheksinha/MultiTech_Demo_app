@@ -1,0 +1,28 @@
+Manifest-Version: 1.0
+
+Name: META-INF/ejb-jar.xml
+
+Name: com/castsoftware/castpubs/AuthorSalesBeanEJBHomeImpl.class
+
+Name: META-INF/weblogic-ejb-jar.xml
+
+Name: com/castsoftware/castpubs/AuthorSalesBeanEJBHomeImplAD.ser
+
+Name: com/castsoftware/castpubs/AuthorSalesBeanEJBHomeImpl_WLSkel.class
+
+Name: com/castsoftware/castpubs/AuthorSalesBeanEJBEOImpl_WLSkel.class
+
+Name: com/castsoftware/castpubs/AuthorSalesBeanHome.class
+
+Name: com/castsoftware/castpubs/AuthorSalesBeanEJBEOImpl_WLStub.class
+
+Name: com/castsoftware/castpubs/AuthorSalesBeanEJBEOImplAD.ser
+
+Name: com/castsoftware/castpubs/AuthorSalesBeanEJBEOImpl.class
+
+Name: com/castsoftware/castpubs/AuthorSalesBeanEJB.class
+
+Name: com/castsoftware/castpubs/AuthorSalesBeanEJBHomeImpl_WLStub.class
+
+Name: com/castsoftware/castpubs/AuthorSalesBean.class
+

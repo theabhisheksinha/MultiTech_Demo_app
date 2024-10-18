@@ -1,0 +1,28 @@
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "AppliPubs", "AppliPubs\AppliPubs.vbproj", "{3B3CFD45-FE75-4695-A1FF-58E02F663F6D}"
+	ProjectSection(ProjectDependencies) = postProject
+		{99B59E3D-B1E6-43E7-A6DD-6940178EB104} = {99B59E3D-B1E6-43E7-A6DD-6940178EB104}
+	EndProjectSection
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "LibraryPubs", "LibraryPubs\LibraryPubs.vbproj", "{99B59E3D-B1E6-43E7-A6DD-6940178EB104}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3B3CFD45-FE75-4695-A1FF-58E02F663F6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B3CFD45-FE75-4695-A1FF-58E02F663F6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B3CFD45-FE75-4695-A1FF-58E02F663F6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B3CFD45-FE75-4695-A1FF-58E02F663F6D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99B59E3D-B1E6-43E7-A6DD-6940178EB104}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99B59E3D-B1E6-43E7-A6DD-6940178EB104}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99B59E3D-B1E6-43E7-A6DD-6940178EB104}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99B59E3D-B1E6-43E7-A6DD-6940178EB104}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

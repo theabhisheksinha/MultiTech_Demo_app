@@ -1,0 +1,53 @@
+<html>
+
+<head>
+<title>Ajouter un employe</title>
+</head>
+<script language="JScript" src="time.js"></script>
+
+
+<body bgcolor="#FFFFFF" onLoad="display_time_in_status_line();">
+<!-- form qui saisie les paramètres des employés et exécute le fichier enregistre.asp pour envoyer les données au serveur-->
+
+<p><font size="3"><b>Formulaire d'ajout de personnel</b></font></p>
+<form method="post" action="enregistre_employee.asp">
+<p><b>Employee ID</b>
+<input type="text" name="employee_id">
+</p>
+<p><b>First_name</b>
+<input type="text" name="first_name">
+</p>
+<p><b>Last_name</b>
+<input type="text" name="last_name">
+</p>
+<p><b>Middle Initial</b>
+<input type="text" name="middle_initial">
+</p>
+<p><b>Job ID</b>
+<input type="text" name="job_id">
+</p>
+<p><b>Manager ID</b>
+<input type="text" name="manager_id">
+</p>
+<p><b>Hire Date</b>
+<input type="text" name="hire_date">
+</p>
+<p><b>Salary</b>
+<input type="text" name="salary">
+</p>
+<p><b>Commission</b>
+<input type="text" name="commission">
+</p>
+<p><b>Department ID</b>
+<input type="text" name="department_id">
+</p>
+<p>
+<input type="submit" name="submit" value="Envoyer">  <input type="BUTTON" value="RETOUR" onClick="window.history.back();">
+</p>
+</form>
+<p>&nbsp;</p>
+
+
+</body>
+
+</html>

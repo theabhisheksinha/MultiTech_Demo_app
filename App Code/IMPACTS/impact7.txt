@@ -1,0 +1,156 @@
+/******************************************************************************/
+/*** ----------------------------------------------------------------------- **/
+/*** CAST Release Builder R2.1                            (generated script) **/
+/*** ----------------------------------------------------------------------- **/
+/******************************************************************************/
+/* Server name    : OSPORTES                           */
+/* Oracle version : 8.1.5.0.0                          */
+/* Schema         : SCOTT                              */
+/* Date & Time    : January 14, 2000 at 11:43 AM       */
+/*******************************************************/
+
+
+
+/******************************************************************************/
+/** Generated Script (CREATE): Tables                                        **/
+/** ------------------------------------------------------------------------ **/
+/******************************************************************************/
+
+CREATE TABLE I7_TABLE1 (
+  T1_COL1                                       NUMBER(10,0)        NOT NULL  ,
+  T1_COL2                                       VARCHAR2(255)       NOT NULL  ,
+  T1_COL3                                       DATE                NOT NULL  ,
+  T1_COL4                                       NUMBER              NULL      
+)
+/
+
+
+/******************************************************************************/
+/** Generated Script (CREATE): Check constraints                             **/
+/** ------------------------------------------------------------------------ **/
+/******************************************************************************/
+
+ALTER TABLE I7_TABLE1
+ADD CHECK( "T1_COL1" IS NOT NULL )
+/
+
+ALTER TABLE I7_TABLE1
+ADD CHECK( "T1_COL2" IS NOT NULL )
+/
+
+ALTER TABLE I7_TABLE1
+ADD CHECK( "T1_COL3" IS NOT NULL )
+/
+
+
+/******************************************************************************/
+/** Generated Script (CREATE): Primary/Unique Key constraints                **/
+/** ------------------------------------------------------------------------ **/
+/******************************************************************************/
+
+ALTER TABLE I7_TABLE1
+ADD CONSTRAINT PK_I7_TABLE1 PRIMARY KEY(T1_COL1)
+USING INDEX
+/
+
+
+/******************************************************************************/
+/** Generated Script (CREATE): Functions                                     **/
+/** ------------------------------------------------------------------------ **/
+/******************************************************************************/
+
+/******************************************************************************/
+/** FUNCTION I7_USEPCKDEF                         * Object from Data Dictionary  */
+/******************************************************************************/
+
+CREATE OR REPLACE FUNCTION I7_USEPCKDEF 
+Return number
+Is
+Begin
+	I7_IMP_PACKAGE_VARDEF.VAR1:=1;
+	open I7_IMP_PACKAGE_VARDEF.Cur1;
+	open I7_IMP_PACKAGE_VARDEF.Cur2 (1);
+	return 1;
+End;
+/
+
+
+/******************************************************************************/
+/** Generated Script (CREATE): Procedures                                    **/
+/** ------------------------------------------------------------------------ **/
+/******************************************************************************/
+
+/******************************************************************************/
+/** PROCEDURE I7_PROCUSETYP1                       * Object from Data Dictionary */
+/******************************************************************************/
+
+CREATE OR REPLACE PROCEDURE I7_PROCUSETYP1 
+Is
+Begin
+	I7_IMP_PACKAGE_VARDEF.VAR1:=1;
+	open I7_IMP_PACKAGE_VARDEF.Cur1;
+	open I7_IMP_PACKAGE_VARDEF.Cur2 (1);
+	
+End;
+/
+
+
+/******************************************************************************/
+/** Generated Script (CREATE): Packages                                      **/
+/** ------------------------------------------------------------------------ **/
+/******************************************************************************/
+
+/******************************************************************************/
+/** PACKAGE I7_IMP_PACKAGE_VARDEF                  * Object from Data Dictionary */
+/******************************************************************************/
+
+CREATE OR REPLACE PACKAGE I7_IMP_PACKAGE_VARDEF 
+Is
+	VAR1 number;
+	cursor Cur1 is select * from I7_TABLE1;
+	cursor Cur2(PARAM1 IN NUMBER) is select * from I7_TABLE1 where T1_COL1=PARAM1;
+End;
+/
+
+/******************************************************************************/
+/** PACKAGE I7_PCKUSE1                             * Object from Data Dictionary */
+/******************************************************************************/
+
+CREATE OR REPLACE PACKAGE I7_PCKUSE1 
+Is
+	function FCT1 return NUMBER;
+	procedure PS1;
+End;
+/
+
+
+/******************************************************************************/
+/** Generated Script (CREATE): Package bodies                                **/
+/** ------------------------------------------------------------------------ **/
+/******************************************************************************/
+
+/******************************************************************************/
+/** PACKAGE BODY I7_PCKUSE1                        * Object from Data Dictionary */
+/******************************************************************************/
+
+CREATE OR REPLACE PACKAGE BODY I7_PCKUSE1 
+Is
+	function FCT1 return NUMBER 
+	is
+	begin
+		I7_IMP_PACKAGE_VARDEF.VAR1:=1;
+		open I7_IMP_PACKAGE_VARDEF.Cur1;
+		open I7_IMP_PACKAGE_VARDEF.Cur2 (1);
+		return 1;
+	end;
+	
+	procedure PS1 
+	is
+	begin
+		I7_IMP_PACKAGE_VARDEF.VAR1:=2;
+		open I7_IMP_PACKAGE_VARDEF.Cur1;
+		open I7_IMP_PACKAGE_VARDEF.Cur2 (1);
+	end;
+End;
+/
+

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<jobDescription xmlns="http://www.castsoftware.com">
+<anaJob name="cout" type="899" version="511" cookie="0"></anaJob>
+<anaSel><anaSelEntry refCookie="0" cookie="2" type="8195" prop="38" ordNum="0" objType="0"><![CDATA[up_clients]]></anaSelEntry>
+<anaSelEntry refCookie="2" cookie="3" type="8195" prop="38" ordNum="0" objType="0"><![CDATA[job_PB8]]></anaSelEntry>
+</anaSel>
+<anaInf><anaInfEntry refCookie="0" infType="1" infSubType="2" blockNo="0">-1</anaInfEntry>
+<anaInfEntry refCookie="0" infType="1" infSubType="3" blockNo="0">-1</anaInfEntry>
+<anaInfEntry refCookie="0" infType="1" infSubType="26" blockNo="0">-1</anaInfEntry>
+<anaInfEntry refCookie="0" infType="1" infSubType="17" blockNo="0">-1</anaInfEntry>
+<anaInfEntry refCookie="0" infType="1" infSubType="20" blockNo="0">2</anaInfEntry>
+<anaInfEntry refCookie="0" infType="1" infSubType="21" blockNo="0">2</anaInfEntry>
+<anaInfEntry refCookie="0" infType="1" infSubType="22" blockNo="0">2</anaInfEntry>
+<anaInfEntry refCookie="0" infType="25020" infSubType="1" blockNo="0">1</anaInfEntry>
+<anaInfEntry refCookie="2" infType="1" infSubType="13" blockNo="0">1578</anaInfEntry>
+<anaInfEntry refCookie="2" infType="1" infSubType="15" blockNo="0">669</anaInfEntry>
+<anaInfEntry refCookie="3" infType="1" infSubType="13" blockNo="0">1745</anaInfEntry>
+<anaInfEntry refCookie="3" infType="1" infSubType="15" blockNo="0">712</anaInfEntry>
+</anaInf>
+<anaDesc><anaDescEntry refCookie="0" infType="1" infSubType="1" blockNo="0"><![CDATA[]]></anaDescEntry>
+<anaDescEntry refCookie="0" infType="1" infSubType="18" blockNo="0"><![CDATA[]]></anaDescEntry>
+<anaDescEntry refCookie="0" infType="1" infSubType="19" blockNo="0"><![CDATA[]]></anaDescEntry>
+</anaDesc>
+<anaCnx></anaCnx>
+
+</jobDescription>

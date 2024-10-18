@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<AnaMan>
+ <Version>500</Version>
+ <Config>
+  <LogConfig>
+   <UseLog>0</UseLog>
+   <RawTruncate>1</RawTruncate>
+   <RawImmediate>1</RawImmediate>
+   <RawSecure>0</RawSecure>
+   <RawFilePath></RawFilePath>
+   <StdTruncate>1</StdTruncate>
+   <StdImmediate>1</StdImmediate>
+   <StdSecure>0</StdSecure>
+   <StdFilePath>C:\DOCUME~1\ABD\LOCALS~1\Temp\AnaMan-Log.txt</StdFilePath>
+   <FieldTerminator>&#x9;</FieldTerminator>
+   <RowTerminator>&#xA;</RowTerminator>
+   <Threshold>4</Threshold>
+   <MaxLine>0</MaxLine>
+   <ShowDate>1</ShowDate>
+   <IncludeDebug>0</IncludeDebug>
+  </LogConfig>
+  <ConnectionConfig>
+   <UserName>ABD_O198</UserName>
+   <UserPassword>CRYPTED:C8846EB4052B3349</UserPassword>
+   <ServerName>O92CASTA</ServerName>
+   <AppWName>ABD_O198</AppWName>
+   <ProfileName>O92CASTA_ABD_O198</ProfileName>
+   <HostName></HostName>
+   <LoginName>castcorp\abd</LoginName>
+   <LoginPassword></LoginPassword>
+   <DatabaseType>Oracle</DatabaseType>
+  </ConnectionConfig>
+ </Config>
+ <Checktree>
+  <UserProject>
+   <Name>up_multi</Name>
+   <Job>
+    <Name>job_TSQL</Name>
+    <Type>T-SQL Analyzer</Type>
+    <JobItself>true</JobItself>
+   </Job>
+   <Job>
+    <Name>job_SYB</Name>
+    <Type>T-SQL Analyzer</Type>
+    <JobItself>true</JobItself>
+   </Job>
+   <Job>
+    <Name>job_DB2</Name>
+    <Type>DB2 Analyzer</Type>
+    <JobItself>true</JobItself>
+   </Job>
+   <Job>
+    <Name>job_PLSQL</Name>
+    <Type>PL/SQL Analyzer</Type>
+    <JobItself>true</JobItself>
+   </Job>
+   <Job>
+    <Name>job_PLSQL_script</Name>
+    <Type>PL/SQL script Analyzer</Type>
+    <JobItself>true</JobItself>
+   </Job>
+   <Job>
+    <Name>job_BO</Name>
+    <Type>BusinessObjects Analyzer</Type>
+    <JobItself>true</JobItself>
+   </Job>
+   <Job>
+    <Name>job_ASP</Name>
+    <Type>ASP Analyzer</Type>
+    <JobItself>true</JobItself>
+   </Job>
+   <Job>
+    <Name>job_JSP</Name>
+    <Type>J2EE Analyzer</Type>
+    <JobItself>true</JobItself>
+   </Job>
+   <Job>
+    <Name>job_DOTNET</Name>
+    <Type>.NET Analyzer</Type>
+    <JobItself>true</JobItself>
+   </Job>
+   <Job>
+    <Name>job_CPP</Name>
+    <Type>C++ Analyzer</Type>
+    <JobItself>true</JobItself>
+   </Job>
+   <Job>
+    <Name>job_Delphi</Name>
+    <Type>Delphi Analyzer</Type>
+    <JobItself>true</JobItself>
+   </Job>
+   <Job>
+    <Name>job_Mainframe</Name>
+    <Type>Mainframe Analyzers</Type>
+    <JobItself>true</JobItself>
+   </Job>
+   <Job>
+    <Name>job_eAv1</Name>
+    <Type>EAnalyzer</Type>
+    <JobItself>true</JobItself>
+   </Job>
+   <Job>
+    <Name>job_GCS</Name>
+    <Type>Generic Code Scan</Type>
+    <JobItself>true</JobItself>
+   </Job>
+   <Job>
+    <Name>job_PB7</Name>
+    <Type>PowerBuilder Analyzer</Type>
+    <JobItself>true</JobItself>
+   </Job>
+   <Job>
+    <Name>job_Java</Name>
+    <Type>Java Analyzer</Type>
+    <JobItself>true</JobItself>
+   </Job>
+   <Job>
+    <Name>job_EJB</Name>
+    <Type>EJB Assistant</Type>
+    <JobItself>true</JobItself>
+   </Job>
+   <Job>
+    <Name>job_PB8</Name>
+    <Type>PowerBuilder Analyzer</Type>
+    <JobItself>true</JobItself>
+   </Job>
+   <Job>
+    <Name>job_Tibco</Name>
+    <Type>Tibco Analyzer</Type>
+    <JobItself>true</JobItself>
+   </Job>
+   <Job>
+    <Name>job_VB</Name>
+    <Type>Visual Basic Analyzer</Type>
+    <JobItself>true</JobItself>
+   </Job>
+   <Job>
+    <Name>job_WS</Name>
+    <Type>Web Services Assistant</Type>
+    <JobItself>true</JobItself>
+   </Job>
+   <Job>
+    <Name>job_ABAP</Name>
+    <Type>Abap Analyzer</Type>
+    <JobItself>true</JobItself>
+   </Job>
+  </UserProject>
+ </Checktree>
+ <Expand>
+  <UserProject>
+   <Name>up_multi</Name>
+  </UserProject>
+ </Expand>
+</AnaMan>

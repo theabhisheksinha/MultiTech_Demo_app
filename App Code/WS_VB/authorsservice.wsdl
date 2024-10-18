@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<definitions xmlns:tns="http://example.com/authors/service" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:defs="http://example.com/authors/definitions" xmlns="http://schemas.xmlsoap.org/wsdl/" targetNamespace="http://example.com/authors/service" name="Authors">
+	<portType name="AuthorsPortType">
+		<operation name="Test_Authors">
+        </operation>
+	</portType>
+	<binding name="AuthorsSoapBinding" type="tns:AuthorsPortType">
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+		<operation name="Test_Authors">
+			<soap:operation soapAction="http://example.com/Test_Authors"/>
+		</operation>
+	</binding>
+	<service name="AuthorsService">
+		<documentation>My first service</documentation>
+		<port name="AuthorsPort" binding="tns:AuthorsSoapBinding">
+			<soap:address location="http://example.com/authors"/>
+		</port>
+	</service>
+</definitions>
+   

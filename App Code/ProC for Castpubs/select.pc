@@ -1,0 +1,114 @@
+/* Sample Pro*C/C++ */
+#include <stdio.h>
+#include <string.h>
+#include <oraca.h>
+#include <sqlca.h>
+
+EXEC SQL BEGIN DECLARE SECTION;
+  char *userid = "FCH/FCH";                  /* variable de connection */                         
+                                             /* variables hotes ....   */
+  int     id;                                /* id                     */
+  VARCHAR lname[20];                         /* lname                  */ 
+  VARCHAR fname[20];                         /* fname                  */ 
+  VARCHAR adress[40];                        /* adresse                */ 
+  char    postalcode[10];                    /* code postal            */
+  VARCHAR city[20];                          /* ville                  */ 
+  short   ind_adress;                        /* indicatrice NULL       */  
+  
+  char SQLSTATE[6];
+EXEC SQL END DECLARE SECTION;
+
+void sql_error(errmsg)
+    char *errmsg;
+{ 
+    char buf[6];
+
+    strcpy(buf, SQLSTATE);
+    EXEC SQL WHENEVER SQLERROR CONTINUE; 
+
+    EXEC SQL COMMIT WORK RELEASE; 
+    
+    if (strncmp(errmsg, "Oracle error", 12) == 0)
+        printf("\n%s, sqlstate is %s\n\n", errmsg, buf);
+    else
+        printf("\n%s\n\n", errmsg);
+
+    printf("Last SQL statement: %.*s\n", 
+    oraca.orastxt.orastxtl, oraca.orastxt.orastxtc); 
+    printf("\nAt or near line number %d\n", oraca.oraslnr); 
+    printf("\nCursor Cache Statistics\n------------------------\n"); 
+    printf("Maximum value of MAXOPENCURSORS:    %d\n", oraca.orahoc); 
+    printf("Maximum open cursors required:      %d\n", oraca.oramoc); 
+    printf("Current number of open cursors:     %d\n", oraca.oracoc); 
+    printf("Number of cache reassignments:      %d\n", oraca.oranor); 
+    printf("Number of SQL statement parses:     %d\n", oraca.oranpr); 
+    printf("Number of SQL statement executions: %d\n", oraca.oranex); 
+    exit(1); 
+} 
+
+void main() 
+{ 
+    char temp_buf[16];
+
+    EXEC SQL WHENEVER SQLERROR DO sql_error("Oracle error");
+    EXEC SQL CONNECT :userid; 
+    
+    EXEC ORACLE OPTION (ORACA=YES);
+
+    oraca.oradbgf  = 1;                    /* enable debug operations */ 
+    oraca.oracchf  = 1;             /* gather cursor cache statistics */ 
+    oraca.orastxtf = 3;              /* always save the SQL statement */ 
+
+    printf("Enter customer id: "); 
+    gets(temp_buf);
+    id = atoi(temp_buf);
+
+    EXEC SQL WHENEVER NOT FOUND DO sql_error("End of data");
+      EXEC SQL SELECT * FROM titleview;
+
+    EXEC SQL SELECT address INTO :adress:ind_adress     
+/*    EXEC SQL SELECT address INTO :adress INDICATOR :ind_adress  */
+       FROM authors 
+       WHERE au_id = :id;
+//---------------------------------------------------- to delete ----///////
+      EXEC SQL EXECUTE
+	    	DECLARE
+		search VARCHAR2(40) := 'Unknown';
+		BEGIN
+		   UPDATE roysched SET title_id = search
+		   WHERE title_id = (SELECT title_id FROM TITLES WHERE title = 'A'); 
+		END;
+	END-EXEC;
+
+//	EXEC SQL CALL getauthors;
+
+	EXEC SQL EXECUTE
+           BEGIN
+                getauthors;
+           END;
+      END-EXEC;
+
+      int id = 10;
+	EXEC SQL CALL salepkg.insert_sales_proc (:id,15,20);
+
+      EXEC SQL BEGIN DECLARE SECTION;
+      VARCHAR id_VARCHAR[16]; 
+      EXEC SQL END DECLARE SECTION;
+
+      chaine = "100";
+	id_VARCHAR.len = 3;
+   
+	for (i=0;i<id_VARCHAR.len;i++)
+		id_VARCHAR.arr[i] = *(chaine + i);
+      
+	EXEC SQL CALL defectspkg.ctrl_defect (:id_VARCHAR) INTO :id;
+
+      EXEC SQL DELETE FROM titles;
+      EXEC SQL INSERT INTO titleauthor VALUES('A','B',1,2);
+      EXEC SQL UPDATE orders SET stor_id = 3 WHERE order_id = 1;
+//---------------------------------------------------- end to delete ----///////
+
+
+    printf("%.10s\n", lname);
+  
+} 

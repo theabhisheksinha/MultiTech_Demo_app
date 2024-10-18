@@ -1,0 +1,7 @@
+V:\STD\clia\O920\CASTPubs_VBNet\LibraryPubs\bin\LibraryPubs.dll
+V:\STD\clia\O920\CASTPubs_VBNet\LibraryPubs\bin\LibraryPubs.pdb
+V:\STD\clia\O920\CASTPubs_VBNet\LibraryPubs\bin\LibraryPubs.xml
+V:\STD\clia\O920\CASTPubs_VBNet\LibraryPubs\obj\Debug\ResolveAssemblyReference.cache
+V:\STD\clia\O920\CASTPubs_VBNet\LibraryPubs\obj\Debug\LibraryPubs.dll
+V:\STD\clia\O920\CASTPubs_VBNet\LibraryPubs\obj\Debug\LibraryPubs.xml
+V:\STD\clia\O920\CASTPubs_VBNet\LibraryPubs\obj\Debug\LibraryPubs.pdb

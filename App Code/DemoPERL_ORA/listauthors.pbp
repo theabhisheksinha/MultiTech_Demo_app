@@ -1,0 +1,13 @@
+[Settings]
+script=D:\www\cgi-shell\fonctionne\oraperl\listauthors.pl
+args=
+pathinfo=
+exec_dir=D:\www\cgi-shell\fonctionne\oraperl
+itype=0
+[Wizard]
+form=
+errout=
+dout=
+rout=
+parse=0
+out=0

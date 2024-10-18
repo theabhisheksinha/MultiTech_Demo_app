@@ -1,0 +1,95 @@
+Menu Module = DEFAULT&SMARTBAR
+Program Unit Type = Procedure
+Database Data Block = Yes
+Query Data Source Type = Table
+Item Type = Text Item
+Database Item = Yes
+Tooltip Visual Attribute Group = DEFAULT
+Item Type = Text Item
+Database Item = Yes
+Tooltip Visual Attribute Group = DEFAULT
+Item Type = Push Button
+Item Type = Push Button
+Database Data Block = Yes
+Query Data Source Type = Table
+Query Data Source Name = INVOICE
+DML Data Target Type = Table
+DML Data Target Name = INVOICE
+Query Allowed = Yes
+Delete Allowed = Yes
+Insert Allowed = Yes
+Update Allowed = Yes
+Item Type = Text Item
+Database Item = Yes
+Column Name = INVOICE_ID
+Item Type = Text Item
+Database Item = Yes
+Column Name = STOR_ID
+Item Type = Text Item
+Database Item = Yes
+Column Name = ORD_NUM
+Item Type = Text Item
+Database Item = Yes
+Column Name = DT_INVOICE
+Item Type = Text Item
+Database Item = Yes
+Column Name = TOTAL_SALES
+Record Group Type = Query
+Record Group Query = select title from titles
+List Type = Record Group
+Record Group = GROUP_LIST_TITLES
+Column Mapping : Information follows
+	Name = TITLE
+	Return Item = BLOCK1.TITLE
+PROCEDURE check_builtin IS
+BEGIN
+
+IF NOT Form_Success THEN
+		RAISE Form_Trigger_Failure;
+END IF;
+
+END;
+declare
+	var_alert number;
+	var_srf varchar2(4);
+begin
+	var_alert := show_alert('INFO_BEGIN_OK');
+	var_srf := 'MYRF';
+	MYRF;
+end;
+:block1.title := :parameter.p_title;
+
+	
+close_Form('DEFECTS');
+DECLARE
+	 alert_button NUMBER;
+	 var_title VARCHAR2(200);
+	 var_defect VARCHAR2(30);
+	 	 
+begin
+	alert_button := null;
+	var_title := null;
+	var_defect:=null;
+	
+	if :block1.title is not null and :block1.defect is not null then
+	/*	select title_id 
+		into var_title_id
+		from titles
+		where title = :block1.title;*/
+		var_title := :block1.title;
+	  var_defect := :block1.defect;
+		   --Rajouter ici l'executtion de la proc qui passe en parametre :block1.title_id
+	  DEFECTSPKG.Add_Defect(var_title, var_defect);
+    alert_button:=Show_Alert('TITLE_ADDED');
+    close_Form('DEFECTS');
+	else
+		alert_button:=Show_Alert('VERIF_IDTITLE');
+	end if;
+
+check_builtin;
+end;
+DECLARE
+	 dummy boolean;
+begin
+   dummy := Show_LOV('TITLES_LIST',100,50);
+end;

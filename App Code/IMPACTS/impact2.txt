@@ -1,0 +1,207 @@
+/******************************************************************************/
+/*** ----------------------------------------------------------------------- **/
+/*** CAST Release Builder R2.1                            (generated script) **/
+/*** ----------------------------------------------------------------------- **/
+/******************************************************************************/
+/* Server name    : OSPORTES                           */
+/* Oracle version : 8.1.5.0.0                          */
+/* Schema         : SCOTT                              */
+/* Date & Time    : January 07, 2000 at 11:42 AM       */
+/*******************************************************/
+
+
+
+/******************************************************************************/
+/** Generated Script (CREATE): Synonyms                                      **/
+/** ------------------------------------------------------------------------ **/
+/******************************************************************************/
+
+CREATE SYNONYM I2_SYN_TAB1 FOR I2_IMP_TABLE1
+/
+
+
+/******************************************************************************/
+/** Generated Script (CREATE): Tables                                        **/
+/** ------------------------------------------------------------------------ **/
+/******************************************************************************/
+
+CREATE TABLE I2_IMP_TABLE1 (
+  T1_COL1                                       NUMBER(10,0)        NOT NULL  ,
+  T1_COL2                                       VARCHAR2(255)       NOT NULL  ,
+  T1_COL3                                       DATE                NOT NULL  ,
+  T1_COL4                                       NUMBER              NULL      
+)
+
+/
+
+CREATE TABLE I2_IMP_TABLE2 (
+  T2_COL1                                       NUMBER(10,0)        NOT NULL  ,
+  T2_COL2                                       VARCHAR2(255)       NOT NULL  
+)
+
+/
+
+
+/******************************************************************************/
+/** Generated Script (CREATE): Primary/Unique Key constraints                **/
+/** ------------------------------------------------------------------------ **/
+/******************************************************************************/
+
+ALTER TABLE I2_IMP_TABLE2
+ADD CONSTRAINT PK_I2_IMP_TABLE2 PRIMARY KEY(T2_COL1)
+USING INDEX
+
+/
+
+ALTER TABLE I2_IMP_TABLE1
+ADD CONSTRAINT PK_I2_IMP_TAB1 PRIMARY KEY(T1_COL1)
+USING INDEX
+
+/
+
+
+/******************************************************************************/
+/** Generated Script (CREATE): Foreign Key constraints                       **/
+/** ------------------------------------------------------------------------ **/
+/******************************************************************************/
+
+ALTER TABLE I2_IMP_TABLE1
+ADD CONSTRAINT I2_IMP_TABLE1_I2_IMP_TABLE2 FOREIGN KEY (T1_COL1) REFERENCES I2_IMP_TABLE2(T2_COL1)
+/
+
+
+/******************************************************************************/
+/** Generated Script (CREATE): Views                                         **/
+/** ------------------------------------------------------------------------ **/
+/******************************************************************************/
+
+CREATE OR REPLACE FORCE VIEW I2_VIEWONTAB1
+(T1_COL1,T1_COL2,T1_COL3,T1_COL4)
+AS
+select "T1_COL1","T1_COL2","T1_COL3","T1_COL4" from I2_IMP_TABLE1
+/
+
+
+/******************************************************************************/
+/** Generated Script (CREATE): Functions                                     **/
+/** ------------------------------------------------------------------------ **/
+/******************************************************************************/
+
+
+CREATE OR REPLACE FUNCTION I2_SYN1_ACCESS 
+Return number
+Is
+	toto number;
+	cursor c is select * from I2_SYN_TAB1;
+Begin
+	select T1_COL1 into toto from I2_SYN_TAB1 where T1_COL1 = 1;
+	return toto;
+End;
+/
+
+
+CREATE OR REPLACE FUNCTION I2_TBL1_ACCESS 
+Return number
+Is
+	toto number;
+	cursor c is select * from I2_IMP_TABLE1;
+Begin
+	select T1_COL1 into toto from I2_IMP_TABLE1 where T1_COL1 = 1;
+	return toto;
+End;
+/
+
+CREATE OR REPLACE FUNCTION I2_VEW1_ACCESS 
+Return number
+Is
+	toto number;
+	cursor c is select * from I2_VIEWONTAB1;
+Begin
+	select T1_COL1 into toto from I2_VIEWONTAB1 where T1_COL1 = 1;
+	return toto;
+End;
+/
+
+
+/******************************************************************************/
+/** Generated Script (CREATE): Procedures                                    **/
+/** ------------------------------------------------------------------------ **/
+/******************************************************************************/
+
+CREATE OR REPLACE PROCEDURE I2_P_SYN1_ACCESS (
+	TOTO OUT NUMBER
+)
+Is
+	cursor c is select * from I2_SYN_TAB1;
+Begin
+	select T1_COL1 into TOTO from I2_SYN_TAB1 where T1_COL1 = 1;
+End;
+/
+
+CREATE OR REPLACE PROCEDURE I2_P_TAB1_ACCESS (
+	TOTO OUT NUMBER
+)
+Is
+	cursor c is select * from I2_IMP_TABLE1;
+Begin
+	select T1_COL1 into TOTO from I2_IMP_TABLE1 where T1_COL1 = 1;
+End;
+/
+
+CREATE OR REPLACE PROCEDURE I2_P_VEW1_ACCESS (
+	TOTO OUT NUMBER
+)
+Is
+	cursor c is select * from I2_VIEWONTAB1;
+Begin
+	select T1_COL1 into TOTO from I2_VIEWONTAB1 where T1_COL1 = 1;
+End;
+/
+
+
+/******************************************************************************/
+/** Generated Script (CREATE): Packages                                      **/
+/** ------------------------------------------------------------------------ **/
+/******************************************************************************/
+
+CREATE OR REPLACE PACKAGE I2_PK_TBL1_ACCESS 
+Is
+	cursor c is select * from I2_IMP_TABLE1;
+	cursor c1 is  select * from I2_SYN_TAB1;
+	cursor c2 is select * from I2_VIEWONTAB1;
+	function F1 return number;
+	procedure P1;
+End;
+/
+
+
+/******************************************************************************/
+/** Generated Script (CREATE): Package bodies                                **/
+/** ------------------------------------------------------------------------ **/
+/******************************************************************************/
+
+CREATE OR REPLACE PACKAGE BODY I2_PK_TBL1_ACCESS 
+Is
+	function F1 return number is
+		cursor fc is select * from I2_IMP_TABLE1;
+		cursor fc1 is  select * from I2_SYN_TAB1;
+		cursor fc2 is select * from I2_VIEWONTAB1;
+	begin
+		delete I2_IMP_TABLE1;  
+		delete I2_SYN_TAB1;   
+	    	delete I2_VIEWONTAB1;
+    	return 1;   
+	End;
+	
+	procedure  P1 is
+		cursor fc is select * from I2_IMP_TABLE1;
+		cursor fc1 is  select * from I2_SYN_TAB1;
+		cursor fc2 is select * from I2_VIEWONTAB1;
+	begin
+		delete I2_IMP_TABLE1;  
+		delete I2_SYN_TAB1;   
+	    	delete I2_VIEWONTAB1;   
+	End;	
+end;
+/
+

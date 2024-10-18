@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<AnaMan>
+ <Version>500</Version>
+ <Config>
+  <LogConfig>
+   <UseLog>0</UseLog>
+   <RawTruncate>1</RawTruncate>
+   <RawImmediate>1</RawImmediate>
+   <RawSecure>0</RawSecure>
+   <RawFilePath></RawFilePath>
+   <StdTruncate>1</StdTruncate>
+   <StdImmediate>1</StdImmediate>
+   <StdSecure>0</StdSecure>
+   <StdFilePath>C:\DOCUME~1\ABD\LOCALS~1\Temp\AnaMan-Log.txt</StdFilePath>
+   <FieldTerminator>&#x9;</FieldTerminator>
+   <RowTerminator>&#xA;</RowTerminator>
+   <Threshold>4</Threshold>
+   <MaxLine>0</MaxLine>
+   <ShowDate>1</ShowDate>
+   <IncludeDebug>0</IncludeDebug>
+  </LogConfig>
+  <ConnectionConfig>
+   <UserName>SYSTEM</UserName>
+   <UserPassword>CRYPTED:FABF599F2F77</UserPassword>
+   <ServerName>O92ABD</ServerName>
+   <AppWName>OBIWAN</AppWName>
+   <ProfileName>O92ABD_OBIWAN</ProfileName>
+   <HostName></HostName>
+   <LoginName>castcorp\abd</LoginName>
+   <LoginPassword></LoginPassword>
+   <DatabaseType>Oracle</DatabaseType>
+  </ConnectionConfig>
+ </Config>
+ <Checktree>
+  <UserProject>
+   <Name>up_multi</Name>
+  </UserProject>
+ </Checktree>
+ <Expand>
+  <UserProject>
+   <Name>up_multi</Name>
+  </UserProject>
+ </Expand>
+</AnaMan>

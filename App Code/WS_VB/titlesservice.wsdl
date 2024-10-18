@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<definitions xmlns:tns="http://example.com/titles/service" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:defs="http://example.com/titles/definitions" xmlns="http://schemas.xmlsoap.org/wsdl/" targetNamespace="http://example.com/titles/service" name="titles">
+	<portType name="titlesPortType">
+		<operation name="Execute_Titles">
+        </operation>
+	</portType>
+	<binding name="titlesSoapBinding" type="tns:titlesPortType">
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+		<operation name="Execute_Titles">
+			<soap:operation soapAction="http://example.com/Execute_Titles"/>
+		</operation>
+	</binding>
+	<service name="titlesService">
+		<documentation>My first service</documentation>
+		<port name="titlesPort" binding="tns:titlesSoapBinding">
+			<soap:address location="http://example.com/titles"/>
+		</port>
+	</service>
+</definitions>
+
+   

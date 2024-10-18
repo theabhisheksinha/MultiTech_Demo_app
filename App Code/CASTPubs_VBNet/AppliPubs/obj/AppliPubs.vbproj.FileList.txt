@@ -1,0 +1,16 @@
+obj\Debug\AppliPubs.exe
+obj\Debug\AppliPubs.pdb
+bin\AppliPubs.exe
+bin\AppliPubs.pdb
+bin\AppliPubs.xml
+bin\LibraryPubs.dll
+bin\LibraryPubs.pdb
+bin\LibraryPubs.xml
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\AppliPubs.frmAuteur.resources
+obj\Debug\AppliPubs.frmAuthors1.resources
+obj\Debug\AppliPubs.frmMain.resources
+obj\Debug\AppliPubs.frmTitles1.resources
+obj\Debug\AppliPubs.frmTitleview1.resources
+obj\Debug\AppliPubs.vbproj.GenerateResource.Cache
+obj\Debug\AppliPubs.xml

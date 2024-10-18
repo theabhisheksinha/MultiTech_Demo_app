@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<jobDescription xmlns="http://www.castsoftware.com">
+<anaJob name="job_iis" type="744" version="513" cookie="0"></anaJob>
+<anaSel><anaSelEntry refCookie="0" cookie="2" type="8195" prop="28" ordNum="0" objType="0"><![CDATA[Root]]></anaSelEntry>
+<anaSelEntry refCookie="2" cookie="3" type="8195" prop="28" ordNum="1" objType="0"><![CDATA[LiensCS]]></anaSelEntry>
+<anaSelEntry refCookie="0" cookie="4" type="8195" prop="15" ordNum="0" objType="0"><![CDATA[ABD_TEST]]></anaSelEntry>
+<anaSelEntry refCookie="4" cookie="5" type="8195" prop="15" ordNum="1" objType="0"><![CDATA[CASTPUBS]]></anaSelEntry>
+<anaSelEntry refCookie="0" cookie="6" type="8195" prop="15" ordNum="2" objType="0"><![CDATA[ABDXP\MS2K_CASTA]]></anaSelEntry>
+<anaSelEntry refCookie="6" cookie="7" type="8195" prop="15" ordNum="3" objType="0"><![CDATA[CASTpubs]]></anaSelEntry>
+<anaSelEntry refCookie="0" cookie="8" type="8195" prop="15" ordNum="4" objType="0"><![CDATA[O92CASTA.US.ORACLE.COM]]></anaSelEntry>
+<anaSelEntry refCookie="8" cookie="9" type="8195" prop="15" ordNum="5" objType="0"><![CDATA[CASTPUBS]]></anaSelEntry>
+<anaSelEntry refCookie="0" cookie="10" type="8195" prop="15" ordNum="6" objType="0"><![CDATA[SYBCASTA]]></anaSelEntry>
+<anaSelEntry refCookie="10" cookie="11" type="8195" prop="15" ordNum="7" objType="0"><![CDATA[CASTpubs]]></anaSelEntry>
+<anaSelEntry refCookie="0" cookie="12" type="16" prop="2" ordNum="0" objType="0"><![CDATA[E:\IIS\Appli_ACH_2\fonctionnel\Liens Client_serveur\Liens_c_s_dyn\include\requete.vbs]]></anaSelEntry>
+<anaSelEntry refCookie="0" cookie="13" type="16" prop="2" ordNum="1" objType="0"><![CDATA[E:\IIS\Appli_ACH_2\fonctionnel\Liens Client_serveur\Liens_c_s_dyn\pagec-s.asp]]></anaSelEntry>
+<anaSelEntry refCookie="0" cookie="14" type="16" prop="2" ordNum="2" objType="0"><![CDATA[E:\IIS\Appli_ACH_2\fonctionnel\Liens Client_serveur\liens_c_s_quoted\dblink.asp]]></anaSelEntry>
+<anaSelEntry refCookie="0" cookie="15" type="16" prop="2" ordNum="3" objType="0"><![CDATA[E:\IIS\Appli_ACH_2\fonctionnel\Liens Client_serveur\liens_c_s_quoted\function.asp]]></anaSelEntry>
+<anaSelEntry refCookie="0" cookie="16" type="16" prop="2" ordNum="4" objType="0"><![CDATA[E:\IIS\Appli_ACH_2\fonctionnel\Liens Client_serveur\liens_c_s_quoted\index.asp]]></anaSelEntry>
+<anaSelEntry refCookie="0" cookie="17" type="16" prop="2" ordNum="5" objType="0"><![CDATA[E:\IIS\Appli_ACH_2\fonctionnel\Liens Client_serveur\liens_c_s_quoted\object_type.asp]]></anaSelEntry>
+<anaSelEntry refCookie="0" cookie="18" type="16" prop="2" ordNum="6" objType="0"><![CDATA[E:\IIS\Appli_ACH_2\fonctionnel\Liens Client_serveur\liens_c_s_quoted\pak.asp]]></anaSelEntry>
+<anaSelEntry refCookie="0" cookie="19" type="16" prop="2" ordNum="7" objType="0"><![CDATA[E:\IIS\Appli_ACH_2\fonctionnel\Liens Client_serveur\liens_c_s_quoted\pak_cur.asp]]></anaSelEntry>
+<anaSelEntry refCookie="0" cookie="20" type="16" prop="2" ordNum="8" objType="0"><![CDATA[E:\IIS\Appli_ACH_2\fonctionnel\Liens Client_serveur\liens_c_s_quoted\pak_fnc.asp]]></anaSelEntry>
+<anaSelEntry refCookie="0" cookie="21" type="16" prop="2" ordNum="9" objType="0"><![CDATA[E:\IIS\Appli_ACH_2\fonctionnel\Liens Client_serveur\liens_c_s_quoted\pak_proc.asp]]></anaSelEntry>
+<anaSelEntry refCookie="0" cookie="22" type="16" prop="2" ordNum="10" objType="0"><![CDATA[E:\IIS\Appli_ACH_2\fonctionnel\Liens Client_serveur\liens_c_s_quoted\pak_type.asp]]></anaSelEntry>
+<anaSelEntry refCookie="0" cookie="23" type="16" prop="2" ordNum="11" objType="0"><![CDATA[E:\IIS\Appli_ACH_2\fonctionnel\Liens Client_serveur\liens_c_s_quoted\procedure.asp]]></anaSelEntry>
+<anaSelEntry refCookie="0" cookie="24" type="16" prop="2" ordNum="12" objType="0"><![CDATA[E:\IIS\Appli_ACH_2\fonctionnel\Liens Client_serveur\liens_c_s_quoted\sequence.asp]]></anaSelEntry>
+<anaSelEntry refCookie="0" cookie="25" type="16" prop="2" ordNum="13" objType="0"><![CDATA[E:\IIS\Appli_ACH_2\fonctionnel\Liens Client_serveur\liens_c_s_quoted\synonym.asp]]></anaSelEntry>
+<anaSelEntry refCookie="0" cookie="26" type="16" prop="2" ordNum="14" objType="0"><![CDATA[E:\IIS\Appli_ACH_2\fonctionnel\Liens Client_serveur\liens_c_s_quoted\table.asp]]></anaSelEntry>
+<anaSelEntry refCookie="0" cookie="27" type="16" prop="2" ordNum="15" objType="0"><![CDATA[E:\IIS\Appli_ACH_2\fonctionnel\Liens Client_serveur\liens_c_s_quoted\vue.asp]]></anaSelEntry>
+<anaSelEntry refCookie="0" cookie="28" type="16" prop="2" ordNum="16" objType="0"><![CDATA[E:\IIS\Appli_ACH_2\fonctionnel\Liens Client_serveur\test_liens_c_s\dblink.asp]]></anaSelEntry>
+<anaSelEntry refCookie="0" cookie="29" type="16" prop="2" ordNum="17" objType="0"><![CDATA[E:\IIS\Appli_ACH_2\fonctionnel\Liens Client_serveur\test_liens_c_s\function.asp]]></anaSelEntry>
+<anaSelEntry refCookie="0" cookie="30" type="16" prop="2" ordNum="18" objType="0"><![CDATA[E:\IIS\Appli_ACH_2\fonctionnel\Liens Client_serveur\test_liens_c_s\index.asp]]></anaSelEntry>
+<anaSelEntry refCookie="0" cookie="31" type="16" prop="2" ordNum="19" objType="0"><![CDATA[E:\IIS\Appli_ACH_2\fonctionnel\Liens Client_serveur\test_liens_c_s\object_type.asp]]></anaSelEntry>
+<anaSelEntry refCookie="0" cookie="32" type="16" prop="2" ordNum="20" objType="0"><![CDATA[E:\IIS\Appli_ACH_2\fonctionnel\Liens Client_serveur\test_liens_c_s\pak.asp]]></anaSelEntry>
+<anaSelEntry refCookie="0" cookie="33" type="16" prop="2" ordNum="21" objType="0"><![CDATA[E:\IIS\Appli_ACH_2\fonctionnel\Liens Client_serveur\test_liens_c_s\pak_cur.asp]]></anaSelEntry>
+<anaSelEntry refCookie="0" cookie="34" type="16" prop="2" ordNum="22" objType="0"><![CDATA[E:\IIS\Appli_ACH_2\fonctionnel\Liens Client_serveur\test_liens_c_s\pak_fnc.asp]]></anaSelEntry>
+<anaSelEntry refCookie="0" cookie="35" type="16" prop="2" ordNum="23" objType="0"><![CDATA[E:\IIS\Appli_ACH_2\fonctionnel\Liens Client_serveur\test_liens_c_s\pak_proc.asp]]></anaSelEntry>
+<anaSelEntry refCookie="0" cookie="36" type="16" prop="2" ordNum="24" objType="0"><![CDATA[E:\IIS\Appli_ACH_2\fonctionnel\Liens Client_serveur\test_liens_c_s\pak_type.asp]]></anaSelEntry>
+<anaSelEntry refCookie="0" cookie="37" type="16" prop="2" ordNum="25" objType="0"><![CDATA[E:\IIS\Appli_ACH_2\fonctionnel\Liens Client_serveur\test_liens_c_s\procedure.asp]]></anaSelEntry>
+<anaSelEntry refCookie="0" cookie="38" type="16" prop="2" ordNum="26" objType="0"><![CDATA[E:\IIS\Appli_ACH_2\fonctionnel\Liens Client_serveur\test_liens_c_s\sequence.asp]]></anaSelEntry>
+<anaSelEntry refCookie="0" cookie="39" type="16" prop="2" ordNum="27" objType="0"><![CDATA[E:\IIS\Appli_ACH_2\fonctionnel\Liens Client_serveur\test_liens_c_s\synonym.asp]]></anaSelEntry>
+<anaSelEntry refCookie="0" cookie="40" type="16" prop="2" ordNum="28" objType="0"><![CDATA[E:\IIS\Appli_ACH_2\fonctionnel\Liens Client_serveur\test_liens_c_s\table.asp]]></anaSelEntry>
+<anaSelEntry refCookie="0" cookie="41" type="16" prop="2" ordNum="29" objType="0"><![CDATA[E:\IIS\Appli_ACH_2\fonctionnel\Liens Client_serveur\test_liens_c_s\vue.asp]]></anaSelEntry>
+<anaSelEntry refCookie="0" cookie="42" type="16" prop="3" ordNum="0" objType="0"><![CDATA[E:\IIS\Appli_ACH_2\fonctionnel\Liens Client_serveur\index_liens_c_s.htm]]></anaSelEntry>
+<anaSelEntry refCookie="0" cookie="43" type="16" prop="3" ordNum="1" objType="0"><![CDATA[E:\IIS\Appli_ACH_2\fonctionnel\Liens Client_serveur\liens_c_s_quoted\index.html]]></anaSelEntry>
+<anaSelEntry refCookie="0" cookie="44" type="16" prop="3" ordNum="2" objType="0"><![CDATA[E:\IIS\Appli_ACH_2\fonctionnel\Liens Client_serveur\test_liens_c_s\index.html]]></anaSelEntry>
+</anaSel>
+<anaInf><anaInfEntry refCookie="2" infType="1" infSubType="13" blockNo="0">-5000</anaInfEntry>
+<anaInfEntry refCookie="2" infType="1" infSubType="15" blockNo="0">0</anaInfEntry>
+<anaInfEntry refCookie="2" infType="1" infSubType="23" blockNo="0">1</anaInfEntry>
+<anaInfEntry refCookie="3" infType="1" infSubType="13" blockNo="0">-5000</anaInfEntry>
+<anaInfEntry refCookie="3" infType="1" infSubType="15" blockNo="0">0</anaInfEntry>
+<anaInfEntry refCookie="3" infType="1" infSubType="23" blockNo="0">0</anaInfEntry>
+<anaInfEntry refCookie="0" infType="17000" infSubType="6" blockNo="0">100</anaInfEntry>
+<anaInfEntry refCookie="0" infType="17000" infSubType="19" blockNo="0">0</anaInfEntry>
+<anaInfEntry refCookie="0" infType="1" infSubType="2" blockNo="0">2</anaInfEntry>
+<anaInfEntry refCookie="0" infType="1" infSubType="3" blockNo="0">2</anaInfEntry>
+<anaInfEntry refCookie="0" infType="1" infSubType="26" blockNo="0">2</anaInfEntry>
+<anaInfEntry refCookie="0" infType="1" infSubType="17" blockNo="0">-1</anaInfEntry>
+<anaInfEntry refCookie="0" infType="1" infSubType="20" blockNo="0">2</anaInfEntry>
+<anaInfEntry refCookie="0" infType="1" infSubType="21" blockNo="0">2</anaInfEntry>
+<anaInfEntry refCookie="0" infType="1" infSubType="22" blockNo="0">2</anaInfEntry>
+<anaInfEntry refCookie="0" infType="1" infSubType="12" blockNo="0">18</anaInfEntry>
+<anaInfEntry refCookie="0" infType="1" infSubType="12" blockNo="1">13</anaInfEntry>
+<anaInfEntry refCookie="0" infType="1" infSubType="12" blockNo="2">9</anaInfEntry>
+<anaInfEntry refCookie="0" infType="1" infSubType="12" blockNo="3">10</anaInfEntry>
+<anaInfEntry refCookie="4" infType="1" infSubType="13" blockNo="0">-5000</anaInfEntry>
+<anaInfEntry refCookie="4" infType="1" infSubType="15" blockNo="0">313</anaInfEntry>
+<anaInfEntry refCookie="4" infType="1" infSubType="23" blockNo="0">1</anaInfEntry>
+<anaInfEntry refCookie="5" infType="1" infSubType="13" blockNo="0">-5000</anaInfEntry>
+<anaInfEntry refCookie="5" infType="1" infSubType="15" blockNo="0">301</anaInfEntry>
+<anaInfEntry refCookie="5" infType="1" infSubType="23" blockNo="0">0</anaInfEntry>
+<anaInfEntry refCookie="6" infType="1" infSubType="13" blockNo="0">-5000</anaInfEntry>
+<anaInfEntry refCookie="6" infType="1" infSubType="15" blockNo="0">127</anaInfEntry>
+<anaInfEntry refCookie="6" infType="1" infSubType="23" blockNo="0">1</anaInfEntry>
+<anaInfEntry refCookie="7" infType="1" infSubType="13" blockNo="0">-5000</anaInfEntry>
+<anaInfEntry refCookie="7" infType="1" infSubType="15" blockNo="0">278</anaInfEntry>
+<anaInfEntry refCookie="7" infType="1" infSubType="23" blockNo="0">0</anaInfEntry>
+<anaInfEntry refCookie="8" infType="1" infSubType="13" blockNo="0">-5000</anaInfEntry>
+<anaInfEntry refCookie="8" infType="1" infSubType="15" blockNo="0">218</anaInfEntry>
+<anaInfEntry refCookie="8" infType="1" infSubType="23" blockNo="0">1</anaInfEntry>
+<anaInfEntry refCookie="9" infType="1" infSubType="13" blockNo="0">-5000</anaInfEntry>
+<anaInfEntry refCookie="9" infType="1" infSubType="15" blockNo="0">17</anaInfEntry>
+<anaInfEntry refCookie="9" infType="1" infSubType="23" blockNo="0">0</anaInfEntry>
+<anaInfEntry refCookie="10" infType="1" infSubType="13" blockNo="0">-5000</anaInfEntry>
+<anaInfEntry refCookie="10" infType="1" infSubType="15" blockNo="0">127</anaInfEntry>
+<anaInfEntry refCookie="10" infType="1" infSubType="23" blockNo="0">1</anaInfEntry>
+<anaInfEntry refCookie="11" infType="1" infSubType="13" blockNo="0">-5000</anaInfEntry>
+<anaInfEntry refCookie="11" infType="1" infSubType="15" blockNo="0">278</anaInfEntry>
+<anaInfEntry refCookie="11" infType="1" infSubType="23" blockNo="0">0</anaInfEntry>
+<anaInfEntry refCookie="0" infType="1" infSubType="8" blockNo="0">1</anaInfEntry>
+<anaInfEntry refCookie="0" infType="1" infSubType="9" blockNo="0">1</anaInfEntry>
+<anaInfEntry refCookie="0" infType="1" infSubType="10" blockNo="0">0</anaInfEntry>
+<anaInfEntry refCookie="0" infType="1" infSubType="16" blockNo="0">1</anaInfEntry>
+<anaInfEntry refCookie="0" infType="1" infSubType="25" blockNo="0">0</anaInfEntry>
+<anaInfEntry refCookie="0" infType="17000" infSubType="17" blockNo="0">1</anaInfEntry>
+<anaInfEntry refCookie="0" infType="17000" infSubType="18" blockNo="0">1</anaInfEntry>
+</anaInf>
+<anaDesc><anaDescEntry refCookie="0" infType="17000" infSubType="9" blockNo="0"><![CDATA[ABD2K4]]></anaDescEntry>
+<anaDescEntry refCookie="0" infType="17000" infSubType="10" blockNo="0"><![CDATA[1 - Default Web Site]]></anaDescEntry>
+<anaDescEntry refCookie="0" infType="17000" infSubType="15" blockNo="0"><![CDATA[C:\WINNT\system32\inetsrv\iisadmin]]></anaDescEntry>
+<anaDescEntry refCookie="0" infType="17000" infSubType="16" blockNo="0"><![CDATA[C:\WINNT\system32\inetsrv\iisadmin]]></anaDescEntry>
+<anaDescEntry refCookie="0" infType="17000" infSubType="15" blockNo="1"><![CDATA[c:\inetpub\scripts]]></anaDescEntry>
+<anaDescEntry refCookie="0" infType="17000" infSubType="16" blockNo="1"><![CDATA[c:\inetpub\scripts]]></anaDescEntry>
+<anaDescEntry refCookie="0" infType="17000" infSubType="15" blockNo="2"><![CDATA[C:\WINNT\web\printers]]></anaDescEntry>
+<anaDescEntry refCookie="0" infType="17000" infSubType="16" blockNo="2"><![CDATA[C:\WINNT\web\printers]]></anaDescEntry>
+<anaDescEntry refCookie="0" infType="17000" infSubType="15" blockNo="3"><![CDATA[E:\IIS\Appli_ACH_2]]></anaDescEntry>
+<anaDescEntry refCookie="0" infType="17000" infSubType="16" blockNo="3"><![CDATA[E:\IIS\Appli_ACH_2]]></anaDescEntry>
+<anaDescEntry refCookie="0" infType="17000" infSubType="15" blockNo="4"><![CDATA[E:\IIS\Appli_ACH_2\fonctionnel\Liens Client_serveur]]></anaDescEntry>
+<anaDescEntry refCookie="0" infType="17000" infSubType="16" blockNo="4"><![CDATA[E:\IIS\Appli_ACH_2\fonctionnel\Liens Client_serveur]]></anaDescEntry>
+<anaDescEntry refCookie="0" infType="17000" infSubType="15" blockNo="5"><![CDATA[C:\Inetpub\webpub]]></anaDescEntry>
+<anaDescEntry refCookie="0" infType="17000" infSubType="16" blockNo="5"><![CDATA[C:\Inetpub\webpub]]></anaDescEntry>
+<anaDescEntry refCookie="0" infType="17000" infSubType="15" blockNo="6"><![CDATA[c:\inetpub\iissamples]]></anaDescEntry>
+<anaDescEntry refCookie="0" infType="17000" infSubType="16" blockNo="6"><![CDATA[c:\inetpub\iissamples]]></anaDescEntry>
+<anaDescEntry refCookie="0" infType="17000" infSubType="15" blockNo="7"><![CDATA[C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\40\isapi]]></anaDescEntry>
+<anaDescEntry refCookie="0" infType="17000" infSubType="16" blockNo="7"><![CDATA[C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\40\isapi]]></anaDescEntry>
+<anaDescEntry refCookie="0" infType="17000" infSubType="15" blockNo="8"><![CDATA[c:\inetpub\wwwroot]]></anaDescEntry>
+<anaDescEntry refCookie="0" infType="17000" infSubType="16" blockNo="8"><![CDATA[c:\inetpub\wwwroot]]></anaDescEntry>
+<anaDescEntry refCookie="0" infType="17000" infSubType="15" blockNo="9"><![CDATA[c:\program files\common files\system\msadc]]></anaDescEntry>
+<anaDescEntry refCookie="0" infType="17000" infSubType="16" blockNo="9"><![CDATA[c:\program files\common files\system\msadc]]></anaDescEntry>
+<anaDescEntry refCookie="0" infType="17000" infSubType="15" blockNo="10"><![CDATA[c:\winnt\help\iishelp]]></anaDescEntry>
+<anaDescEntry refCookie="0" infType="17000" infSubType="16" blockNo="10"><![CDATA[c:\winnt\help\iishelp]]></anaDescEntry>
+<anaDescEntry refCookie="0" infType="1" infSubType="1" blockNo="0"><![CDATA[]]></anaDescEntry>
+<anaDescEntry refCookie="0" infType="1" infSubType="18" blockNo="0"><![CDATA[]]></anaDescEntry>
+<anaDescEntry refCookie="0" infType="1" infSubType="19" blockNo="0"><![CDATA[]]></anaDescEntry>
+<anaDescEntry refCookie="0" infType="17000" infSubType="13" blockNo="0"><![CDATA[*.asp;*.cer;*.cdx;*.asa;*.vbs]]></anaDescEntry>
+<anaDescEntry refCookie="0" infType="17000" infSubType="14" blockNo="0"><![CDATA[]]></anaDescEntry>
+<anaDescEntry refCookie="0" infType="17000" infSubType="11" blockNo="0"><![CDATA[*.html;*.stm;*.htm;*.htc;*.js]]></anaDescEntry>
+<anaDescEntry refCookie="0" infType="17000" infSubType="12" blockNo="0"><![CDATA[]]></anaDescEntry>
+</anaDesc>
+<anaCnx><anaCnxEntry refCookie="4" connectionName="ABD_TEST"></anaCnxEntry>
+<anaCnxEntry refCookie="5" connectionName="ABD_TEST"></anaCnxEntry>
+<anaCnxEntry refCookie="6" connectionName="MS2K_CASTA"></anaCnxEntry>
+<anaCnxEntry refCookie="7" connectionName="MS2K_CASTA"></anaCnxEntry>
+<anaCnxEntry refCookie="8" connectionName="O92CASTA"></anaCnxEntry>
+<anaCnxEntry refCookie="9" connectionName="O92CASTA"></anaCnxEntry>
+<anaCnxEntry refCookie="10" connectionName="SYBCASTA"></anaCnxEntry>
+<anaCnxEntry refCookie="11" connectionName="SYBCASTA"></anaCnxEntry>
+</anaCnx>
+
+</jobDescription>

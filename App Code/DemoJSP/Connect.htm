@@ -1,0 +1,109 @@
+<html>
+<head>
+ <title>CAST Demo Application</title>
+ <script language="JavaScript" src="Scripts/date.js"> </script>
+ <script language="JavaScript" src="Scripts/tests.js"> </script>
+</head>
+<body bgcolor="#FFFFFF" background="pageart/bg_orange.gif">
+<table cellspacing="0" cellpadding="0" border="0">
+  <tr> 
+    <td width="463" height="12" valign="top"></td>
+    <td width="34" height="12" valign="top"></td>
+    <td width="174" height="12" valign="top"></td>
+  </tr>
+  <tr> 
+    <td width="463" height="31" valign="top"><img src="pageart/title.gif" width="459" height="31"></td>
+    <td width="34" height="31" valign="top"></td>
+    <td width="174" height="31" valign="bottom"><img src="pageart/logo_ani.gif" width="174" height="21"></td>
+  </tr>
+  <tr> 
+    <td width="671" height="27" colspan="3" valign="middle" bgcolor="#FF6600"> 
+      <div align="right"><font face="Arial, Helvetica, sans-serif" size="-2" color="#FFFFFF"> 
+        <script language="javascript">display_date();</script>
+        </font></div>
+    </td>
+  </tr>
+  <tr> 
+    <td width="463" height="1" valign="top"><img width="463" height="1" src="pageart/transparent.gif"></td>
+    <td width="34" height="1" valign="top"><img width="34" height="1" src="pageart/transparent.gif"></td>
+    <td width="174" height="1" valign="top"><img width="174" height="1" src="pageart/transparent.gif"></td>
+  </tr>
+  <tr> 
+    <td width="463" height="1" valign="top">&nbsp;</td>
+    <td width="34" height="1" valign="top">&nbsp;</td>
+    <td width="174" height="1" valign="top">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td colspan="3" height="20" valign="top">
+    </td>
+  </tr>
+  <tr>
+    <td colspan="3" height="1" valign="top"> 
+      <center>
+        <p><big><font face="Comic Sans MS" color="#003399">CONNECTION TO SERVER</font></big> 
+        </p>
+      </center>
+      <center>
+      <form  name="form1" method="get" action="Connect.jsp">
+  	  <br>
+       <table border=0 cellpadding=7 cellspacing=3 height=117 style="HEIGHT: 117px" align  =center background="">
+        <tr> 
+          <td width="93"><font color="#003399" face="Comic Sans MS">Login</font></td>
+          <td width="158"> 
+            <input id=text1 name="login" value="CASTPUBS">
+          </td>
+        </tr>
+        <tr> 
+          <td width="93"><font color="#003399" face="Comic Sans MS">Password</font></td>
+          <td width="158"> 
+            <input id=password1 name="password" type=password  value="CASTPUBS">
+          </td>
+        </tr>
+        <tr> 
+          <td width="93"><font color="#003399" face="Comic Sans MS">Server Type</font></td>
+          <td width="158"> 
+            <select id="select1" disabled name="servertype" 
+            style="HEIGHT: 22px; WIDTH: 154px" > 22 154
+              <option value=1 	       >Microsoft</option>
+              <option value=2          >Sybase</option>
+              <option value=3 selected >Oracle</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td width="93"><font color="#003399" face="Comic Sans MS">Server</font></td>
+          <td width="158">
+            <input id=text2 name="server" value="FRESU">
+          </td>
+        </tr>
+        <tr>
+          <td width="93"><font color="#003399" face="Comic Sans MS">Port N°</font></td>
+          <td width="158">
+            <input id=text2 name="port" value="1521">
+          </td>
+        </tr>
+        <tr>
+          <td width="93"><font color="#003399" face="Comic Sans MS">DB SID</font></td>
+          <td width="158">
+            <input id=text2 name="sid" value="FRESU">
+          </td>
+        </tr>
+        <tr>
+          <td width="93">&nbsp;</td>
+          <td width="158">&nbsp;</td>
+        </tr>
+        <td width="93">&nbsp;</td>
+        <td width="158"> 
+          <input id="submit1" name="submit1" type="button" value="Connect" onClick="JavaScript:test_formulaire_connection( this.form );">
+        </td>
+        </tr>
+      </table>
+        </form>
+      </center>    
+    </td>
+  </tr>
+</table>
+
+
+</body>
+</html>

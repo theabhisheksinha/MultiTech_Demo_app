@@ -1,0 +1,22 @@
+/*create table authors (
+	col1 number,
+	col2 varchar2(255),
+	col3 date
+)
+/
+*/
+
+create function "liens_existants" return int
+is
+	a varchar2(255);
+begin
+	select au_lname from authors where au_lname='MYRF';
+	return 0;
+end;
+/
+create procedure "lien_titles" (name in varchar2, id out number,type out varchar2) is
+begin
+	select title_id,type_ into id,type from titles where title=name;
+end;
+/
+

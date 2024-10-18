@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<AnaMan>
+ <Version>500</Version>
+ <SubVersion>13</SubVersion>
+ <Config>
+  <LogConfig>
+   <UseLog>0</UseLog>
+   <RawTruncate>1</RawTruncate>
+   <RawImmediate>0</RawImmediate>
+   <RawSecure>0</RawSecure>
+   <RawFilePath></RawFilePath>
+   <StdTruncate>1</StdTruncate>
+   <StdImmediate>0</StdImmediate>
+   <StdSecure>0</StdSecure>
+   <StdFilePath>E:\temp\CAST\CAST\5.1\AnaMan-Log.txt</StdFilePath>
+   <FieldTerminator>&#x9;</FieldTerminator>
+   <RowTerminator>&#xA;</RowTerminator>
+   <Threshold>4</Threshold>
+   <MaxLine>10000</MaxLine>
+   <ShowDate>0</ShowDate>
+   <IncludeDebug>0</IncludeDebug>
+  </LogConfig>
+  <ConnectionConfig>
+   <UserName>DIP470</UserName>
+   <UserPassword>CRYPTED:CD8F7ADF7D2A</UserPassword>
+   <ServerName>ABDO10G</ServerName>
+   <AppWName>DIP470</AppWName>
+   <ProfileName>ABDO10G_DIP470</ProfileName>
+   <HostName></HostName>
+   <LoginName>ABDXP</LoginName>
+   <LoginPassword></LoginPassword>
+   <DatabaseType>Oracle</DatabaseType>
+  </ConnectionConfig>
+ </Config>
+ <Checktree>
+  <UserProject>
+   <Name>zzz_calculs</Name>
+  </UserProject>
+ </Checktree>
+ <Expand>
+  <UserProject>
+   <Name>up_db2_sql</Name>
+   <Job>
+    <Name>job_DB2</Name>
+    <Type>DB2 Analyzer</Type>
+    <TypeKey>DB2_LANGUAGE</TypeKey>
+   </Job>
+  </UserProject>
+  <UserProject>
+   <Name>up_mssql</Name>
+   <Job>
+    <Name>job_TSQL</Name>
+    <Type>T-SQL Analyzer</Type>
+    <TypeKey>TSQL_SERVER</TypeKey>
+   </Job>
+  </UserProject>
+  <UserProject>
+   <Name>up_oracle</Name>
+   <Job>
+    <Name>job_PLSQL</Name>
+    <Type>PL/SQL Analyzer</Type>
+    <TypeKey>PLSQL_LANGUAGE</TypeKey>
+   </Job>
+   <Job>
+    <Name>job_PLSQL_script</Name>
+    <Type>PL/SQL script Analyzer</Type>
+    <TypeKey>PLSQLScript_LANGUAGE</TypeKey>
+   </Job>
+   <Job>
+    <Name>JOB_FORMS</Name>
+    <Type>Forms Analyzer</Type>
+    <TypeKey>FormsLANGUAGE</TypeKey>
+   </Job>
+  </UserProject>
+  <UserProject>
+   <Name>up_sybsql</Name>
+   <Job>
+    <Name>job_SYB</Name>
+    <Type>T-SQL Analyzer</Type>
+    <TypeKey>TSQL_SERVER</TypeKey>
+   </Job>
+  </UserProject>
+  <UserProject>
+   <Name>zzz_calculs</Name>
+  </UserProject>
+ </Expand>
+</AnaMan>

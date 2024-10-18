@@ -1,0 +1,94 @@
+#include <stdio.h>
+#include <string.h>
+#include <oraca.h>
+#include <sqlca.h>
+#include <sqlcpr.h>
+
+/* Variables-hotes */
+
+EXEC SQL BEGIN DECLARE SECTION;
+  char    *userid = "Castpubs/Castpubs";             /* variable de connection */
+  int     nb_row = 0;
+  int     id;
+ 
+  int     order_id;
+  char    *state;
+  VARCHAR fname[20];
+  VARCHAR lname[20];
+
+EXEC SQL END DECLARE SECTION;
+
+EXEC SQL DECLARE authors TABLE                /* ...a cause du PL/SQL   */
+   (AU_ID     NUMBER(16,0)  NOT NULL ,        /* si l'option USERID= de */
+    AU_FNAME  VARCHAR2(20)  NOT NULL ,        /* pre-comp est omise     */
+    AU_LNAME  VARCHAR2(20)  NOT NULL ,
+    ADDRESS   VARCHAR2(40)           ,
+    CITY      VARCHAR2(20)           ,
+    STATE        CHAR(2)             ,
+    COUNTRY   VARCHAR2(12)           ,   
+    POSTALCODE CHAR(10)              
+    );
+
+/* Variables diverses      */
+	char    *chaine;
+	int     return_code;       
+/* Prototype des fonctions */
+
+void sqlglm(char         *message_buffer,
+            unsigned int *buffer_size,
+            unsigned int *message_length);
+void sql_error();
+
+/* ------------------------------------------------------------------*/
+/* Appel d'une function stockée PL/SQL                              */
+/* ------------------------------------------------------------------*/
+
+void main()
+{
+    EXEC SQL WHENEVER SQLERROR DO sql_error();
+    EXEC SQL CONNECT :userid; 
+
+	EXEC SQL COMMIT;
+/*
+	EXEC SQL EXECUTE
+	    	DECLARE
+		search VARCHAR2(40) := 'Unknown';
+		BEGIN
+		   SELECT count(*) INTO :nb_row FROM authors
+		   WHERE address = search; 
+		END;
+	END-EXEC;
+*/
+	EXEC SQL CALL deliverorder(:au_id,:state);
+
+	EXEC SQL EXECUTE
+           BEGIN
+                :return_code := deliverorder(:au_id,:state);
+           END;
+      END-EXEC;
+
+	EXEC SQL COMMIT RELEASE;
+
+	printf("count(*)= %d \n",nb_row);
+      printf("lname = %.*s \n",lname.len,lname.arr);
+}
+
+/* --------------------------------------------------------------------- */
+/* Appel de la fonction Oracle qui retourne le message d'erreur integral */
+/* --------------------------------------------------------------------- */
+void sql_error()
+{
+	char         msg_buf[200];
+	unsigned int msg_buf_len,msg_actual_len;
+
+	msg_buf_len = sizeof (msg_buf);
+
+	sqlglm(msg_buf,&msg_buf_len,&msg_actual_len);                
+	
+	printf("sqlcode = %d \n",sqlca.sqlcode);
+	printf("%.*s \n",msg_buf_len,msg_buf);
+
+	EXEC SQL WHENEVER SQLERROR CONTINUE;
+	EXEC SQL ROLLBACK RELEASE;
+
+} 

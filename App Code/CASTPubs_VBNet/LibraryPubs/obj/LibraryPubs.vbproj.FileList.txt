@@ -1,0 +1,7 @@
+bin\LibraryPubs.dll
+bin\LibraryPubs.pdb
+bin\LibraryPubs.xml
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\LibraryPubs.dll
+obj\Debug\LibraryPubs.xml
+obj\Debug\LibraryPubs.pdb

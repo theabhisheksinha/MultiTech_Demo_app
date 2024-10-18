@@ -1,0 +1,731 @@
+/******************************************************************************/
+/*** ----------------------------------------------------------------------- **/
+/*** CAST Release Builder R2.1                            (generated script) **/
+/*** ----------------------------------------------------------------------- **/
+/******************************************************************************/
+/* Server name    : OSPORTES                           */
+/* Oracle version : 8.1.5.0.0                          */
+/* Schema         : SCOTT                              */
+/* Date & Time    : January 05, 2000 at 03:27 PM       */
+/*******************************************************/
+
+
+
+/******************************************************************************/
+/** Generated Script (CREATE): Synonyms                                      **/
+/** ------------------------------------------------------------------------ **/
+/******************************************************************************/
+
+CREATE SYNONYM SYN_TAB1 FOR IMP_TABLE1
+/
+
+
+/******************************************************************************/
+/** Generated Script (CREATE): Tables                                        **/
+/** ------------------------------------------------------------------------ **/
+/******************************************************************************/
+
+CREATE TABLE IMP_TABLE1 (
+  T1_COL1                                       NUMBER(10,0)        NOT NULL  ,
+  T1_COL2                                       VARCHAR2(255)       NOT NULL  ,
+  T1_COL3                                       DATE                NOT NULL  ,
+  T1_COL4                                       NUMBER              NULL      
+)
+
+/
+
+CREATE TABLE IMP_TABLE2 (
+  T2_COL1                                       NUMBER(10,0)        NOT NULL  ,
+  T2_COL2                                       VARCHAR2(255)       NOT NULL  
+)
+
+/
+
+
+/******************************************************************************/
+/** Generated Script (CREATE): Primary/Unique Key constraints                **/
+/** ------------------------------------------------------------------------ **/
+/******************************************************************************/
+
+ALTER TABLE IMP_TABLE2
+ADD CONSTRAINT PK_IMP_TABLE2 PRIMARY KEY(T2_COL1)
+USING INDEX
+
+/
+
+ALTER TABLE IMP_TABLE1
+ADD CONSTRAINT PK_IMP_TAB1 PRIMARY KEY(T1_COL1)
+USING INDEX
+
+/
+
+
+/******************************************************************************/
+/** Generated Script (CREATE): Foreign Key constraints                       **/
+/** ------------------------------------------------------------------------ **/
+/******************************************************************************/
+
+ALTER TABLE IMP_TABLE1
+ADD CONSTRAINT IMP_TABLE1_IMP_TABLE2 FOREIGN KEY (T1_COL1) REFERENCES IMP_TABLE2(T2_COL1)
+/
+
+
+/******************************************************************************/
+/** Generated Script (CREATE): Views                                         **/
+/** ------------------------------------------------------------------------ **/
+/******************************************************************************/
+
+CREATE OR REPLACE FORCE VIEW VIEWONTAB1
+(T1_COL1,T1_COL2,T1_COL3,T1_COL4)
+AS
+select "T1_COL1","T1_COL2","T1_COL3","T1_COL4" from IMP_TABLE1
+/
+
+
+/******************************************************************************/
+/** Generated Script (CREATE): Functions                                     **/
+/** ------------------------------------------------------------------------ **/
+/******************************************************************************/
+
+/******************************************************************************/
+/** FUNCTION F_RET_COLTYP_T1_COL1              * Object from Data Dictionary  */
+/******************************************************************************/
+
+CREATE OR REPLACE FUNCTION F_RET_COLTYP_T1_COL1 
+Return IMP_TABLE1.T1_COL1%TYPE
+Is
+Begin
+	return null;
+End;
+/
+
+/******************************************************************************/
+/** FUNCTION F_RET_COLTYP_T1_COL1_2            * Object from Data Dictionary  */
+/******************************************************************************/
+
+CREATE OR REPLACE FUNCTION F_RET_COLTYP_T1_COL1_2 
+Return SYN_TAB1.T1_COL1%TYPE
+Is
+Begin
+	return null;
+End;
+/
+
+/******************************************************************************/
+/** FUNCTION F_RET_COLTYP_T1_COL1_3            * Object from Data Dictionary  */
+/******************************************************************************/
+
+CREATE OR REPLACE FUNCTION F_RET_COLTYP_T1_COL1_3 
+Return VIEWONTAB1.T1_COL1%TYPE
+Is
+Begin
+	return null;
+End;
+/
+
+/******************************************************************************/
+/** FUNCTION F_RET_ROWTYP_T1                   * Object from Data Dictionary  */
+/******************************************************************************/
+
+CREATE OR REPLACE FUNCTION F_RET_ROWTYP_T1 
+Return IMP_TABLE1%ROWTYPE
+Is
+Begin
+	return null;
+End;
+/
+
+/******************************************************************************/
+/** FUNCTION F_RET_ROWTYP_T1_2                 * Object from Data Dictionary  */
+/******************************************************************************/
+
+CREATE OR REPLACE FUNCTION F_RET_ROWTYP_T1_2 
+Return SYN_TAB1%ROWTYPE
+Is
+Begin
+	return null;
+End;
+/
+
+/******************************************************************************/
+/** FUNCTION F_RET_ROWTYP_T1_3                 * Object from Data Dictionary  */
+/******************************************************************************/
+
+CREATE OR REPLACE FUNCTION F_RET_ROWTYP_T1_3 
+Return VIEWONTAB1%ROWTYPE
+Is
+Begin
+	return null;
+End;
+/
+
+/******************************************************************************/
+/** FUNCTION F_USE_COLTYP_T1_COL1              * Object from Data Dictionary  */
+/******************************************************************************/
+
+CREATE OR REPLACE FUNCTION F_USE_COLTYP_T1_COL1 (
+	PARAM1 IN IMP_TABLE1.T1_COL1%TYPE
+)
+Return NUMBER
+Is
+Begin
+	return 1;
+End;
+/
+
+/******************************************************************************/
+/** FUNCTION F_USE_COLTYP_T1_COL1_2            * Object from Data Dictionary  */
+/******************************************************************************/
+
+CREATE OR REPLACE FUNCTION F_USE_COLTYP_T1_COL1_2 (
+	PARAM1 IN SYN_TAB1.T1_COL1%TYPE
+)
+Return NUMBER
+Is
+Begin
+	return 1;
+End;
+/
+
+/******************************************************************************/
+/** FUNCTION F_USE_COLTYP_T1_COL1_3            * Object from Data Dictionary  */
+/******************************************************************************/
+
+CREATE OR REPLACE FUNCTION F_USE_COLTYP_T1_COL1_3 (
+	PARAM1 IN VIEWONTAB1.T1_COL1%TYPE
+)
+Return NUMBER
+Is
+Begin
+	return 1;
+End;
+/
+
+/******************************************************************************/
+/** FUNCTION F_USE_ROWTYP_T1_COL1              * Object from Data Dictionary  */
+/******************************************************************************/
+
+CREATE OR REPLACE FUNCTION F_USE_ROWTYP_T1_COL1 (
+	PARAM1 IN IMP_TABLE1%ROWTYPE
+)
+Return NUMBER
+Is
+Begin
+	return 1;
+	NULL;
+End;
+/
+
+/******************************************************************************/
+/** FUNCTION F_USE_ROWTYP_T1_COL1_2            * Object from Data Dictionary  */
+/******************************************************************************/
+
+CREATE OR REPLACE FUNCTION F_USE_ROWTYP_T1_COL1_2 (
+	PARAM1 IN SYN_TAB1%ROWTYPE
+)
+Return NUMBER
+Is
+Begin
+	return 1;
+	NULL;
+End;
+/
+
+/******************************************************************************/
+/** FUNCTION F_USE_ROWTYP_T1_COL1_3            * Object from Data Dictionary  */
+/******************************************************************************/
+
+CREATE OR REPLACE FUNCTION F_USE_ROWTYP_T1_COL1_3 (
+	PARAM1 IN VIEWONTAB1%ROWTYPE
+)
+Return NUMBER
+Is
+Begin
+	return 1;
+	NULL;
+End;
+/
+
+
+/******************************************************************************/
+/** Generated Script (CREATE): Procedures                                    **/
+/** ------------------------------------------------------------------------ **/
+/******************************************************************************/
+
+/******************************************************************************/
+/** PROCEDURE CALLPROC1                         * Object from Data Dictionary */
+/******************************************************************************/
+
+CREATE OR REPLACE PROCEDURE CALLPROC1 
+Is
+	titi IMP_TABLE1%ROWTYPE;
+Begin
+	USE_ROWTYP_T1_COL1(titi);
+
+End;
+/
+
+/******************************************************************************/
+/** PROCEDURE CALLPROC1_2                       * Object from Data Dictionary */
+/******************************************************************************/
+
+CREATE OR REPLACE PROCEDURE CALLPROC1_2 
+Is
+	titi SYN_TAB1%ROWTYPE;
+Begin
+	USE_ROWTYP_T1_COL1_2(titi);
+
+End;
+/
+
+/******************************************************************************/
+/** PROCEDURE CALLPROC1_3                       * Object from Data Dictionary */
+/******************************************************************************/
+
+CREATE OR REPLACE PROCEDURE CALLPROC1_3 
+Is
+	titi VIEWONTAB1%ROWTYPE;
+Begin
+	USE_ROWTYP_T1_COL1_3(titi);
+
+End;
+/
+
+/******************************************************************************/
+/** PROCEDURE CALLPROC2                         * Object from Data Dictionary */
+/******************************************************************************/
+
+CREATE OR REPLACE PROCEDURE CALLPROC2 
+Is
+	titi number;
+Begin
+	USE_COLTYP_T1_COL1 (titi);
+End;
+/
+
+/******************************************************************************/
+/** PROCEDURE CALLPROC2_2                       * Object from Data Dictionary */
+/******************************************************************************/
+
+CREATE OR REPLACE PROCEDURE CALLPROC2_2 
+Is
+	titi number;
+Begin
+	USE_COLTYP_T1_COL1_2 (titi);
+End;
+/
+
+/******************************************************************************/
+/** PROCEDURE CALLPROC2_3                       * Object from Data Dictionary */
+/******************************************************************************/
+
+CREATE OR REPLACE PROCEDURE CALLPROC2_3 
+Is
+	titi number;
+Begin
+	USE_COLTYP_T1_COL1_3 (titi);
+End;
+/
+
+/******************************************************************************/
+/** PROCEDURE CALLPROC3                         * Object from Data Dictionary */
+/******************************************************************************/
+
+CREATE OR REPLACE PROCEDURE CALLPROC3 
+Is
+Begin
+	USE_ROWTYP_T1_COL1(F_RET_ROWTYP_T1);
+End;
+/
+
+/******************************************************************************/
+/** PROCEDURE CALLPROC3_2                       * Object from Data Dictionary */
+/******************************************************************************/
+
+CREATE OR REPLACE PROCEDURE CALLPROC3_2 
+Is
+Begin
+	USE_ROWTYP_T1_COL1_2(F_RET_ROWTYP_T1_2);
+End;
+/
+
+/******************************************************************************/
+/** PROCEDURE CALLPROC3_3                       * Object from Data Dictionary */
+/******************************************************************************/
+
+CREATE OR REPLACE PROCEDURE CALLPROC3_3 
+Is
+Begin
+	USE_ROWTYP_T1_COL1_3(F_RET_ROWTYP_T1_3);
+End;
+/
+
+/******************************************************************************/
+/** PROCEDURE CALLPROC4                         * Object from Data Dictionary */
+/******************************************************************************/
+
+CREATE OR REPLACE PROCEDURE CALLPROC4 
+Is
+Begin
+	USE_COLTYP_T1_COL1 (F_RET_COLTYP_T1_COL1);
+End;
+/
+
+/******************************************************************************/
+/** PROCEDURE CALLPROC4_2                       * Object from Data Dictionary */
+/******************************************************************************/
+
+CREATE OR REPLACE PROCEDURE CALLPROC4_2 
+Is
+Begin
+	USE_COLTYP_T1_COL1_2 (F_RET_COLTYP_T1_COL1_2);
+End;
+/
+
+/******************************************************************************/
+/** PROCEDURE CALLPROC4_3                       * Object from Data Dictionary */
+/******************************************************************************/
+
+CREATE OR REPLACE PROCEDURE CALLPROC4_3 
+Is
+Begin
+	USE_COLTYP_T1_COL1_3 (F_RET_COLTYP_T1_COL1_3);
+End;
+/
+
+/******************************************************************************/
+/** PROCEDURE USE_COLTYP_T1_COL1                * Object from Data Dictionary */
+/******************************************************************************/
+
+CREATE OR REPLACE PROCEDURE USE_COLTYP_T1_COL1 (
+	PARAM1 IN IMP_TABLE1.T1_COL1%TYPE
+)
+Is
+Begin
+	null;
+End;
+/
+
+/******************************************************************************/
+/** PROCEDURE USE_COLTYP_T1_COL1_2              * Object from Data Dictionary */
+/******************************************************************************/
+
+CREATE OR REPLACE PROCEDURE USE_COLTYP_T1_COL1_2 (
+	PARAM1 IN SYN_TAB1.T1_COL1%TYPE
+)
+Is
+Begin
+	null;
+End;
+/
+
+/******************************************************************************/
+/** PROCEDURE USE_COLTYP_T1_COL1_3              * Object from Data Dictionary */
+/******************************************************************************/
+
+CREATE OR REPLACE PROCEDURE USE_COLTYP_T1_COL1_3 (
+	PARAM1 IN VIEWONTAB1.T1_COL1%TYPE
+)
+Is
+Begin
+	null;
+End;
+/
+
+/******************************************************************************/
+/** PROCEDURE USE_ROWTYP_T1_COL1                * Object from Data Dictionary */
+/******************************************************************************/
+
+CREATE OR REPLACE PROCEDURE USE_ROWTYP_T1_COL1 (
+	PARAM1 IN IMP_TABLE1%ROWTYPE
+)
+Is
+Begin
+	null;
+End;
+/
+
+/******************************************************************************/
+/** PROCEDURE USE_ROWTYP_T1_COL1_2              * Object from Data Dictionary */
+/******************************************************************************/
+
+CREATE OR REPLACE PROCEDURE USE_ROWTYP_T1_COL1_2 (
+	PARAM1 IN SYN_TAB1%ROWTYPE
+)
+Is
+Begin
+	null;
+End;
+/
+
+/******************************************************************************/
+/** PROCEDURE USE_ROWTYP_T1_COL1_3              * Object from Data Dictionary */
+/******************************************************************************/
+
+CREATE OR REPLACE PROCEDURE USE_ROWTYP_T1_COL1_3 (
+	PARAM1 IN VIEWONTAB1%ROWTYPE
+)
+Is
+Begin
+	null;
+End;
+/
+
+
+/******************************************************************************/
+/** Generated Script (CREATE): Packages                                      **/
+/** ------------------------------------------------------------------------ **/
+/******************************************************************************/
+
+/******************************************************************************/
+/** PACKAGE DEF_TYPEON_COLTABLE                 * Object from Data Dictionary */
+/******************************************************************************/
+
+CREATE OR REPLACE PACKAGE DEF_TYPEON_COLTABLE 
+Is
+	VARROWTYPE IMP_TABLE1.T1_COL1%TYPE;
+	SUBTYPE TAB1STYP is IMP_TABLE1.T1_COL1%TYPE;
+	TYPE TAB1TYP is table of IMP_TABLE1.T1_COL1%TYPE;
+	Function F_USEROWTYPE (PARAM1 IN IMP_TABLE1.T1_COL1%TYPE) return number;
+	Function F_RETROWTYPE return IMP_TABLE1.T1_COL1%TYPE;
+	Procedure P_USEROWTYPE (PARAM1 IN IMP_TABLE1.T1_COL1%TYPE);
+End;
+/
+
+/******************************************************************************/
+/** PACKAGE DEF_TYPEON_COLTABLE_2               * Object from Data Dictionary */
+/******************************************************************************/
+
+CREATE OR REPLACE PACKAGE DEF_TYPEON_COLTABLE_2 
+Is
+	VARROWTYPE_2 SYN_TAB1.T1_COL1%TYPE;
+	SUBTYPE TAB1STYP_2 is SYN_TAB1.T1_COL1%TYPE;
+	TYPE TAB1TYP_2 is table of SYN_TAB1.T1_COL1%TYPE;
+	Function F_USEROWTYPE_2 (PARAM1 IN SYN_TAB1.T1_COL1%TYPE) return number;
+	Function F_RETROWTYPE_2 return SYN_TAB1.T1_COL1%TYPE;
+	Procedure P_USEROWTYPE_2 (PARAM1 IN SYN_TAB1.T1_COL1%TYPE);
+End;
+/
+
+/******************************************************************************/
+/** PACKAGE DEF_TYPEON_COLTABLE_3               * Object from Data Dictionary */
+/******************************************************************************/
+
+CREATE OR REPLACE PACKAGE DEF_TYPEON_COLTABLE_3 
+Is
+	VARROWTYPE_3 VIEWONTAB1.T1_COL1%TYPE;
+	SUBTYPE TAB1STYP_3 is VIEWONTAB1.T1_COL1%TYPE;
+	TYPE TAB1TYP_3 is table of VIEWONTAB1.T1_COL1%TYPE;
+	Function F_USEROWTYPE_3 (PARAM1 IN VIEWONTAB1.T1_COL1%TYPE) return number;
+	Function F_RETROWTYPE_3 return VIEWONTAB1.T1_COL1%TYPE;
+	Procedure P_USEROWTYPE_3 (PARAM1 IN VIEWONTAB1.T1_COL1%TYPE);
+End;
+/
+
+/******************************************************************************/
+/** PACKAGE DEF_TYPEON_TABLE                    * Object from Data Dictionary */
+/******************************************************************************/
+
+CREATE OR REPLACE PACKAGE DEF_TYPEON_TABLE 
+Is
+	VARROWTYPE IMP_TABLE1%ROWTYPE;
+	SUBTYPE TAB1STYP is IMP_TABLE1%ROWTYPE;
+	TYPE TAB1TYP is table of IMP_TABLE1%ROWTYPE;
+	Function F_USEROWTYPE (PARAM1 IN IMP_TABLE1%ROWTYPE) return number;
+	Function F_RETROWTYPE return IMP_TABLE1%ROWTYPE;
+	Procedure P_USEROWTYPE (PARAM1 IN IMP_TABLE1%ROWTYPE);
+End;
+/
+
+/******************************************************************************/
+/** PACKAGE DEF_TYPEON_TABLE_2                  * Object from Data Dictionary */
+/******************************************************************************/
+
+CREATE OR REPLACE PACKAGE DEF_TYPEON_TABLE_2 
+Is
+	VARROWTYPE_2 SYN_TAB1%ROWTYPE;
+	SUBTYPE TAB1STYP_2 is SYN_TAB1%ROWTYPE;
+	TYPE TAB1TYP_2 is table of SYN_TAB1%ROWTYPE;
+	Function F_USEROWTYPE_2 (PARAM1 IN SYN_TAB1%ROWTYPE) return number;
+	Function F_RETROWTYPE_2 return SYN_TAB1%ROWTYPE;
+	Procedure P_USEROWTYPE_2 (PARAM1 IN SYN_TAB1%ROWTYPE);
+End;
+/
+
+/******************************************************************************/
+/** PACKAGE DEF_TYPEON_TABLE_3                  * Object from Data Dictionary */
+/******************************************************************************/
+
+CREATE OR REPLACE PACKAGE DEF_TYPEON_TABLE_3 
+Is
+	VARROWTYPE_3 VIEWONTAB1%ROWTYPE;
+	SUBTYPE TAB1STYP_3 is VIEWONTAB1%ROWTYPE;
+	TYPE TAB1TYP_3 is table of VIEWONTAB1%ROWTYPE;
+	Function F_USEROWTYPE_3 (PARAM1 IN VIEWONTAB1%ROWTYPE) return number;
+	Function F_RETROWTYPE_3 return VIEWONTAB1%ROWTYPE;
+	Procedure P_USEROWTYPE_3 (PARAM1 IN VIEWONTAB1%ROWTYPE);
+End;
+/
+
+
+/******************************************************************************/
+/** Generated Script (CREATE): Package bodies                                **/
+/** ------------------------------------------------------------------------ **/
+/******************************************************************************/
+
+/******************************************************************************/
+/** PACKAGE BODY DEF_TYPEON_COLTABLE            * Object from Data Dictionary */
+/******************************************************************************/
+
+CREATE OR REPLACE PACKAGE BODY DEF_TYPEON_COLTABLE 
+Is
+	Procedure INTERN_PACK(PARAM2 in IMP_TABLE1.T1_COL1%TYPE) is 
+	begin
+		null;
+	end;
+	Function F_USEROWTYPE (PARAM1 IN IMP_TABLE1.T1_COL1%TYPE) return number
+	is
+	begin
+		return null;
+	end;
+	Function F_RETROWTYPE return IMP_TABLE1.T1_COL1%TYPE is  
+	begin
+		return VARROWTYPE;
+	end; 
+	Procedure P_USEROWTYPE (PARAM1 IN IMP_TABLE1.T1_COL1%TYPE) is
+	begin
+		null;
+	end;
+End;
+/
+
+/******************************************************************************/
+/** PACKAGE BODY DEF_TYPEON_COLTABLE_2          * Object from Data Dictionary */
+/******************************************************************************/
+
+CREATE OR REPLACE PACKAGE BODY DEF_TYPEON_COLTABLE_2 
+Is
+	Procedure INTERN_PACK_2(PARAM2 in SYN_TAB1.T1_COL1%TYPE) is 
+	begin
+		null;
+	end;
+	Function F_USEROWTYPE_2 (PARAM1 IN SYN_TAB1.T1_COL1%TYPE) return number
+	is
+	begin
+		return null;
+	end;
+	Function F_RETROWTYPE_2 return SYN_TAB1.T1_COL1%TYPE is  
+	begin
+		return VARROWTYPE_2;
+	end; 
+	Procedure P_USEROWTYPE_2 (PARAM1 IN SYN_TAB1.T1_COL1%TYPE) is
+	begin
+		null;
+	end;
+End;
+/
+
+/******************************************************************************/
+/** PACKAGE BODY DEF_TYPEON_COLTABLE_3          * Object from Data Dictionary */
+/******************************************************************************/
+
+CREATE OR REPLACE PACKAGE BODY DEF_TYPEON_COLTABLE_3 
+Is
+	Procedure INTERN_PACK_3(PARAM2 in VIEWONTAB1.T1_COL1%TYPE) is 
+	begin
+		null;
+	end;
+	Function F_USEROWTYPE_3 (PARAM1 IN VIEWONTAB1.T1_COL1%TYPE) return number
+	is
+	begin
+		return null;
+	end;
+	Function F_RETROWTYPE_3 return VIEWONTAB1.T1_COL1%TYPE is  
+	begin
+		return VARROWTYPE_3;
+	end; 
+	Procedure P_USEROWTYPE_3 (PARAM1 IN VIEWONTAB1.T1_COL1%TYPE) is
+	begin
+		null;
+	end;
+End;
+/
+
+/******************************************************************************/
+/** PACKAGE BODY DEF_TYPEON_TABLE               * Object from Data Dictionary */
+/******************************************************************************/
+
+CREATE OR REPLACE PACKAGE BODY DEF_TYPEON_TABLE 
+Is
+	Procedure INTERN_PACK(PARAM2 in IMP_TABLE1%ROWTYPE) is 
+	begin
+		null;
+	end;
+	Function F_USEROWTYPE (PARAM1 IN IMP_TABLE1%ROWTYPE) return number
+	is
+	begin
+		return null;
+	end;
+	Function F_RETROWTYPE return IMP_TABLE1%ROWTYPE is  
+	begin
+		return VARROWTYPE;
+	end; 
+	Procedure P_USEROWTYPE (PARAM1 IN IMP_TABLE1%ROWTYPE) is
+	begin
+		null;
+	end;
+End;
+/
+
+/******************************************************************************/
+/** PACKAGE BODY DEF_TYPEON_TABLE_2             * Object from Data Dictionary */
+/******************************************************************************/
+
+CREATE OR REPLACE PACKAGE BODY DEF_TYPEON_TABLE_2 
+Is
+	Procedure INTERN_PACK_2(PARAM2 in SYN_TAB1%ROWTYPE) is 
+	begin
+		null;
+	end;
+	Function F_USEROWTYPE_2 (PARAM1 IN SYN_TAB1%ROWTYPE) return number
+	is
+	begin
+		return null;
+	end;
+	Function F_RETROWTYPE_2 return SYN_TAB1%ROWTYPE is  
+	begin
+		return VARROWTYPE_2;
+	end; 
+	Procedure P_USEROWTYPE_2 (PARAM1 IN SYN_TAB1%ROWTYPE) is
+	begin
+		null;
+	end;
+End;
+/
+
+/******************************************************************************/
+/** PACKAGE BODY DEF_TYPEON_TABLE_3             * Object from Data Dictionary */
+/******************************************************************************/
+
+CREATE OR REPLACE PACKAGE BODY DEF_TYPEON_TABLE_3 
+Is
+	Procedure INTERN_PACK_3(PARAM2 in VIEWONTAB1%ROWTYPE) is 
+	begin
+		null;
+	end;
+	Function F_USEROWTYPE_3 (PARAM1 IN VIEWONTAB1%ROWTYPE) return number
+	is
+	begin
+		return null;
+	end;
+	Function F_RETROWTYPE_3 return VIEWONTAB1%ROWTYPE is  
+	begin
+		return VARROWTYPE_3;
+	end; 
+	Procedure P_USEROWTYPE_3 (PARAM1 IN VIEWONTAB1%ROWTYPE) is
+	begin
+		null;
+	end;
+End;
+/
+

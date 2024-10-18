@@ -1,0 +1,361 @@
+Menu Module = DEFAULT&SMARTBAR
+Program Unit Type = Procedure
+Program Unit Type = Procedure
+Program Unit Type = Procedure
+Database Data Block = No
+Item Type = Text Item
+Database Item = No
+Item Type = Text Item
+Database Item = No
+Item Type = Text Item
+Database Item = No
+Item Type = Text Item
+Database Item = No
+Item Type = Text Item
+Database Item = No
+Item Type = Push Button
+Database Data Block = No
+Item Type = Push Button
+Item Type = Push Button
+Database Data Block = Yes
+Query Data Source Type = Table
+Query Data Source Name = AUTHORS
+DML Data Target Type = Table
+DML Data Target Name = AUTHORS
+Query Allowed = Yes
+Delete Allowed = Yes
+Insert Allowed = No
+Update Allowed = No
+Item Type = Text Item
+Database Item = Yes
+Column Name = AU_ID
+Item Type = Text Item
+Database Item = Yes
+Column Name = AU_LNAME
+Item Type = Text Item
+Database Item = Yes
+Column Name = AU_FNAME
+Database Data Block = Yes
+Query Data Source Type = Table
+Query Data Source Name = VIEWTITLEAUTHOR
+DML Data Target Type = Table
+DML Data Target Name = VIEWTITLEAUTHOR
+Query Allowed = Yes
+Delete Allowed = Yes
+Insert Allowed = No
+Update Allowed = No
+Item Type = Text Item
+Database Item = Yes
+Column Name = TITLE_ID
+Item Type = Text Item
+Database Item = Yes
+Column Name = AU_ID
+Copy Value from Item = AUTHORS.AU_ID
+Item Type = Text Item
+Database Item = Yes
+Column Name = TITLE
+Procedure Check_Package_Failure IS
+BEGIN
+  IF NOT ( Form_Success ) THEN
+    RAISE Form_Trigger_Failure;
+  END IF;
+END;PROCEDURE Clear_All_Master_Details IS
+  mastblk  VARCHAR2(30);  -- Initial Master Block Causing Coord
+  coordop  VARCHAR2(30);  -- Operation Causing the Coord
+  trigblk  VARCHAR2(30);  -- Cur Block On-Clear-Details Fires On
+  startitm VARCHAR2(61);  -- Item in which cursor started
+  frmstat  VARCHAR2(15);  -- Form Status
+  curblk   VARCHAR2(30);  -- Current Block
+  currel   VARCHAR2(30);  -- Current Relation
+  curdtl   VARCHAR2(30);  -- Current Detail Block
+
+  FUNCTION First_Changed_Block_Below(Master VARCHAR2)
+  RETURN VARCHAR2 IS
+    curblk VARCHAR2(30);  -- Current Block
+    currel VARCHAR2(30);  -- Current Relation
+    retblk VARCHAR2(30);  -- Return Block
+  BEGIN
+    --
+    -- Initialize Local Vars
+    --
+    curblk := Master;
+    currel := Get_Block_Property(curblk,  FIRST_MASTER_RELATION);
+    --
+    -- While there exists another relation for this block
+    --
+    WHILE currel IS NOT NULL LOOP
+      --
+      -- Get the name of the detail block
+      --
+      curblk := Get_Relation_Property(currel, DETAIL_NAME);
+      --
+      -- If this block has changes, return its name
+      --
+      IF ( Get_Block_Property(curblk, STATUS) = 'CHANGED' ) THEN
+        RETURN curblk;
+      ELSE
+        --
+        -- No changes, recursively look for changed blocks below
+        --
+        retblk := First_Changed_Block_Below(curblk);
+        --
+        -- If some block below is changed, return its name
+        --
+        IF retblk IS NOT NULL THEN
+          RETURN retblk;
+        ELSE
+          --
+          -- Consider the next relation
+          --
+          currel := Get_Relation_Property(currel, NEXT_MASTER_RELATION);
+        END IF;
+      END IF;
+    END LOOP;
+
+    --
+    -- No changed blocks were found
+    --
+    RETURN NULL;
+  END First_Changed_Block_Below;
+
+BEGIN
+  --
+  -- Init Local Vars
+  --
+  mastblk  := :System.Master_Block;
+  coordop  := :System.Coordination_Operation;
+  trigblk  := :System.Trigger_Block;
+  startitm := :System.Cursor_Item;
+  frmstat  := :System.Form_Status;
+
+  --
+  -- If the coordination operation is anything but CLEAR_RECORD or
+  -- SYNCHRONIZE_BLOCKS, then continue checking.
+  --
+  IF coordop NOT IN ('CLEAR_RECORD', 'SYNCHRONIZE_BLOCKS') THEN
+    --
+    -- If we're processing the driving master block...
+    --
+    IF mastblk = trigblk THEN
+      --
+      -- If something in the form is changed, find the
+      -- first changed block below the master
+      --
+      IF frmstat = 'CHANGED' THEN
+        curblk := First_Changed_Block_Below(mastblk);
+        --
+        -- If we find a changed block below, go there
+        -- and Ask to commit the changes.
+        --
+        IF curblk IS NOT NULL THEN
+          Go_Block(curblk);
+          Check_Package_Failure;
+          Clear_Block(ASK_COMMIT);
+          --
+          -- If user cancels commit dialog, raise error
+          --
+          IF NOT ( :System.Form_Status = 'QUERY'
+                   OR :System.Block_Status = 'NEW' ) THEN
+            RAISE Form_Trigger_Failure;
+          END IF;
+        END IF;
+      END IF;
+    END IF;
+  END IF;
+
+  --
+  -- Clear all the detail blocks for this master without
+  -- any further asking to commit.
+  --
+  currel := Get_Block_Property(trigblk, FIRST_MASTER_RELATION);
+  WHILE currel IS NOT NULL LOOP
+    curdtl := Get_Relation_Property(currel, DETAIL_NAME);
+    IF Get_Block_Property(curdtl, STATUS) <> 'NEW'  THEN
+      Go_Block(curdtl);
+      Check_Package_Failure;
+      Clear_Block(NO_VALIDATE);
+      IF :System.Block_Status <> 'NEW' THEN
+        RAISE Form_Trigger_Failure;
+      END IF;
+    END IF;
+    currel := Get_Relation_Property(currel, NEXT_MASTER_RELATION);
+  END LOOP;
+
+  --
+  -- Put cursor back where it started
+  --
+  IF :System.Cursor_Item <> startitm THEN
+    Go_Item(startitm);
+    Check_Package_Failure;
+  END IF;
+
+EXCEPTION
+  WHEN Form_Trigger_Failure THEN
+    IF :System.Cursor_Item <> startitm THEN
+      Go_Item(startitm);
+    END IF;
+    RAISE;
+
+END Clear_All_Master_Details;PROCEDURE Query_Master_Details(rel_id Relation,detail VARCHAR2) IS
+  oldmsg VARCHAR2(2);  -- Old Message Level Setting
+  reldef VARCHAR2(5);  -- Relation Deferred Setting
+BEGIN
+  --
+  -- Initialize Local Variable(s)
+  --
+  reldef := Get_Relation_Property(rel_id, DEFERRED_COORDINATION);
+  oldmsg := :System.Message_Level;
+  --
+  -- If NOT Deferred, Goto detail and execute the query.
+  --
+  IF reldef = 'FALSE' THEN
+    Go_Block(detail);
+    Check_Package_Failure;
+    :System.Message_Level := '10';
+    Execute_Query;
+    :System.Message_Level := oldmsg;
+  ELSE
+    --
+    -- Relation is deferred, mark the detail block as un-coordinated
+    --
+    Set_Block_Property(detail, COORDINATION_STATUS, NON_COORDINATED);
+  END IF;
+
+EXCEPTION
+    WHEN Form_Trigger_Failure THEN
+      :System.Message_Level := oldmsg;
+      RAISE;
+END Query_Master_Details;--
+-- Begin default relation program section
+--
+BEGIN
+  Clear_All_Master_Details;
+END;
+--
+-- End default relation program section
+--
+GO_FIELD ('AUTHORS.AU_LNAME');
+EXECUTE_QUERY;--
+-- Begin default relation declare section
+--
+DECLARE
+  Dummy_Define CHAR(1);
+  --
+  -- Begin VIEWTITLEAUTHOR detail declare section
+  --
+  CURSOR VIEWTITLEAUTHOR_cur IS      
+    SELECT 1 FROM VIEWTITLEAUTHOR V     
+    WHERE V.AU_ID = :AUTHORS.AU_ID;
+  --
+  -- End VIEWTITLEAUTHOR detail declare section
+  --
+--
+-- End default relation declare section
+--
+--
+-- Begin default relation program section
+--
+BEGIN
+  --
+  -- Begin VIEWTITLEAUTHOR detail program section
+  --
+  OPEN VIEWTITLEAUTHOR_cur;     
+  FETCH VIEWTITLEAUTHOR_cur INTO Dummy_Define;     
+  IF ( VIEWTITLEAUTHOR_cur%found ) THEN     
+    Message('Cannot delete master record when matching detail records exist.');     
+    CLOSE VIEWTITLEAUTHOR_cur;     
+    RAISE Form_Trigger_Failure;     
+  END IF;
+  CLOSE VIEWTITLEAUTHOR_cur;
+  --
+  -- End VIEWTITLEAUTHOR detail program section
+  --
+END;
+--
+-- End default relation program section
+--
+--
+-- Begin default relation declare section
+--
+DECLARE
+  recstat     VARCHAR2(20) := :System.record_status;   
+  startitm    VARCHAR2(61) := :System.cursor_item;   
+  rel_id      Relation;
+--
+-- End default relation declare section
+--
+--
+-- Begin default relation program section
+--
+BEGIN
+  IF ( recstat = 'NEW' or recstat = 'INSERT' ) THEN   
+    RETURN;
+  END IF;
+  --
+  -- Begin VIEWTITLEAUTHOR detail program section
+  --
+  IF ( (:AUTHORS.AU_ID is not null) ) THEN   
+    rel_id := Find_Relation('AUTHORS.AUTHORS_VIEWTITLEAUTHOR');   
+    Query_Master_Details(rel_id, 'VIEWTITLEAUTHOR');   
+  END IF;
+  --
+  -- End VIEWTITLEAUTHOR detail program section
+  --
+
+  IF ( :System.cursor_item <> startitm ) THEN     
+     Go_Item(startitm);     
+     Check_Package_Failure;     
+  END IF;
+END;
+--
+-- End default relation program section
+--
+:CREATE_SALE.au_fname:=:authors.au_fname;
+:CREATE_SALE.au_lname:=:authors.au_lname;:CREATE_SALE.au_fname:=:authors.au_fname;
+:CREATE_SALE.au_lname:=:authors.au_lname;DECLARE
+	 alert_button NUMBER;
+begin
+	if :CREATE_SALE.quantity is not null and :CREATE_SALE.discount is not null and :CREATE_SALE.title is not null then
+			SALEPKG.newcreatesale(:viewtitleauthor.title_id,:CREATE_SALE.quantity,:CREATE_SALE.discount);
+       alert_button:=Show_Alert('SALE_CREATED');
+	else
+		alert_button:=Show_Alert('VERIF');
+	end if;
+
+end;
+DECLARE
+	pl_titleid paramlist;
+BEGIN
+	pl_titleid := GET_PARAMETER_LIST('title_list');
+	IF ID_NULL(pl_titleid) THEN
+		pl_titleid := CREATE_PARAMETER_LIST('title_list');
+	ELSE
+		DELETE_PARAMETER(pl_titleid,'p_title');
+	END IF;
+	ADD_PARAMETER(pl_titleid,'p_title',text_parameter,:viewtitleauthor.title);
+	CALL_FORM('DEFECTS',HIDE, NO_REPLACE,NO_QUERY_ONLY, pl_titleid);
+END;close_Form('CASTPUBS');
+Declare
+TYPE RT1 IS RECORD (
+	au_lname		 authors.au_lname%TYPE,
+	au_fname		 authors.au_fname%TYPE,
+	title		 titles.title%TYPE,
+	title_id		 titles.title_id%TYPE
+	);	
+RetourCursor			titlepkg.listetitles_ref;
+Enregistrement		RT1;
+
+begin
+
+
+titlepkg.listetitles_proc(:CREATE_SALE.au_fname,:CREATE_SALE.au_lname,RetourCursor);
+
+Fetch RetourCursor into Enregistrement;
+Close RetourCursor;
+
+:CREATE_SALE.title:=:viewtitleauthor.title;
+
+
+-- :select_authors.title:=:viewtitleauthor.title;
+
+end; 

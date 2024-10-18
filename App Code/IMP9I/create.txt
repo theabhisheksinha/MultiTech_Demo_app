@@ -1,0 +1,145 @@
+create table tab_char (col0 char(4 BYTE), col1 varchar2(40 CHAR), col2 nchar(3), col3 nvarchar2(50))
+/
+create table tab_char2 (col0 varchar2(40 CHAR), col1 char(4 BYTE), col2 nchar(3), col3 nvarchar2(50))
+/
+create table tab_interval (date1 interval year (4) to month, date2 interval day (3) to second (7))
+/
+create table tab_timestamp1 (date4 timestamp (5), col4 varchar2(20 BYTE), col timestamp(4) with local time zone)
+/
+create table tab_timestamp2 (start_time timestamp with time zone, duration1 interval day (7) to second (5))
+/
+alter table tab_char add constraint pk_char primary key (col0)
+/
+alter table tab_char2 add constraint fk_char foreign key (col1) references tab_char (col0)
+/
+CREATE PROCEDURE P_CHAR is
+v_char char(4 BYTE);
+v_varchar varchar2(40 CHAR);
+begin
+select col0, col1 into v_char, v_varchar from tab_char;
+end;
+/
+CREATE FUNCTION F_CHAR return char
+is
+v_char char(4 BYTE);
+v_varchar varchar2(40 CHAR);
+begin
+select col0, col1 into v_char, v_varchar from tab_char;
+return v_char;
+end;
+/
+CREATE PACKAGE PACK_CHAR
+is
+Type_char tab_char.col0%TYPE ;
+TYPE Type_tab_char is table of tab_char.col1%TYPE;
+procedure PK_P_CHAR;
+end;
+/
+CREATE PACKAGE BODY PACK_CHAR
+is
+Procedure PK_P_CHAR
+is
+v_char char(4 BYTE);
+v_varchar varchar2(40 CHAR);
+begin
+select col0, col1 into v_char, v_varchar from tab_char;
+end;
+end;
+/
+CREATE PROCEDURE P_INTERVAL
+is
+v_interval1 interval year (4) to month;
+v_interval2 interval day (3) to second (7);
+begin
+select date1, date2 into v_interval1, v_interval2 from tab_interval;
+end;
+/
+CREATE FUNCTION F_INTERVAL return interval year to month
+is
+v_interval1 interval year (4) to month;
+v_interval2 interval day (3) to second (7);
+begin
+select date1, date2 into v_interval1, v_interval2 from tab_interval;
+return v_interval1;
+end;
+/
+CREATE PACKAGE PACK_INTERVAL
+is
+type_interval tab_interval%ROWTYPE;
+Function PK_F_INTERVAL return interval day to second;
+end;
+/
+CREATE PACKAGE BODY PACK_INTERVAL
+is
+Function PK_F_INTERVAL return interval day to second
+is
+v_interval1 interval year (4) to month;
+v_interval2 interval day (3) to second (7);
+begin
+select date1, date2 into v_interval1, v_interval2 from tab_interval;
+return v_interval2;
+end;
+end;
+/
+CREATE PROCEDURE P_TIMESTAMP
+is
+v_time1 timestamp (5);
+v_time2 timestamp(4) with local time zone;
+v_time3 timestamp with time zone;
+v_interval interval day (7) to second (5);
+begin
+select date4, col, start_time, duration1
+	into v_time1, v_time2, v_time3, v_interval
+	from tab_timestamp1, tab_timestamp2 ;
+end;
+/
+CREATE FUNCTION F_TIMESTAMP
+return timestamp with local time zone
+is
+v_time1 timestamp (5);
+v_time2 timestamp(4) with local time zone;
+v_time3 timestamp with time zone;
+v_interval interval day (7) to second (5);
+begin
+select date4, col, start_time, duration1
+	into v_time1, v_time2, v_time3, v_interval
+	from tab_timestamp1, tab_timestamp2 ;
+return v_time2;
+end;
+/
+CREATE PACKAGE PACK_TIMESTAMP
+is
+Typ_time1 tab_timestamp1%ROWTYPE;
+Typ_time2 tab_timestamp2.start_time%TYPE;
+Procedure PK_P_TIMESTAMP;
+end;
+/
+CREATE PACKAGE BODY PACK_TIMESTAMP
+is
+Procedure PK_P_TIMESTAMP
+is
+v_time1 timestamp (5);
+v_time2 timestamp(4) with local time zone;
+v_time3 timestamp with time zone;
+v_interval interval day (7) to second (5);
+begin
+select date4, col, start_time, duration1
+	into v_time1, v_time2, v_time3, v_interval
+	from tab_timestamp1, tab_timestamp2 ;
+end;
+end;
+/
+CREATE VIEW V_CHAR
+as
+select col0, col1, col2, col3 from tab_char;
+/
+CREATE VIEW V_INTERVAL
+as
+select date1, date2 from tab_interval;
+/
+CREATE VIEW V_TIMESTAMP
+as
+select date4, col, start_time, duration1
+	from tab_timestamp1, tab_timestamp2 ;
+/
+

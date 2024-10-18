@@ -1,0 +1,218 @@
+/******************************************************************************/
+/*** ----------------------------------------------------------------------- **/
+/*** CAST Release Builder R2.1                            (generated script) **/
+/*** ----------------------------------------------------------------------- **/
+/******************************************************************************/
+/* Server name    : OSPORTES                           */
+/* Oracle version : 8.1.5.0.0                          */
+/* Schema         : SCOTT                              */
+/* Date & Time    : January 10, 2000 at 10:42 AM       */
+/*******************************************************/
+
+
+
+/******************************************************************************/
+/** Generated Script (CREATE): Tables                                        **/
+/** ------------------------------------------------------------------------ **/
+/******************************************************************************/
+
+CREATE TABLE I6_TABLE1 (
+  T1_COL1                                       NUMBER(10,0)        NOT NULL  ,
+  T1_COL2                                       VARCHAR2(255)       NOT NULL  ,
+  T1_COL3                                       DATE                NOT NULL  ,
+  T1_COL4                                       NUMBER              NULL      
+)
+/
+
+
+/******************************************************************************/
+/** Generated Script (CREATE): Check constraints                             **/
+/** ------------------------------------------------------------------------ **/
+/******************************************************************************/
+
+ALTER TABLE I6_TABLE1
+ADD CHECK( "T1_COL1" IS NOT NULL )
+/
+
+ALTER TABLE I6_TABLE1
+ADD CHECK( "T1_COL2" IS NOT NULL )
+/
+
+ALTER TABLE I6_TABLE1
+ADD CHECK( "T1_COL3" IS NOT NULL )
+/
+
+
+/******************************************************************************/
+/** Generated Script (CREATE): Primary/Unique Key constraints                **/
+/** ------------------------------------------------------------------------ **/
+/******************************************************************************/
+
+ALTER TABLE I6_TABLE1
+ADD CONSTRAINT PK_I6_TABLE1 PRIMARY KEY(T1_COL1)
+USING INDEX
+/
+
+
+/******************************************************************************/
+/** Generated Script (CREATE): Functions                                     **/
+/** ------------------------------------------------------------------------ **/
+/******************************************************************************/
+
+/******************************************************************************/
+/** FUNCTION I6_USEPCKDEF                         * Object from Data Dictionary  */
+/******************************************************************************/
+
+CREATE OR REPLACE FUNCTION I6_USEPCKDEF (
+	ROWS_INSERTED IN I6_IMP_PACKAGE_TYPE_DEFINITION.TYPTABL1
+)
+Return number
+Is
+Begin
+	null;
+End;
+/
+
+/******************************************************************************/
+/** FUNCTION I6_USEPCKDEF2                        * Object from Data Dictionary  */
+/******************************************************************************/
+
+CREATE OR REPLACE FUNCTION I6_USEPCKDEF2 (
+	PARAM1 IN NUMBER
+)
+Return I6_IMP_PACKAGE_TYPE_DEFINITION.TABL_OF_REC
+Is
+	SingleRec I6_IMP_PACKAGE_TYPE_DEFINITION.REC1;
+Begin
+	SingleRec.Id:=1;
+	SingleRec.Label:='TEST';
+End;
+/
+
+/******************************************************************************/
+/** FUNCTION I6_USEPCKDEF3                        * Object from Data Dictionary  */
+/******************************************************************************/
+
+CREATE OR REPLACE FUNCTION I6_USEPCKDEF3 
+Return I6_IMP_PACKAGE_TYPE_DEFINITION.TABL_OF_TABLE1
+Is
+	LIGNE I6_TABLE1%ROWTYPE;
+	TABL1 I6_IMP_PACKAGE_TYPE_DEFINITION.TABL_OF_TABLE1; 
+Begin
+	TABL1(1):= LIGNE;
+	return TABL1;
+End;
+/
+
+
+/******************************************************************************/
+/** Generated Script (CREATE): Procedures                                    **/
+/** ------------------------------------------------------------------------ **/
+/******************************************************************************/
+
+/******************************************************************************/
+/** PROCEDURE I6_PROCUSETYP1                       * Object from Data Dictionary */
+/******************************************************************************/
+
+CREATE OR REPLACE PROCEDURE I6_PROCUSETYP1 (
+	PARAM1 OUT I6_IMP_PACKAGE_TYPE_DEFINITION.TABL_OF_TABLE1
+)
+Is
+	TABL1 I6_IMP_PACKAGE_TYPE_DEFINITION.TABL_OF_TABLE1;
+	ROWVALU I6_TABLE1%ROWTYPE; 
+Begin
+	TABL1(1):=ROWVALU;
+	PARAM1:=TABL1;
+End;
+/
+
+/******************************************************************************/
+/** PROCEDURE I6_PROCUSETYP2                       * Object from Data Dictionary */
+/******************************************************************************/
+
+CREATE OR REPLACE PROCEDURE I6_PROCUSETYP2 (
+	PARAM1 OUT I6_IMP_PACKAGE_TYPE_DEFINITION.TABL_OF_TABLE1
+)
+Is
+	TABL1 I6_IMP_PACKAGE_TYPE_DEFINITION.TABL_OF_TABLE1;
+	ROWVALU I6_TABLE1%ROWTYPE; 
+Begin
+	TABL1(1):=ROWVALU;
+	PARAM1:=TABL1;
+End;
+/
+
+/******************************************************************************/
+/** PROCEDURE I6_PROCUSETYP3                       * Object from Data Dictionary */
+/******************************************************************************/
+
+CREATE OR REPLACE PROCEDURE I6_PROCUSETYP3 
+Is
+	RECSINGLE I6_IMP_PACKAGE_TYPE_DEFINITION.REC1;
+	TABLREC I6_IMP_PACKAGE_TYPE_DEFINITION.TABL_OF_REC; 
+Begin
+	NULL;
+End;
+/
+
+
+/******************************************************************************/
+/** Generated Script (CREATE): Packages                                      **/
+/** ------------------------------------------------------------------------ **/
+/******************************************************************************/
+
+/******************************************************************************/
+/** PACKAGE I6_IMP_PACKAGE_TYPE_DEFINITION         * Object from Data Dictionary */
+/******************************************************************************/
+
+CREATE OR REPLACE PACKAGE I6_IMP_PACKAGE_TYPE_DEFINITION 
+Is
+	SUBTYPE TYPTABL1 is I6_TABLE1%ROWTYPE;
+	TYPE REC1 is record (Id Number, Label varchar2(255));
+	TYPE TABL_OF_REC is table of REC1;
+	TYPE TABL_OF_TABLE1 is table of I6_TABLE1%ROWTYPE;
+End;
+/
+
+/******************************************************************************/
+/** PACKAGE I6_PCKUSE1                             * Object from Data Dictionary */
+/******************************************************************************/
+
+CREATE OR REPLACE PACKAGE I6_PCKUSE1 
+Is
+	function FCT1 (PARAM1 in I6_IMP_PACKAGE_TYPE_DEFINITION.REC1) return I6_IMP_PACKAGE_TYPE_DEFINITION.TABL_OF_REC;
+	procedure PS1 (PARAM2 out I6_IMP_PACKAGE_TYPE_DEFINITION.TABL_OF_TABLE1);
+End;
+/
+
+
+/******************************************************************************/
+/** Generated Script (CREATE): Package bodies                                **/
+/** ------------------------------------------------------------------------ **/
+/******************************************************************************/
+
+/******************************************************************************/
+/** PACKAGE BODY I6_PCKUSE1                        * Object from Data Dictionary */
+/******************************************************************************/
+
+CREATE OR REPLACE PACKAGE BODY I6_PCKUSE1 
+Is
+	function FCT1 (PARAM1 in I6_IMP_PACKAGE_TYPE_DEFINITION.REC1) return I6_IMP_PACKAGE_TYPE_DEFINITION.TABL_OF_REC 
+	is
+		TABL I6_IMP_PACKAGE_TYPE_DEFINITION.TABL_OF_REC;
+	begin
+		TABL(1):= PARAM1;
+		return TABL;
+	end;
+	
+	procedure PS1 (PARAM2 out I6_IMP_PACKAGE_TYPE_DEFINITION.TABL_OF_TABLE1) 
+	is
+		TOAST I6_IMP_PACKAGE_TYPE_DEFINITION.TABL_OF_TABLE1;
+		LIG I6_TABLE1%ROWTYPE;
+	begin
+		TOAST(1):= LIG;
+		PARAM2:=TOAST;
+	end;
+End;
+/
+

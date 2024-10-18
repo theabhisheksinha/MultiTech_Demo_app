@@ -1,0 +1,1 @@
+function display_date(){ var today = new Date(); var jour = today.getDate(); if (jour < 10) jour = "0" + jour; var mois = today.getMonth() + 1; if ( mois < 10) mois = "0" + mois; now = jour + "/" + mois + "/" + today.getFullYear(); document.write( now );}

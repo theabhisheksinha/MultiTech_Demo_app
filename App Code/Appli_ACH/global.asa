@@ -1,0 +1,64 @@
+<SCRIPT LANGUAGE=VBScript RUNAT=Server>
+' ligne à rajouter pour pouvoir faire le <%= pour afficher la valeur des variables
+
+<!-- METADATA TYPE="typelib"
+FILE="c:\Program Files\Common Files\System\ado\msado15.dll" -->
+
+'You can add special event handlers in this file that will get run automatically when
+'special Active Server Pages events occur. To create these handlers, just create a
+'subroutine with a name from the list below that corresponds to the event you want to
+'use. For example, to create an event handler for Session_OnStart, you would put the
+'following code into this file (without the comments):
+
+sub Application_OnStart
+	'==Visual InterDev Generated - startspan==
+	'-- Project Data Environment
+		'Set DE = Server.CreateObject("DERuntime.DERuntime")
+		'Application("DE") = DE.Load(Server.MapPath("Global.ASA"), "_private/DataEnvironment/DataEnvironment.asa")
+	'==Visual InterDev Generated - endspan==
+
+	application("variable1")="toto"
+	
+end sub 
+
+sub Application_OnEnd
+
+	application("variable1")=nothing
+	
+end sub
+
+Sub Session_OnStart
+
+session("ville")=""
+'Limite le temps de session
+
+'	Session.TimeOut = 1
+' Type de serveur
+
+	session("servtyp")=""
+' Login information
+
+	Session("login") = ""
+	Session("password") = ""
+	Session("serv") = ""
+	set Session("objconnect")=server.createobject("adodb.connection")
+
+End Sub
+
+SUB Session_OnEnd
+
+	Session("login") = ""
+	Session("password") = ""
+	session("serv") = ""
+	set Session("objconnect")=nothing
+
+END SUB
+
+
+'EventName              Description
+'Session_OnStart        Runs the first time a user runs any page in your application
+'Session_OnEnd          Runs when a user's session times out or quits your application
+'Application_OnStart    Runs once when the first page of your application is run for the first time by any user
+'Application_OnEnd      Runs once when the web server shuts down
+
+</SCRIPT>

@@ -1,0 +1,45 @@
+** fichier basé sur la base castpubs du serveur o817qa5 !
+
+* commentaire monoline
+* titles, titleview, deltitle
+
+** commentaire multiline !
+** sproc_debug, seq_defects
+' byroyalty, CREATESALEPKG, E_Stock, Fct_Return_Scalar !
+
+STRING string echappement : <%t ENDSTRING
+STRING authors ENDSTRING
+STRING DeliverOrder ENDSTRING
+STRING getauthorspkg ENDSTRING
+STRING CreateSale ENDSTRING
+STRING SEQ_303_1 ENDSTRING
+STRING sbonus ENDSTRING
+STRING UPDTITLES ENDSTRING
+STRING viewtitleauthor ENDSTRING
+STRING history<%_proc ENDSTRING
+STRING dbo.Fct_Return_Table ENDSTRING
+
+<%> embedded SQL </>
+<%> SELECT FROM AuthorIdCodes;
+ DELETE on_delete_authors;
+INSERT into salesdetail;</>
+<%>UPDATE sAuthorIdCodes SET odrghiqemr =zkef;</>
+<%>SELECT s_304_1;</>
+<%>SELECT GetAllSales ;</>
+<%>SELECT defectspkg.ctrl_defect(vartitleid);</>
+<%>SELECT I_Stock;</>
+<%>EXECUTE Fct_Return_InLine_Table;</>
+
+
+OBV_BEGIN embedded language profile OBV OBV_END
+
+OBV_BEGIN
+"Stock"
+"storeid_proc"
+"callcreatesalepkg"
+"GetTitleAuthors"
+"SEQ_303_1"
+"sbonus"
+"UPDTITLES"
+"available_delivery"
+OBV_END

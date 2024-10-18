@@ -1,0 +1,196 @@
+/******************************************************************************/
+/*** ----------------------------------------------------------------------- **/
+/*** CAST Release Builder R2.1                            (generated script) **/
+/*** ----------------------------------------------------------------------- **/
+/******************************************************************************/
+/* Server name    : OSPORTES                           */
+/* Oracle version : 8.1.5.0.0                          */
+/* Schema         : SCOTT                              */
+/* Date & Time    : January 07, 2000 at 05:20 PM       */
+/*******************************************************/
+
+
+
+/******************************************************************************/
+/** Generated Script (CREATE): Sequences                                     **/
+/** ------------------------------------------------------------------------ **/
+/******************************************************************************/
+
+CREATE SEQUENCE I5_IMP_SEQ
+ MINVALUE 1
+ MAXVALUE 999999999999999999999999999
+ INCREMENT BY 2
+ START WITH 1
+ NOCACHE
+ NOORDER
+ NOCYCLE
+/
+
+
+/******************************************************************************/
+/** Generated Script (CREATE): Tables                                        **/
+/** ------------------------------------------------------------------------ **/
+/******************************************************************************/
+
+CREATE TABLE I5_TABLE1 (
+  COL                                           NUMBER(10,0)        NOT NULL  
+)
+
+/
+
+
+/******************************************************************************/
+/** Generated Script (CREATE): Functions                                     **/
+/** ------------------------------------------------------------------------ **/
+/******************************************************************************/
+
+/******************************************************************************/
+/** FUNCTION I5_CALFCT1                           * Object from Data Dictionary  */
+/******************************************************************************/
+
+CREATE OR REPLACE FUNCTION I5_CALFCT1 
+Return number
+Is
+Begin
+	return I5_FCT1_SEQ;
+End;
+/
+
+/******************************************************************************/
+/** FUNCTION I5_F_CALLPACK                        * Object from Data Dictionary  */
+/******************************************************************************/
+
+CREATE OR REPLACE FUNCTION I5_F_CALLPACK (
+	PARAM1 OUT NUMBER
+)
+Return NUMBER
+Is
+Begin
+	I5_PACKAGE1.SEQCur(PARAM1);
+	return I5_PACKAGE1.GetSEQ;
+End;
+/
+
+/******************************************************************************/
+/** FUNCTION I5_FCT1_SEQ                          * Object from Data Dictionary  */
+/******************************************************************************/
+
+CREATE OR REPLACE FUNCTION I5_FCT1_SEQ 
+Return NUMBER
+Is
+	SQ_VAL number;
+Begin
+	select I5_IMP_SEQ.NEXTVAL into SQ_VAL from dual;
+End;
+/
+
+/******************************************************************************/
+/** FUNCTION I5_FCT2_PACK                         * Object from Data Dictionary  */
+/******************************************************************************/
+
+CREATE OR REPLACE FUNCTION I5_FCT2_PACK 
+Return NUMBER
+Is
+Begin
+	return I5_PACKAGE1.CURSEQVAL;
+End;
+/
+
+
+/******************************************************************************/
+/** Generated Script (CREATE): Procedures                                    **/
+/** ------------------------------------------------------------------------ **/
+/******************************************************************************/
+
+/******************************************************************************/
+/** PROCEDURE I5_PS1_CALLFCT1                      * Object from Data Dictionary */
+/******************************************************************************/
+
+CREATE OR REPLACE PROCEDURE I5_PS1_CALLFCT1 (
+	PARAM1 OUT number
+)
+Is
+Begin
+	PARAM1:=I5_CALFCT1;
+End;
+/
+
+/******************************************************************************/
+/** PROCEDURE I5_PS1_SEQ                           * Object from Data Dictionary */
+/******************************************************************************/
+
+CREATE OR REPLACE PROCEDURE I5_PS1_SEQ 
+Is
+Begin
+	insert into I5_TABLE1 values (I5_IMP_SEQ.NEXTVAL);
+End;
+/
+
+/******************************************************************************/
+/** PROCEDURE I5_PS2_SEQ                           * Object from Data Dictionary */
+/******************************************************************************/
+
+CREATE OR REPLACE PROCEDURE I5_PS2_SEQ 
+Is
+	VAR1 number;
+Begin
+	select I5_IMP_SEQ.CURRVAL into VAR1 from dual; 
+End;
+/
+
+
+/******************************************************************************/
+/** Generated Script (CREATE): Packages                                      **/
+/** ------------------------------------------------------------------------ **/
+/******************************************************************************/
+
+/******************************************************************************/
+/** PACKAGE I5_PACKAGE1                            * Object from Data Dictionary */
+/******************************************************************************/
+
+CREATE OR REPLACE PACKAGE I5_PACKAGE1 
+Is
+	INITSEQ number;
+	CURSEQVAL number;
+	Function GetSEQ return number;
+	Procedure SEQCur (VALSEQ OUT number);
+End;
+/
+
+
+/******************************************************************************/
+/** Generated Script (CREATE): Package bodies                                **/
+/** ------------------------------------------------------------------------ **/
+/******************************************************************************/
+
+/******************************************************************************/
+/** PACKAGE BODY I5_PACKAGE1                       * Object from Data Dictionary */
+/******************************************************************************/
+
+CREATE OR REPLACE PACKAGE BODY I5_PACKAGE1 
+Is
+	Procedure TEST is
+		roro number;
+	begin
+		roro:=GetSEQ;
+	end;
+	Function GetSEQ return number is
+		VALEUR number;
+	begin
+		select I5_IMP_SEQ.NEXTVAL into VALEUR from dual;
+		select I5_IMP_SEQ.CURRVAL into CURSEQVAL from dual;
+		return VALEUR;
+	end;
+	Procedure SEQCur (VALSEQ OUT number) is
+		VALEUR number;
+	begin
+		if INITSEQ = 1 then
+			select I5_IMP_SEQ.CURRVAL into VALEUR from dual;
+		else
+			VALEUR:= GetSEQ;
+		end if;
+		VALSEQ:=VALEUR;
+	end; 
+End;
+/
+
